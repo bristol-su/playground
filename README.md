@@ -34,7 +34,7 @@
 [![Code Quality][code-quality-shield]][code-quality-url]
 [![Coverage][coverage-shield]][coverage-url]
 [![Release][release-shield]][release-url]
-[![MIT License][license-shield]][license-url]
+[![License][license-shield]][license-url]
 
 [![Downloads][downloads-shield]][downloads-url]
 [![Stargazers][stars-shield]][stars-url]
