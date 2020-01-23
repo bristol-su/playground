@@ -10,7 +10,7 @@
     "license": "GPL-3.0-or-later",
     "require": {
         "php": "^7.2",
-        "bristol-su/support": "dev-develop",
+        "bristol-su/support": "^1.0",
         "bristol-su/upload-file": "dev-master",
         "bristol-su/typeform": "dev-master",
         "fideloper/proxy": "^4.0",
