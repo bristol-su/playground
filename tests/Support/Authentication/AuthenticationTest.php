@@ -49,11 +49,9 @@ class AuthenticationTest extends TestCase
     }
 
     /** @test */
-    public function get_group_throws_an_exception(){
-        $this->expectException(\Exception::class);
-        $this->expectExceptionMessage('No implementation');
+    public function get_group_returns_null(){
         $authentication = resolve(Authentication::class);
-        $authentication->getGroup();
+        $this->assertNull($authentication->getGroup());
     }
 
     /** @test */
@@ -65,11 +63,9 @@ class AuthenticationTest extends TestCase
     }
 
     /** @test */
-    public function get_role_throws_an_exception(){
-        $this->expectException(\Exception::class);
-        $this->expectExceptionMessage('No implementation');
+    public function get_role_returns_null(){
         $authentication = resolve(Authentication::class);
-        $authentication->getRole();
+        $this->assertNull($authentication->getRole());
     }
 
     /** @test */

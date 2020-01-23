@@ -32,11 +32,9 @@
 
 [![Build][build-status-shield]][build-status-url]
 [![Code Quality][code-quality-shield]][code-quality-url]
-[![Coverage][coverage-shield]][coverage-url]
 [![Release][release-shield]][release-url]
 [![License][license-shield]][license-url]
 
-[![Downloads][downloads-shield]][downloads-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
@@ -79,7 +77,7 @@ See the [open issues](https://github.com/github_username/repo/issues) for a list
 <!-- CONTRIBUTING -->
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Contributions are what make the open source community such an amazing place to learn, be inspired, and create. Any contributions you make are **greatly appreciated**.
 
 1. Create an issue to notify us of your planned changes
 2. Fork the Project
@@ -94,7 +92,6 @@ See `CONTRIBUTING` for more information.
 ## License
 
 Distributed under the GPL-3.0 License. See `LICENSE` for more information.
-
 
 
 <!-- CONTACT -->
