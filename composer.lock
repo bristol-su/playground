@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c58c392e70745789f8a5663dc680d4a7",
+    "content-hash": "70f64334f333218e09e28c341eb66cdb",
     "packages": [
         {
             "name": "bristol-su/control",
@@ -57,16 +57,16 @@
         },
         {
             "name": "bristol-su/support",
-            "version": "dev-develop",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bristol-su/support.git",
-                "reference": "db462a7e5210c492dba7b1f88d4bb915368497a8"
+                "reference": "e4a717db98e7de93e20d91b98b486eb5fc70da12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bristol-su/support/zipball/db462a7e5210c492dba7b1f88d4bb915368497a8",
-                "reference": "db462a7e5210c492dba7b1f88d4bb915368497a8",
+                "url": "https://api.github.com/repos/bristol-su/support/zipball/e4a717db98e7de93e20d91b98b486eb5fc70da12",
+                "reference": "e4a717db98e7de93e20d91b98b486eb5fc70da12",
                 "shasum": ""
             },
             "require": {
@@ -122,7 +122,7 @@
                 "portal",
                 "sdk"
             ],
-            "time": "2020-01-21T17:13:25+00:00"
+            "time": "2020-01-23T20:37:15+00:00"
         },
         {
             "name": "bristol-su/typeform",
@@ -130,16 +130,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/bristol-su/typeform.git",
-                "reference": "4fcb6d5a8b030d3b565b0b5a8a9c3401c9e8e697"
+                "reference": "9141b9f64ec36e68f3a0befd22cd8169d2ecc9fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bristol-su/typeform/zipball/4fcb6d5a8b030d3b565b0b5a8a9c3401c9e8e697",
-                "reference": "4fcb6d5a8b030d3b565b0b5a8a9c3401c9e8e697",
+                "url": "https://api.github.com/repos/bristol-su/typeform/zipball/9141b9f64ec36e68f3a0befd22cd8169d2ecc9fc",
+                "reference": "9141b9f64ec36e68f3a0befd22cd8169d2ecc9fc",
                 "shasum": ""
             },
             "require": {
-                "bristol-su/support": "dev-develop",
+                "bristol-su/support": "^1.0",
                 "bristol-su/typeform-service": "dev-master",
                 "ext-json": "*",
                 "php": "^7.2",
@@ -171,7 +171,7 @@
                     "email": "toby.twigger@bristol.ac.uk"
                 }
             ],
-            "time": "2020-01-21T10:19:56+00:00"
+            "time": "2020-01-23T21:07:29+00:00"
         },
         {
             "name": "bristol-su/typeform-service",
@@ -179,16 +179,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/bristol-su/typeform-service.git",
-                "reference": "b801528bff097c59d2b41a0c91d5cda017c9b958"
+                "reference": "f75a1d75764c5edddcccbb795b444d2e50e87900"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bristol-su/typeform-service/zipball/b801528bff097c59d2b41a0c91d5cda017c9b958",
-                "reference": "b801528bff097c59d2b41a0c91d5cda017c9b958",
+                "url": "https://api.github.com/repos/bristol-su/typeform-service/zipball/f75a1d75764c5edddcccbb795b444d2e50e87900",
+                "reference": "f75a1d75764c5edddcccbb795b444d2e50e87900",
                 "shasum": ""
             },
             "require": {
-                "bristol-su/support": "dev-develop",
+                "bristol-su/support": "^1.0",
                 "ext-json": "*",
                 "php": "^7.2"
             },
@@ -219,7 +219,7 @@
                 }
             ],
             "description": "A third party service for typeform",
-            "time": "2020-01-21T11:57:01+00:00"
+            "time": "2020-01-23T21:08:00+00:00"
         },
         {
             "name": "bristol-su/upload-file",
@@ -227,16 +227,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/bristol-su/upload-file.git",
-                "reference": "f3371542216a0d9a55da35b60df07991b0c44168"
+                "reference": "7d6e7b9d79f305bad410c9902418074c1e504ebf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bristol-su/upload-file/zipball/f3371542216a0d9a55da35b60df07991b0c44168",
-                "reference": "f3371542216a0d9a55da35b60df07991b0c44168",
+                "url": "https://api.github.com/repos/bristol-su/upload-file/zipball/7d6e7b9d79f305bad410c9902418074c1e504ebf",
+                "reference": "7d6e7b9d79f305bad410c9902418074c1e504ebf",
                 "shasum": ""
             },
             "require": {
-                "bristol-su/support": "dev-develop",
+                "bristol-su/support": "^1.0",
                 "php": "^7.2"
             },
             "require-dev": {
@@ -265,7 +265,7 @@
                     "email": "toby.twigger@bristol.ac.uk"
                 }
             ],
-            "time": "2020-01-17T16:02:59+00:00"
+            "time": "2020-01-23T21:07:55+00:00"
         },
         {
             "name": "defuse/php-encryption",
@@ -6665,7 +6665,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "bristol-su/support": 20,
         "bristol-su/upload-file": 20,
         "bristol-su/typeform": 20
     },

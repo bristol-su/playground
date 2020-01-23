@@ -65,6 +65,11 @@ git clone https://github.com/bristol-su/playground
 ```
 
 Install the dependencies
+```sh
+composer install
+```
+
+Copy ```.env.example``` to ```.env``` and fill in required environment variables
 
 See our [developer docs](https://docs.bristolsustaging.co.uk/books/framework-development/chapter/playground) for more information.
 
@@ -122,3 +127,4 @@ Project Link: [https://github.com/bristol-su/playground](https://github.com/bris
 [issues-url]: https://github.com/bristol-su/playground/issues
 [license-shield]: https://img.shields.io/github/license/bristol-su/playground?style=for-the-badge
 [license-url]: https://github.com/bristol-su/playground/blob/master/LICENCE.md
+
