@@ -4,6 +4,7 @@ namespace BristolSU\Playground\Providers;
 
 use BristolSU\Playground\Support\Permissions\OverridePermissionTester;
 use BristolSU\Support\Permissions\Facade\PermissionTester;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 
 /**
