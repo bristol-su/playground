@@ -22,7 +22,8 @@ abstract class TestCase extends \Illuminate\Foundation\Testing\TestCase
             'database' => ':memory:',
             'prefix' => '',
         ]);
-        $this->artisan('migrate', ['--database' => 'testing']);
+        $app['config']->set('app.key', 'base64:UTyp33UhGolgzCK5CJmT+hNHcA+dJyp3+oINtX+VoPI=');
+        $this->createSdkEnvironment($app);        $this->artisan('migrate', ['--database' => 'testing']);
         $this->createSdkEnvironment($this->app);
         $this->app->make(ModelFactory::class)->load(__DIR__ . '/../vendor/bristol-su/support/database/factories');
 
