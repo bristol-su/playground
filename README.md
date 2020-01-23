@@ -106,8 +106,8 @@ Project Link: [https://github.com/bristol-su/playground](https://github.com/bris
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[release-shield]: https://img.shields.io/packagist/v/bristol-su/playground?include_prereleases&style=for-the-badge
-[release-url]: https://github.com/bristol-su/playground
+[release-shield]: https://img.shields.io/github/v/release/bristol-su/playground?include_prereleases&style=for-the-badge
+[release-url]: https://github.com/bristol-su/playground/releases
 [coverage-shield]: https://img.shields.io/scrutinizer/coverage/g/bristol-su/playground/master?style=for-the-badge
 [coverage-url]: https://scrutinizer-ci.com/g/bristol-su/playground/build-status/masterhttps://github.com/bristol-su/playground
 [build-status-shield]: https://img.shields.io/scrutinizer/build/g/bristol-su/playground/master?style=for-the-badge
