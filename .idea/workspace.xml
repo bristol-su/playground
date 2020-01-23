@@ -2,7 +2,198 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46cc1789-6870-42c1-bab3-43670a9d401e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Support/Authentication/Authentication.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Support/Authentication/Authentication.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AppServiceProvider_8php.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/AppServiceProvider_8php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AppServiceProvider_8php_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/AppServiceProvider_8php_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AuthServiceProvider_8php.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/AuthServiceProvider_8php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/AuthServiceProvider_8php_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/AuthServiceProvider_8php_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Authenticate_8php.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Authenticate_8php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Authenticate_8php_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Authenticate_8php_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Authentication_8php.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Authentication_8php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Authentication_8php_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Authentication_8php_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/CheckForMaintenanceMode_8php.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/CheckForMaintenanceMode_8php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/CheckForMaintenanceMode_8php_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/CheckForMaintenanceMode_8php_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ClearDatabase_8php.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ClearDatabase_8php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ClearDatabase_8php_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ClearDatabase_8php_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ConfirmPasswordController_8php.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ConfirmPasswordController_8php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ConfirmPasswordController_8php_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ConfirmPasswordController_8php_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ConnectionController_8php.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ConnectionController_8php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ConnectionController_8php_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ConnectionController_8php_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Console_2Kernel_8php.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Console_2Kernel_8php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Console_2Kernel_8php_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Console_2Kernel_8php_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Controller_8php.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Controller_8php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Controller_8php_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Controller_8php_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/EncryptCookies_8php.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/EncryptCookies_8php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/EncryptCookies_8php_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/EncryptCookies_8php_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/EventServiceProvider_8php.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/EventServiceProvider_8php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/EventServiceProvider_8php_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/EventServiceProvider_8php_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ForgotPasswordController_8php.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ForgotPasswordController_8php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ForgotPasswordController_8php_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ForgotPasswordController_8php_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Handler_8php.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Handler_8php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Handler_8php_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Handler_8php_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/HomeController_8php.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/HomeController_8php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/HomeController_8php_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/HomeController_8php_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Http_2Kernel_8php.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Http_2Kernel_8php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Http_2Kernel_8php_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Http_2Kernel_8php_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/LoginController_8php.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/LoginController_8php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/LoginController_8php_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/LoginController_8php_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ModuleController_8php.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ModuleController_8php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ModuleController_8php_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ModuleController_8php_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ModuleInstanceFactory_8php.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ModuleInstanceFactory_8php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ModuleInstanceFactory_8php_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ModuleInstanceFactory_8php_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ModuleInstancePermissionController_8php.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ModuleInstancePermissionController_8php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ModuleInstancePermissionController_8php_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ModuleInstancePermissionController_8php_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ModuleInstanceServiceController_8php.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ModuleInstanceServiceController_8php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ModuleInstanceServiceController_8php_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ModuleInstanceServiceController_8php_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ModuleInstanceSettingController_8php.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ModuleInstanceSettingController_8php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ModuleInstanceSettingController_8php_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ModuleInstanceSettingController_8php_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ModuleModuleInstanceController_8php.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ModuleModuleInstanceController_8php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ModuleModuleInstanceController_8php_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ModuleModuleInstanceController_8php_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ModulePermission_8php.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ModulePermission_8php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ModulePermission_8php_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ModulePermission_8php_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/OverridePermissionTester_8php.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/OverridePermissionTester_8php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/OverridePermissionTester_8php_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/OverridePermissionTester_8php_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/README_8md.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/README_8md.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/README_8md_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/README_8md_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/RedirectIfAuthenticated_8php.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/RedirectIfAuthenticated_8php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/RedirectIfAuthenticated_8php_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/RedirectIfAuthenticated_8php_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/RegisterController_8php.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/RegisterController_8php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/RegisterController_8php_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/RegisterController_8php_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ResetPasswordController_8php.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ResetPasswordController_8php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ResetPasswordController_8php_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ResetPasswordController_8php_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/RouteServiceProvider_8php.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/RouteServiceProvider_8php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/RouteServiceProvider_8php_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/RouteServiceProvider_8php_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ServiceConnectionController_8php.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ServiceConnectionController_8php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ServiceConnectionController_8php_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ServiceConnectionController_8php_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ServiceConnectorController_8php.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ServiceConnectorController_8php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ServiceConnectorController_8php_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ServiceConnectorController_8php_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/TrimStrings_8php.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/TrimStrings_8php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/TrimStrings_8php_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/TrimStrings_8php_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/TrustProxies_8php.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/TrustProxies_8php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/TrustProxies_8php_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/TrustProxies_8php_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/VerificationController_8php.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/VerificationController_8php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/VerificationController_8php_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/VerificationController_8php_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/VerifyCsrfToken_8php.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/VerifyCsrfToken_8php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/VerifyCsrfToken_8php_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/VerifyCsrfToken_8php_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ViewServiceProvider_8php.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ViewServiceProvider_8php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ViewServiceProvider_8php_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ViewServiceProvider_8php_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/annotated.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/annotated.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Console_1_1Commands_1_1ClearDatabase-members.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Console_1_1Commands_1_1ClearDatabase-members.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Console_1_1Commands_1_1ClearDatabase.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Console_1_1Commands_1_1ClearDatabase.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Console_1_1Kernel-members.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Console_1_1Kernel-members.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Console_1_1Kernel.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Console_1_1Kernel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Exceptions_1_1Handler-members.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Exceptions_1_1Handler-members.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Exceptions_1_1Handler.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Exceptions_1_1Handler.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Api_1_1ConnectionController-members.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Api_1_1ConnectionController-members.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Api_1_1ConnectionController.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Api_1_1ConnectionController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Api_1_1ModuleController-members.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Api_1_1ModuleController-members.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Api_1_1ModuleController.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Api_1_1ModuleController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Api_1_1ModuleInstancePermissionController-members.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Api_1_1ModuleInstancePermissionController-members.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Api_1_1ModuleInstancePermissionController.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Api_1_1ModuleInstancePermissionController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Api_1_1ModuleInstanceServiceController-members.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Api_1_1ModuleInstanceServiceController-members.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Api_1_1ModuleInstanceServiceController.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Api_1_1ModuleInstanceServiceController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Api_1_1ModuleInstanceSettingController-members.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Api_1_1ModuleInstanceSettingController-members.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Api_1_1ModuleInstanceSettingController.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Api_1_1ModuleInstanceSettingController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Api_1_1ModuleModuleInstanceController-members.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Api_1_1ModuleModuleInstanceController-members.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Api_1_1ModuleModuleInstanceController.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Api_1_1ModuleModuleInstanceController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Api_1_1ServiceConnectionController-members.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Api_1_1ServiceConnectionController-members.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Api_1_1ServiceConnectionController.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Api_1_1ServiceConnectionController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Api_1_1ServiceConnectorController-members.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Api_1_1ServiceConnectorController-members.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Api_1_1ServiceConnectorController.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Api_1_1ServiceConnectorController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Auth_1_1ConfirmPasswordController-members.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Auth_1_1ConfirmPasswordController-members.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Auth_1_1ConfirmPasswordController.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Auth_1_1ConfirmPasswordController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Auth_1_1ForgotPasswordController.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Auth_1_1ForgotPasswordController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Auth_1_1LoginController-members.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Auth_1_1LoginController-members.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Auth_1_1LoginController.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Auth_1_1LoginController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Auth_1_1RegisterController-members.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Auth_1_1RegisterController-members.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Auth_1_1RegisterController.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Auth_1_1RegisterController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Auth_1_1ResetPasswordController-members.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Auth_1_1ResetPasswordController-members.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Auth_1_1ResetPasswordController.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Auth_1_1ResetPasswordController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Auth_1_1VerificationController-members.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Auth_1_1VerificationController-members.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Auth_1_1VerificationController.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Auth_1_1VerificationController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Controller.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Controller.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1HomeController-members.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1HomeController-members.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1HomeController.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1HomeController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Kernel-members.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Kernel-members.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Kernel.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Kernel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Middleware_1_1Authenticate-members.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Middleware_1_1Authenticate-members.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Middleware_1_1Authenticate.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Middleware_1_1Authenticate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Middleware_1_1CheckForMaintenanceMode-members.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Middleware_1_1CheckForMaintenanceMode-members.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Middleware_1_1CheckForMaintenanceMode.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Middleware_1_1CheckForMaintenanceMode.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Middleware_1_1EncryptCookies-members.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Middleware_1_1EncryptCookies-members.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Middleware_1_1EncryptCookies.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Middleware_1_1EncryptCookies.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Middleware_1_1RedirectIfAuthenticated-members.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Middleware_1_1RedirectIfAuthenticated-members.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Middleware_1_1RedirectIfAuthenticated.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Middleware_1_1RedirectIfAuthenticated.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Middleware_1_1TrimStrings-members.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Middleware_1_1TrimStrings-members.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Middleware_1_1TrimStrings.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Middleware_1_1TrimStrings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Middleware_1_1TrustProxies-members.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Middleware_1_1TrustProxies-members.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Middleware_1_1TrustProxies.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Middleware_1_1TrustProxies.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Middleware_1_1VerifyCsrfToken-members.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Middleware_1_1VerifyCsrfToken-members.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Middleware_1_1VerifyCsrfToken.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Http_1_1Middleware_1_1VerifyCsrfToken.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Providers_1_1AppServiceProvider-members.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Providers_1_1AppServiceProvider-members.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Providers_1_1AppServiceProvider.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Providers_1_1AppServiceProvider.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Providers_1_1AuthServiceProvider-members.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Providers_1_1AuthServiceProvider-members.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Providers_1_1AuthServiceProvider.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Providers_1_1AuthServiceProvider.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Providers_1_1EventServiceProvider-members.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Providers_1_1EventServiceProvider-members.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Providers_1_1EventServiceProvider.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Providers_1_1EventServiceProvider.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Providers_1_1RouteServiceProvider-members.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Providers_1_1RouteServiceProvider-members.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Providers_1_1RouteServiceProvider.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Providers_1_1RouteServiceProvider.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Providers_1_1ViewServiceProvider-members.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Providers_1_1ViewServiceProvider-members.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Providers_1_1ViewServiceProvider.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Providers_1_1ViewServiceProvider.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Support_1_1Authentication_1_1Authentication-members.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Support_1_1Authentication_1_1Authentication-members.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Support_1_1Authentication_1_1Authentication.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Support_1_1Authentication_1_1Authentication.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Support_1_1Module_1_1ModuleInstanceFactory-members.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Support_1_1Module_1_1ModuleInstanceFactory-members.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Support_1_1Module_1_1ModuleInstanceFactory.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Support_1_1Module_1_1ModuleInstanceFactory.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Support_1_1Permissions_1_1ModulePermission-members.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Support_1_1Permissions_1_1ModulePermission-members.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Support_1_1Permissions_1_1ModulePermission.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Support_1_1Permissions_1_1ModulePermission.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Support_1_1Permissions_1_1OverridePermissionTester-members.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Support_1_1Permissions_1_1OverridePermissionTester-members.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Support_1_1Permissions_1_1OverridePermissionTester.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classBristolSU_1_1Playground_1_1Support_1_1Permissions_1_1OverridePermissionTester.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/classes.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/dir_07d79607a5b3b5e8afcff74e4c422a5d.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/dir_07d79607a5b3b5e8afcff74e4c422a5d.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/dir_0c4ee04d587063ecca91a7f35642b9f3.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/dir_0c4ee04d587063ecca91a7f35642b9f3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/dir_17ad28703916f734b4c8becb6f0b42a0.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/dir_17ad28703916f734b4c8becb6f0b42a0.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/dir_1a997922435fbfc95b4f807042937e4f.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/dir_1a997922435fbfc95b4f807042937e4f.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/dir_27ba1f74dc73f44d4e9ca42f2dd266ec.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/dir_27ba1f74dc73f44d4e9ca42f2dd266ec.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/dir_2aabf48db7e26e6e05c13fa13c60612c.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/dir_2aabf48db7e26e6e05c13fa13c60612c.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/dir_39e6fb902e81f005505faea649f0079b.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/dir_39e6fb902e81f005505faea649f0079b.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/dir_7b09fcb4dbd0cb5b1b403fdf6d02d6b8.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/dir_7b09fcb4dbd0cb5b1b403fdf6d02d6b8.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/dir_87811c9fbf44ecd97cc1ffdee3d5a506.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/dir_87811c9fbf44ecd97cc1ffdee3d5a506.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/dir_88a4777cc813fc77c471bd7c38dc0c56.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/dir_88a4777cc813fc77c471bd7c38dc0c56.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/dir_b67ad1f52c1717b3844b7e84564e94bb.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/dir_b67ad1f52c1717b3844b7e84564e94bb.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/dir_d40f4b3ccaf5126fb7bc52edf5c86dba.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/dir_d40f4b3ccaf5126fb7bc52edf5c86dba.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/dir_d422163b96683743ed3963d4aac17747.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/dir_d422163b96683743ed3963d4aac17747.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/dir_ef2b2488ec94a4625ca5ab9839baa414.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/dir_ef2b2488ec94a4625ca5ab9839baa414.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/dir_f5d14b947f8617a7091846429f9b92c6.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/dir_f5d14b947f8617a7091846429f9b92c6.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/files.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/files.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/functions.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/functions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/functions_func.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/functions_func.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/functions_vars.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/functions_vars.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/graph_legend.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/graph_legend.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/helpers_8php.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/helpers_8php.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/helpers_8php_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/helpers_8php_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/hierarchy.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/hierarchy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/inherits.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/inherits.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/namespaceBristolSU.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/namespaceBristolSU.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/namespaceBristolSU_1_1Playground.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/namespaceBristolSU_1_1Playground.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/namespaceBristolSU_1_1Playground_1_1Console.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/namespaceBristolSU_1_1Playground_1_1Console.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/namespaceBristolSU_1_1Playground_1_1Console_1_1Commands.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/namespaceBristolSU_1_1Playground_1_1Console_1_1Commands.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/namespaceBristolSU_1_1Playground_1_1Exceptions.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/namespaceBristolSU_1_1Playground_1_1Exceptions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/namespaceBristolSU_1_1Playground_1_1Http.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/namespaceBristolSU_1_1Playground_1_1Http.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/namespaceBristolSU_1_1Playground_1_1Http_1_1Controllers.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/namespaceBristolSU_1_1Playground_1_1Http_1_1Controllers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/namespaceBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Api.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/namespaceBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Api.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/namespaceBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Auth.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/namespaceBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Auth.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/namespaceBristolSU_1_1Playground_1_1Http_1_1Middleware.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/namespaceBristolSU_1_1Playground_1_1Http_1_1Middleware.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/namespaceBristolSU_1_1Playground_1_1Providers.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/namespaceBristolSU_1_1Playground_1_1Providers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/namespaceBristolSU_1_1Playground_1_1Support.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/namespaceBristolSU_1_1Playground_1_1Support.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/namespaceBristolSU_1_1Playground_1_1Support_1_1Authentication.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/namespaceBristolSU_1_1Playground_1_1Support_1_1Authentication.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/namespaceBristolSU_1_1Playground_1_1Support_1_1Module.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/namespaceBristolSU_1_1Playground_1_1Support_1_1Module.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/namespaceBristolSU_1_1Playground_1_1Support_1_1Permissions.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/namespaceBristolSU_1_1Playground_1_1Support_1_1Permissions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/namespaces.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/namespaces.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Support/Authentication/AuthenticationTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Support/Authentication/AuthenticationTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,6 +401,7 @@
       <workItem from="1579553266032" duration="2042000" />
       <workItem from="1579598326902" duration="9245000" />
       <workItem from="1579607873358" duration="33979000" />
+      <workItem from="1579798465296" duration="2593000" />
     </task>
     <servers />
   </component>
@@ -245,10 +437,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="530" y="367" width="879" height="419" key="NewPhpClassDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579621797769" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1579642885519">
+    <state width="498" height="446" key="SwitcherDM" timestamp="1579806156745">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="498" height="446" key="SwitcherDM/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579642885519" />
+    <state width="498" height="446" key="SwitcherDM/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579806156745" />
     <state x="100" y="127" width="1720" height="853" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1579630711436">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -261,10 +453,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="650" height="132" key="javadoc.popup.new/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579636037542" />
-    <state x="624" y="252" key="run.anything.popup" timestamp="1579642982807">
+    <state x="624" y="252" key="run.anything.popup" timestamp="1579806158474">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="624" y="252" key="run.anything.popup/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579642982807" />
+    <state x="624" y="252" key="run.anything.popup/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1579806158474" />
     <state x="623" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1579637704773">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>

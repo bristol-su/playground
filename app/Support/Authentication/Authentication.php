@@ -72,11 +72,11 @@ class Authentication implements AuthenticationContract
      *
      * This function does not provide a way to get groups
      *
-     * @throws \Exception
+     * @return null
      */
     public function getGroup()
     {
-        throw new \Exception('No implementation');
+        return null;
     }
 
     /**
@@ -84,11 +84,11 @@ class Authentication implements AuthenticationContract
      *
      * This function does not provide a way to get roles
      *
-     * @throws \Exception
+     * @return null
      */
     public function getRole()
     {
-        throw new \Exception('No implementation');
+        return null;
     }
 
     /**
