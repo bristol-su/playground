@@ -2,6 +2,8 @@
 
 namespace BristolSU\Playground\Tests\Http\Controllers\Auth;
 
+use BristolSU\ControlDB\Models\DataUser;
+use BristolSU\ControlDB\Models\User;
 use BristolSU\Playground\Tests\TestCase;
 
 class RegisterControllerTest extends TestCase
@@ -25,7 +27,9 @@ class RegisterControllerTest extends TestCase
         ]);
 
         $this->assertDatabaseHas('users', [
-            'email' => 'email@email.com'
+            'control_id' => User::where('data_provider_id',
+                DataUser::where('first_name', 'TestName1')->firstOrFail()->id()
+            )->firstOrFail()->id()
         ]);
 
     }

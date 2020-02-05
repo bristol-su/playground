@@ -71,10 +71,6 @@ class RegisterController extends Controller
         $controlUser = app(\BristolSU\ControlDB\Contracts\Repositories\User::class)->create($dataUser->id());
 
         $databaseUser = app(UserRepository::class)->create([
-            'forename' => $data['first_name'],
-            'surname' => $data['last_name'],
-            'email' => $data['email'],
-            'student_id' => '',
             'control_id' => $controlUser->id()
         ]);
         $databaseUser->email_verified_at = Carbon::now();
