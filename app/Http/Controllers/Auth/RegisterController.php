@@ -54,7 +54,7 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'first_name' => ['required', 'string', 'max:255'],
             'last_name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:control_data_user'],
             'password' => ['required', 'string', 'min:5', 'confirmed'],
         ]);
     }
@@ -67,12 +67,13 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        $dataUser = app(DataUser::class)->create($data['first_name'], $data['last_name'], $data['email']);
+        $dataUser = app(DataUser::class)->create($data['first_name'], $data['last_name'], $data['email'], null, $data['first_name'] . ' ' . $data['last_name']);
         $controlUser = app(\BristolSU\ControlDB\Contracts\Repositories\User::class)->create($dataUser->id());
 
         $databaseUser = app(UserRepository::class)->create([
             'control_id' => $controlUser->id()
         ]);
+
         $databaseUser->email_verified_at = Carbon::now();
         $databaseUser->password = Hash::make($data['password']);
         $databaseUser->save();

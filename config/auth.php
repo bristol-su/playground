@@ -82,6 +82,10 @@ return [
             'model' => ActivityInstance::class
         ],
 
+        'data-users' => [
+            'driver' => 'data-user-provider',
+            'model' => \BristolSU\Support\User\User::class,
+        ]
 
         // 'users' => [
         //     'driver' => 'database',
