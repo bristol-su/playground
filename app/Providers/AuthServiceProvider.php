@@ -2,7 +2,7 @@
 
 namespace BristolSU\Playground\Providers;
 
-use BristolSU\Playground\Support\Auth\UserProvider;
+use BristolSU\Playground\Support\Authentication\UserProvider;
 use BristolSU\Support\Authentication\Contracts\Authentication;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\ServiceProvider;

@@ -1,6 +1,6 @@
 <?php
 
-namespace BristolSU\Playground\Support\Auth;
+namespace BristolSU\Playground\Support\Authentication;
 
 use BristolSU\ControlDB\Contracts\Repositories\DataUser;
 use BristolSU\Support\User\Contracts\UserRepository;
