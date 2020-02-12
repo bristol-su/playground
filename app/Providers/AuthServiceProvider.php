@@ -2,7 +2,9 @@
 
 namespace BristolSU\Playground\Providers;
 
+use BristolSU\Playground\Support\Authentication\UserProvider;
 use BristolSU\Support\Authentication\Contracts\Authentication;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\ServiceProvider;
 
 /**
@@ -21,5 +23,9 @@ class AuthServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->app->bind(Authentication::class, \BristolSU\Playground\Support\Authentication\Authentication::class);
+
+        Auth::provider('data-user-provider', function($app) {
+            return $app->make(UserProvider::class);
+        });
     }
 }

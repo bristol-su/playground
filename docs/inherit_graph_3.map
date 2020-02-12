@@ -1,5 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node2" href="$classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Controller.html" title="BristolSU\\Playground\l\\Http\\Controllers\\Controller" alt="" coords="193,613,372,654"/>
+<area shape="rect" id="node2" href="$classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Controller.html" title="BristolSU\\Playground\l\\Http\\Controllers\\Controller" alt="" coords="193,573,372,614"/>
 <area shape="rect" id="node3" href="$classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Api_1_1ConnectionController.html" title="BristolSU\\Playground\l\\Http\\Controllers\\Api\l\\ConnectionController" alt="" coords="465,5,613,61"/>
 <area shape="rect" id="node4" href="$classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Api_1_1ModuleController.html" title="BristolSU\\Playground\l\\Http\\Controllers\\Api\l\\ModuleController" alt="" coords="466,85,613,141"/>
 <area shape="rect" id="node5" href="$classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Api_1_1ModuleInstancePermissionController.html" title="BristolSU\\Playground\l\\Http\\Controllers\\Api\l\\ModuleInstancePermissionController" alt="" coords="420,165,659,221"/>
@@ -13,6 +13,6 @@
 <area shape="rect" id="node13" href="$classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Auth_1_1LoginController.html" title="BristolSU\\Playground\l\\Http\\Controllers\\Auth\l\\LoginController" alt="" coords="465,805,614,861"/>
 <area shape="rect" id="node14" href="$classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Auth_1_1RegisterController.html" title="BristolSU\\Playground\l\\Http\\Controllers\\Auth\l\\RegisterController" alt="" coords="465,885,614,941"/>
 <area shape="rect" id="node15" href="$classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Auth_1_1ResetPasswordController.html" title="BristolSU\\Playground\l\\Http\\Controllers\\Auth\l\\ResetPasswordController" alt="" coords="452,965,627,1021"/>
-<area shape="rect" id="node16" href="$classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Auth_1_1VerificationController.html" title="BaseController" alt="" coords="485,1045,593,1072"/>
-<area shape="rect" id="node17" href="$classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1HomeController.html" title="BristolSU\\Playground\l\\Http\\Controllers\\HomeController" alt="" coords="433,1097,646,1138"/>
+<area shape="rect" id="node16" href="$classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Auth_1_1VerificationController.html" title="BristolSU\\Playground\l\\Http\\Controllers\\Auth\l\\VerificationController" alt="" coords="465,1045,614,1101"/>
+<area shape="rect" id="node17" href="$classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1HomeController.html" title="BristolSU\\Playground\l\\Http\\Controllers\\HomeController" alt="" coords="433,1126,646,1167"/>
 </map>
