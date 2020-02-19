@@ -4,5 +4,8 @@ var searchData=
   ['register',['register',['../classBristolSU_1_1Playground_1_1Providers_1_1AppServiceProvider.html#a3e321ca6709e12ff487921c690bdfb3a',1,'BristolSU::Playground::Providers::AppServiceProvider']]],
   ['render',['render',['../classBristolSU_1_1Playground_1_1Exceptions_1_1Handler.html#a4536cf662e6d9b8bc6099b6b8e98e955',1,'BristolSU::Playground::Exceptions::Handler']]],
   ['report',['report',['../classBristolSU_1_1Playground_1_1Exceptions_1_1Handler.html#a425faa2860cbf65995e9b341d95b7008',1,'BristolSU::Playground::Exceptions::Handler']]],
-  ['reset',['reset',['../classBristolSU_1_1Playground_1_1Support_1_1Authentication_1_1Authentication.html#af37ced96430402e56aed583b4a202489',1,'BristolSU::Playground::Support::Authentication::Authentication']]]
+  ['reset',['reset',['../classBristolSU_1_1Playground_1_1Support_1_1Authentication_1_1Authentication.html#af37ced96430402e56aed583b4a202489',1,'BristolSU::Playground::Support::Authentication::Authentication']]],
+  ['retrievebycredentials',['retrieveByCredentials',['../classBristolSU_1_1Playground_1_1Support_1_1Authentication_1_1UserProvider.html#a48dca8f27759c0d9c73be94c1258f467',1,'BristolSU::Playground::Support::Authentication::UserProvider']]],
+  ['retrievebyid',['retrieveById',['../classBristolSU_1_1Playground_1_1Support_1_1Authentication_1_1UserProvider.html#a384194263db0da1c4e046f5056715752',1,'BristolSU::Playground::Support::Authentication::UserProvider']]],
+  ['retrievebytoken',['retrieveByToken',['../classBristolSU_1_1Playground_1_1Support_1_1Authentication_1_1UserProvider.html#a8c17787c637ac029af68458e7b55e183',1,'BristolSU::Playground::Support::Authentication::UserProvider']]]
 ];
