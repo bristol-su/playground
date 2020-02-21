@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- Completion condition testing
+- See all fired events
+
 ## [1.0.3] - (12/02/2020)
 
 ### Changed
