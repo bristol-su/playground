@@ -2,13 +2,21 @@
 
 namespace BristolSU\Playground\Support\Authentication;
 
+use BristolSU\ControlDB\Contracts\Repositories\DataGroup;
+use BristolSU\ControlDB\Contracts\Repositories\DataPosition;
+use BristolSU\ControlDB\Contracts\Repositories\DataRole;
+use BristolSU\ControlDB\Contracts\Repositories\Pivots\UserGroup;
+use BristolSU\ControlDB\Contracts\Repositories\Pivots\UserRole;
+use BristolSU\Support\Activity\Activity;
 use BristolSU\Support\Authentication\Contracts\Authentication as AuthenticationContract;
+use BristolSU\Support\ModuleInstance\ModuleInstance;
 use BristolSU\Support\User\Contracts\UserAuthentication;
 use BristolSU\ControlDB\Contracts\Models\Group;
 use BristolSU\ControlDB\Contracts\Models\Role;
 use BristolSU\ControlDB\Contracts\Models\User;
 use BristolSU\ControlDB\Contracts\Repositories\User as UserRepository;
 use Illuminate\Contracts\Auth\Factory as AuthFactory;
+use Illuminate\Support\Str;
 
 /**
  * Authentication contract that uses the database user
@@ -72,10 +80,18 @@ class Authentication implements AuthenticationContract
      *
      * This function does not provide a way to get groups
      *
-     * @return null
+     * @return Group|null
      */
     public function getGroup()
     {
+        $activity = request()->route('activity_slug');
+        if($activity->exists) {
+            if($activity->activity_for === 'group') {
+                return $this->getGroupForUser();
+            } elseif($activity->activity_for === 'role') {
+                return $this->getRole()->group();
+            }
+        }
         return null;
     }
 
@@ -84,10 +100,14 @@ class Authentication implements AuthenticationContract
      *
      * This function does not provide a way to get roles
      *
-     * @return null
+     * @return Role|null
      */
     public function getRole()
     {
+        $activity = request()->route('activity_slug');
+        if($activity->exists && $activity->activity_for === 'role') {
+            return $this->getRoleForUser();
+        }
         return null;
     }
 
@@ -126,5 +146,62 @@ class Authentication implements AuthenticationContract
      */
     public function reset(): void
     {
+    }
+
+    /**
+     * Find or create a group the user is a member of
+     *
+     * @return Group
+     */
+    protected function getGroupForUser(): Group {
+        $userGroupRepository = app(UserGroup::class);
+        $dataGroupRepository = app(DataGroup::class);
+        $groupRepository = app(\BristolSU\ControlDB\Contracts\Repositories\Group::class);
+
+        $groups = $userGroupRepository->getGroupsThroughUser($this->getUser());
+        if($groups->count() > 0) {
+            return $groups->first();
+        }
+
+        $dataGroup = $dataGroupRepository->create('Group ' . Str::random(), ($this->getUser()->data()->email() ?? 'example-group@example.com'));
+        $group = $groupRepository->create($dataGroup->id());
+
+        $userGroupRepository->addUserToGroup($this->getUser(), $group);
+        return $group;
+    }
+
+    /**
+     * Find or create a role the user is in
+     *
+     * @return Role
+     */
+    protected function getRoleForUser(): Role {
+        /** @var UserRole $userRoleRepository */
+        $userRoleRepository = app(UserRole::class);
+        $dataRoleRepository = app(DataRole::class);
+        $roleRepository = app(\BristolSU\ControlDB\Contracts\Repositories\Role::class);
+        $dataGroupRepository = app(DataGroup::class);
+        $groupRepository = app(\BristolSU\ControlDB\Contracts\Repositories\Group::class);
+        $dataPositionRepository = app(DataPosition::class);
+        $positionRepository = app(\BristolSU\ControlDB\Contracts\Repositories\Position::class);
+
+        $roles = $userRoleRepository->getRolesThroughUser($this->getUser());
+        if($roles->count() > 0) {
+            return $roles->first();
+        }
+
+        $dataRole = $dataRoleRepository->create('Role ' . Str::random(), ($this->getUser()->data()->email() ?? 'example-role@example.com'));
+
+        $dataGroup = $dataGroupRepository->create('Group ' . Str::random(), ($this->getUser()->data()->email() ?? 'example-group@example.com'));
+        $group = $groupRepository->create($dataGroup->id());
+
+        $dataPosition = $dataPositionRepository->create('Position ' . Str::random(), 'Position ' . Str::random());
+        $position = $positionRepository->create($dataPosition->id());
+
+        $role = $roleRepository->create($position->id(), $group->id(), $dataRole->id());
+
+        $userRoleRepository->addUserToRole($this->getUser(), $role);
+
+        return $role;
     }
 }

@@ -57,11 +57,11 @@
 </template>
 
 <script>
-    import Settings from './change/Settings';
-    import Permissions from './change/Permissions';
-    import Services from './change/Services';
-    import CompletionConditions from './change/CompletionConditions';
-    import Events from './change/Events';
+    import Settings from './change/settings/Settings';
+    import Permissions from './change/permission/Permissions';
+    import Services from './change/services/Services';
+    import CompletionConditions from './change/completion/CompletionConditions';
+    import Events from './change/events/Events';
 
     export default {
         name: "Playground",
