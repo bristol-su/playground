@@ -2386,6 +2386,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "AddConnector",
   props: {
@@ -91315,6 +91317,14 @@ var render = function() {
         ],
         1
       ),
+      _vm._v(" "),
+      _c("vue-form-generator", {
+        attrs: {
+          schema: _vm.connector.settings.schema,
+          model: _vm.form.settings,
+          options: _vm.connector.settings.options
+        }
+      }),
       _vm._v(" "),
       _c(
         "b-button",

@@ -11,7 +11,11 @@
     "license": "GPL-3.0-or-later",
     "require": {
         "php": "^7.2",
-        "bristol-su/support": "^2.0",
+        "bristol-su/support": "^3.0",
+        "bristol-su/static-page": "dev-develop",
+        "bristol-su/upload-file": "dev-master",
+        "bristol-su/typeform": "dev-master",
+        "bristol-su/template": "dev-master",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "^6.2",
         "laravel/tinker": "^2.0"
@@ -52,5 +56,17 @@
             "BristolSU\\Playground\\Tests\\": "tests/"
         }
     },
-    "prefer-stable": true
+    "prefer-stable": true,
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi"
+        ]
+    }
 }
