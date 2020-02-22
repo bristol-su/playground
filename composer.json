@@ -1,7 +1,7 @@
 {
     "name": "bristol-su/playground",
     "type": "project",
-    "description": "A playground for experimenting and developing modules",
+    "description": "A playground for experimenting with and developing modules",
     "minimum-stability": "dev",
     "keywords": [
         "portal",

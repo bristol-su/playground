@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cbe1b1fd9d876a151d15221df5bba28f",
+    "content-hash": "8d5d8bc1e3a8cc32622d3e2a77c92da3",
     "packages": [
         {
             "name": "bristol-su/control",
@@ -62,10 +62,16 @@
         {
             "name": "bristol-su/static-page",
             "version": "dev-develop",
-            "dist": {
-                "type": "path",
-                "url": "../../modules/static-page",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bristol-su/static-page.git",
                 "reference": "6b813d80a423140fcd290d7b4b1d84553d8de81f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bristol-su/static-page/zipball/6b813d80a423140fcd290d7b4b1d84553d8de81f",
+                "reference": "6b813d80a423140fcd290d7b4b1d84553d8de81f",
+                "shasum": ""
             },
             "require": {
                 "bristol-su/support": "^3.0",
@@ -84,11 +90,7 @@
                     "BristolSU\\Module\\StaticPage\\": "app/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "BristolSU\\Module\\Tests\\StaticPage\\": "tests/"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -98,7 +100,8 @@
                     "email": "tobytwigger1@gmail.com"
                 }
             ],
-            "description": "A static page module for the Bristol SU Portal Project, to display text or HTML"
+            "description": "A static page module for the Bristol SU Portal Project, to display text or HTML",
+            "time": "2020-02-22T13:39:29+00:00"
         },
         {
             "name": "bristol-su/support",
@@ -219,10 +222,16 @@
         {
             "name": "bristol-su/typeform",
             "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bristol-su/typeform.git",
+                "reference": "fbda4c65cbfd684c23a5fee40b9816473de15787"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../modules/typeform",
-                "reference": "9141b9f64ec36e68f3a0befd22cd8169d2ecc9fc"
+                "type": "zip",
+                "url": "https://api.github.com/repos/bristol-su/typeform/zipball/fbda4c65cbfd684c23a5fee40b9816473de15787",
+                "reference": "fbda4c65cbfd684c23a5fee40b9816473de15787",
+                "shasum": ""
             },
             "require": {
                 "bristol-su/support": "^3.0",
@@ -247,11 +256,7 @@
                     "BristolSU\\Module\\Typeform\\": "app/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "BristolSU\\Module\\Tests\\Typeform\\": "tests/"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -260,7 +265,8 @@
                     "name": "Toby Twigger",
                     "email": "toby.twigger@bristol.ac.uk"
                 }
-            ]
+            ],
+            "time": "2020-02-22T18:30:31+00:00"
         },
         {
             "name": "bristol-su/typeform-service",
