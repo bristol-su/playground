@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Completion condition testing
-- See all fired events
+- See all fired events within a module
 
 ### Changed
 - Authentication now returns a group and role when needed by the activity
