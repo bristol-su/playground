@@ -1,6 +1,9 @@
 var searchData=
 [
   ['modulecontroller',['ModuleController',['../classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Api_1_1ModuleController.html',1,'BristolSU::Playground::Http::Controllers::Api']]],
+  ['moduleeventcontroller',['ModuleEventController',['../classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Api_1_1ModuleEventController.html',1,'BristolSU::Playground::Http::Controllers::Api']]],
+  ['moduleinstancecompletionconditioncontroller',['ModuleInstanceCompletionConditionController',['../classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Api_1_1ModuleInstanceCompletionConditionController.html',1,'BristolSU::Playground::Http::Controllers::Api']]],
+  ['moduleinstanceeventcontroller',['ModuleInstanceEventController',['../classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Api_1_1ModuleInstanceEventController.html',1,'BristolSU::Playground::Http::Controllers::Api']]],
   ['moduleinstancefactory',['ModuleInstanceFactory',['../classBristolSU_1_1Playground_1_1Support_1_1Module_1_1ModuleInstanceFactory.html',1,'BristolSU::Playground::Support::Module']]],
   ['moduleinstancepermissioncontroller',['ModuleInstancePermissionController',['../classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Api_1_1ModuleInstancePermissionController.html',1,'BristolSU::Playground::Http::Controllers::Api']]],
   ['moduleinstanceservicecontroller',['ModuleInstanceServiceController',['../classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Api_1_1ModuleInstanceServiceController.html',1,'BristolSU::Playground::Http::Controllers::Api']]],

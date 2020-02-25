@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1] - (25/02/2020)
+
+### Added
+- Completion condition testing
+- See all fired events within a module
+
+### Changed
+- Authentication now returns a group and role when needed by the activity
+- Creating a module instance accepts an 'activity_for' type, user, group or role
+
 ## [1.0.3] - (12/02/2020)
 
 ### Changed
@@ -31,7 +41,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Open and save module instances
 - Change settings, permissions and third party connections
 
-[Unreleased]: https://github.com/bristol-su/playground/compare/v1.0.3...HEAD
+[Unreleased]: https://github.com/bristol-su/playground/compare/v1.1...HEAD
+[1.1]: https://github.com/bristol-su/playground/compare/v1.0.3...v1.1
 [1.0.3]: https://github.com/bristol-su/playground/compare/v1.0.2...v1.0.3
 [1.0.2]: https://github.com/bristol-su/playground/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/bristol-su/playground/compare/v1.0...v1.0.1

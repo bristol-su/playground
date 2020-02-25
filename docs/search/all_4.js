@@ -13,5 +13,5 @@ var searchData=
   ['controller',['Controller',['../classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Controller.html',1,'BristolSU::Playground::Http::Controllers']]],
   ['controller_2ephp',['Controller.php',['../Controller_8php.html',1,'']]],
   ['create',['create',['../classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Auth_1_1RegisterController.html#ab92506ee4e0a97cfd7e40a26f1b2113f',1,'BristolSU::Playground::Http::Controllers::Auth::RegisterController']]],
-  ['createmoduleinstance',['createModuleInstance',['../classBristolSU_1_1Playground_1_1Support_1_1Module_1_1ModuleInstanceFactory.html#abd03a5a5361c7c7539341394f77dfe97',1,'BristolSU::Playground::Support::Module::ModuleInstanceFactory']]]
+  ['createmoduleinstance',['createModuleInstance',['../classBristolSU_1_1Playground_1_1Support_1_1Module_1_1ModuleInstanceFactory.html#a1e5f3d656f685342844f23cee46a806d',1,'BristolSU::Playground::Support::Module::ModuleInstanceFactory']]]
 ];

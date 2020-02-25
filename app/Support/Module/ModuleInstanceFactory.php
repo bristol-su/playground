@@ -19,9 +19,10 @@ class ModuleInstanceFactory
      *
      * @param Module $module Module to create the module instance with
      * @param string $name Name to use throughout production
+     * @param string $for Who is the module instance for?
      * @return ModuleInstance Created module instance
      */
-    public function createModuleInstance(Module $module, string $name): ModuleInstance
+    public function createModuleInstance(Module $module, string $name, string $for = 'user'): ModuleInstance
     {
         // Create logic
         $logic = Logic::create([
@@ -40,7 +41,7 @@ class ModuleInstanceFactory
             'description' => 'Activity '.$activitySlug,
             'slug' => $activitySlug,
             'type' => 'open',
-            'activity_for' => 'user',
+            'activity_for' => $for,
             'for_logic' => $logic->id,
             'admin_logic' => $logic->id,
         ]);

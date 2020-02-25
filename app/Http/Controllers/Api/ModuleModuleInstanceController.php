@@ -28,7 +28,7 @@ class ModuleModuleInstanceController extends Controller
     public function store(Request $request, Module $module)
     {
         return (new ModuleInstanceFactory())->createModuleInstance(
-            $module, $request->input('name')
+            $module, $request->input('name'), $request->input('activity_for', 'user')
         )->load('activity');
     }
 

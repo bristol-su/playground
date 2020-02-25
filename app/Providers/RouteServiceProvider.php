@@ -3,6 +3,9 @@
 namespace BristolSU\Playground\Providers;
 
 use BristolSU\Playground\Support\Permissions\ModulePermission;
+use BristolSU\Support\Completion\Contracts\CompletionConditionInstance;
+use BristolSU\Support\Completion\Contracts\CompletionConditionInstanceRepository;
+use BristolSU\Support\Completion\Contracts\CompletionConditionRepository;
 use BristolSU\Support\ModuleInstance\ModuleInstance;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Route;

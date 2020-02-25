@@ -18,12 +18,12 @@ class AuthenticateTest extends TestCase
         $this->expectException(AuthenticationException::class);
         $this->expectExceptionMessage('Unauthenticated.');
 
-        dd($this->call('GET', '/'));
         $userAuthentication = $this->prophesize(UserAuthentication::class);
         $userAuthentication->getUser()->willReturn(null);
 
         $request = $this->prophesize(Request::class);
         $request->has('called')->shouldNotBeCalled();
+        $request->expectsJson()->shouldBeCalled()->willReturn(false);
 
         $middleware = new Authenticate($userAuthentication->reveal());
         $middleware->handle($request->reveal(), function($request) {

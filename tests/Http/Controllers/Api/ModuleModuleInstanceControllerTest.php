@@ -44,7 +44,8 @@ class ModuleModuleInstanceControllerTest extends TestCase
         $this->instance(ModuleRepository::class, $moduleRepository->reveal());
 
         $response = $this->json('post', '/api/module/module1/module-instance', [
-            'name' => 'SomeName'
+            'name' => 'SomeName',
+            'activity_for' => 'group'
         ]);
 
         $response->assertStatus(201);
@@ -57,6 +58,9 @@ class ModuleModuleInstanceControllerTest extends TestCase
             'alias' => 'module1',
             'name' => 'SomeName',
             'description' => 'Module instance for the Name1 module with an alias module1'
+        ]);
+        $this->assertDatabaseHas('activities', [
+            'activity_for' => 'group'
         ]);
     }
 

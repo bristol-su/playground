@@ -20,6 +20,14 @@
                     Services
                 </a>
 
+                <a class="dropdown-item" href="#" @click.prevent="show('completion-conditions-modal')">
+                    Completion Conditions
+                </a>
+
+                <a class="dropdown-item" href="#" @click.prevent="show('events-modal')">
+                    Events
+                </a>
+
                 <a class="dropdown-item" :href="oppositeUrl">
                     Go to {{(aorp==='a'?'Participant':'Admin')}}
                 </a>
@@ -37,21 +45,33 @@
         <b-modal id="services-modal" hide-backdrop content-class="shadow" title="Services">
             <services :optional="optional" :required="required"></services>
         </b-modal>
+
+        <b-modal id="completion-conditions-modal" hide-backdrop content-class="shadow" title="Completion Conditions">
+            <completion-conditions :conditions="portalModule.completionConditions"></completion-conditions>
+        </b-modal>
+
+        <b-modal id="events-modal" hide-backdrop content-class="shadow" title="Events">
+            <events></events>
+        </b-modal>
     </div>
 </template>
 
 <script>
-    import Settings from './change/Settings';
-    import Permissions from './change/Permissions';
-    import Services from './change/Services';
+    import Settings from './change/settings/Settings';
+    import Permissions from './change/permission/Permissions';
+    import Services from './change/services/Services';
+    import CompletionConditions from './change/completion/CompletionConditions';
+    import Events from './change/events/Events';
 
     export default {
         name: "Playground",
 
         components: {
+            Events,
             Permissions,
             Settings,
-            Services
+            Services,
+            CompletionConditions
         },
 
         props: {},
