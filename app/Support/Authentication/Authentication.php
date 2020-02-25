@@ -9,13 +9,12 @@ use BristolSU\ControlDB\Contracts\Repositories\Pivots\UserGroup;
 use BristolSU\ControlDB\Contracts\Repositories\Pivots\UserRole;
 use BristolSU\Support\Activity\Activity;
 use BristolSU\Support\Authentication\Contracts\Authentication as AuthenticationContract;
-use BristolSU\Support\ModuleInstance\ModuleInstance;
 use BristolSU\Support\User\Contracts\UserAuthentication;
 use BristolSU\ControlDB\Contracts\Models\Group;
 use BristolSU\ControlDB\Contracts\Models\Role;
 use BristolSU\ControlDB\Contracts\Models\User;
 use BristolSU\ControlDB\Contracts\Repositories\User as UserRepository;
-use Illuminate\Contracts\Auth\Factory as AuthFactory;
+use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Str;
 
 /**
@@ -84,11 +83,10 @@ class Authentication implements AuthenticationContract
      */
     public function getGroup()
     {
-        $activity = request()->route('activity_slug');
-        if($activity->exists) {
-            if($activity->activity_for === 'group') {
+        if($this->activity()->exists) {
+            if($this->activity()->activity_for === 'group') {
                 return $this->getGroupForUser();
-            } elseif($activity->activity_for === 'role') {
+            } elseif($this->activity()->activity_for === 'role') {
                 return $this->getRole()->group();
             }
         }
@@ -104,8 +102,7 @@ class Authentication implements AuthenticationContract
      */
     public function getRole()
     {
-        $activity = request()->route('activity_slug');
-        if($activity->exists && $activity->activity_for === 'role') {
+        if($this->activity()->exists && $this->activity()->activity_for === 'role') {
             return $this->getRoleForUser();
         }
         return null;
@@ -148,6 +145,14 @@ class Authentication implements AuthenticationContract
     {
     }
 
+    protected function activity(): Activity
+    {
+        if(Request::route() && Request::route()->hasParameter('activity_slug')) {
+            return Request::route()->parameter('activity_slug');
+        }
+        return app(Activity::class);
+    }
+
     /**
      * Find or create a group the user is a member of
      *
@@ -176,7 +181,6 @@ class Authentication implements AuthenticationContract
      * @return Role
      */
     protected function getRoleForUser(): Role {
-        /** @var UserRole $userRoleRepository */
         $userRoleRepository = app(UserRole::class);
         $dataRoleRepository = app(DataRole::class);
         $roleRepository = app(\BristolSU\ControlDB\Contracts\Repositories\Role::class);

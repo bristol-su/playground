@@ -3,7 +3,11 @@
 namespace BristolSU\Playground\Http\Controllers\Auth;
 
 use BristolSU\Playground\Http\Controllers\Controller;
+use BristolSU\Support\User\Contracts\UserAuthentication;
+use BristolSU\Support\User\Contracts\UserRepository;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
@@ -36,4 +40,5 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
 }

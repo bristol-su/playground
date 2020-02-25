@@ -3,7 +3,6 @@
 namespace BristolSU\Playground\Support\Events;
 
 use BristolSU\Support\Events\Contracts\EventManager;
-use BristolSU\Support\Events\Contracts\EventRepository;
 use Illuminate\Database\Eloquent\Model;
 
 class Event extends Model
@@ -49,6 +48,14 @@ class Event extends Model
                 return isset($eventArray['event']) && $eventArray['event'] === $this->event;
             })
             ->first();
+    }
+
+    /** @test */
+    public function getDataAttribute(){
+        if($this->attributes['data'] === null) {
+            return [];
+        }
+        return json_decode($this->attributes['data']);
     }
 
 }

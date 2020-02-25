@@ -5,6 +5,7 @@ namespace BristolSU\Playground\Tests\Support\Module;
 use BristolSU\Playground\Support\Module\ModuleInstanceFactory;
 use BristolSU\Playground\Tests\TestCase;
 use BristolSU\Support\Module\Module;
+use Illuminate\Support\Str;
 
 class ModuleInstanceFactoryTest extends TestCase
 {
@@ -70,6 +71,23 @@ class ModuleInstanceFactoryTest extends TestCase
         $this->assertEquals('alias1', $moduleInstance->alias());
         $this->assertEquals('Name2', $moduleInstance->name);
         $this->assertEquals('Module instance for the Name1 module with an alias alias1', $moduleInstance->description);
+    }
+
+    /** @test */
+    public function the_activity_for_can_be_changed(){
+        $this->assertDatabaseMissing('logics', []);
+
+        $module = $this->prophesize(Module::class);
+        $module->getName()->willReturn('Name1');
+        $module->getAlias()->willReturn('alias1');
+
+        $this->assertDatabaseMissing('activities', []);
+
+        (new ModuleInstanceFactory())->createModuleInstance($module->reveal(), 'Name2', 'group');
+
+        $this->assertDatabaseHas('activities', [
+            'activity_for' => 'group'
+        ]);
     }
 
 }

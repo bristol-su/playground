@@ -2,7 +2,7 @@
 
 namespace BristolSU\Playground\Providers;
 
-use BristolSU\Playground\Listeners\SaveEventInDatabase;
+use BristolSU\Playground\Support\Events\SaveEventInDatabase;
 use BristolSU\Support\Events\Contracts\EventRepository;
 use BristolSU\Support\Module\Contracts\ModuleRepository;
 use Illuminate\Auth\Events\Registered;

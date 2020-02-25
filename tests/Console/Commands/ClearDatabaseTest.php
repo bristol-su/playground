@@ -18,7 +18,6 @@ use BristolSU\Support\ModuleInstance\ModuleInstance;
 use BristolSU\Support\ModuleInstance\Settings\ModuleInstanceSetting;
 use BristolSU\Support\Permissions\Models\ModelPermission;
 use BristolSU\Support\Permissions\Models\ModuleInstancePermission;
-use Illuminate\Support\Facades\DB;
 
 class ClearDatabaseTest extends TestCase
 {

@@ -31,7 +31,7 @@ class ModuleInstanceCompletionConditionController extends Controller
     public function test(ModuleInstance $moduleInstance, CompletionConditionTester $tester, ActivityInstanceResolver $activityInstanceResolver)
     {
         if($moduleInstance->completion_condition_instance_id === null) {
-            return abort(500);
+            return abort(404, 'Could not find the completion condition');
         }
         $activityInstance = $activityInstanceResolver->getActivityInstance();
         return [

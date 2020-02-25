@@ -3,7 +3,6 @@
 namespace BristolSU\Playground\Http\Controllers\Auth;
 
 use BristolSU\Playground\Http\Controllers\Controller;
-use BristolSU\Playground\User;
 use BristolSU\ControlDB\Contracts\Repositories\DataUser;
 use BristolSU\Support\User\Contracts\UserRepository;
 use Illuminate\Foundation\Auth\RegistersUsers;

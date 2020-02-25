@@ -17,7 +17,7 @@ class CreateEventsTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('module_instance_id');
             $table->text('event');
-            $table->json('data');
+            $table->json('data')->nullable();
             $table->timestamps();
         });
     }

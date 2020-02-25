@@ -1,8 +1,7 @@
 <?php
 
-namespace BristolSU\Playground\Listeners;
+namespace BristolSU\Playground\Support\Events;
 
-use BristolSU\Playground\Support\Events\Event;
 use BristolSU\Support\Action\Contracts\TriggerableEvent;
 use BristolSU\Support\ModuleInstance\ModuleInstance;
 

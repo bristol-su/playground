@@ -23,31 +23,31 @@ class UserProvider implements \Illuminate\Contracts\Auth\UserProvider
     }
 
     /**
-     * Retrieve a user by their unique email.
+     * Retrieve a user by their unique id.
      *
-     * @param mixed $email
+     * @param mixed $id
      * @return User|null
      */
-    public function retrieveById($email)
+    public function retrieveById($id)
     {
         try {
-            return $this->userRepository->getById($email);
+            return $this->userRepository->getById($id);
         } catch (ModelNotFoundException $e) {}
         return null;
     }
 
     /**
-     * Retrieve a user by their unique email and "remember me" token.
+     * Retrieve a user by their unique id and "remember me" token.
      *
-     * @param mixed $email
+     * @param mixed $id
      * @param string $token
      * @return \Illuminate\Contracts\Auth\Authenticatable|null
      */
-    public function retrieveByToken($email, $token)
+    public function retrieveByToken($id, $token)
     {
         try {
             $user = $this->userRepository->getFromRememberToken($token);
-            if($user->id === $email) {
+            if($user->id === $id) {
                 return $user;
             }
         } catch (ModelNotFoundException $e) {}
@@ -74,7 +74,6 @@ class UserProvider implements \Illuminate\Contracts\Auth\UserProvider
      */
     public function retrieveByCredentials(array $credentials)
     {
-
         try {
             $dataUser = app(DataUser::class)->getWhere([
                 'email' => $credentials['email']
