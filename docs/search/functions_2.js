@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['can',['can',['../classBristolSU_1_1Playground_1_1Support_1_1Permissions_1_1OverridePermissionTester.html#a7c317ed3d25396652bdfec12c29dcf22',1,'BristolSU::Playground::Support::Permissions::OverridePermissionTester']]],
-  ['commands',['commands',['../classBristolSU_1_1Playground_1_1Console_1_1Kernel.html#a85db311e3a1d78bdc9144e1c199f0f83',1,'BristolSU::Playground::Console::Kernel']]],
-  ['create',['create',['../classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Auth_1_1RegisterController.html#ab92506ee4e0a97cfd7e40a26f1b2113f',1,'BristolSU::Playground::Http::Controllers::Auth::RegisterController']]],
-  ['createmoduleinstance',['createModuleInstance',['../classBristolSU_1_1Playground_1_1Support_1_1Module_1_1ModuleInstanceFactory.html#abd03a5a5361c7c7539341394f77dfe97',1,'BristolSU::Playground::Support::Module::ModuleInstanceFactory']]]
+  ['boot',['boot',['../classBristolSU_1_1Playground_1_1Providers_1_1AppServiceProvider.html#afa9087bb28bd2c31d79af4fc7ec54013',1,'BristolSU\Playground\Providers\AppServiceProvider\boot()'],['../classBristolSU_1_1Playground_1_1Providers_1_1AuthServiceProvider.html#aaf089101848c895f1c1c16151cec3ce4',1,'BristolSU\Playground\Providers\AuthServiceProvider\boot()'],['../classBristolSU_1_1Playground_1_1Providers_1_1RouteServiceProvider.html#aa33e878cd14afb00ceb4c30fef66ba81',1,'BristolSU\Playground\Providers\RouteServiceProvider\boot()'],['../classBristolSU_1_1Playground_1_1Providers_1_1ViewServiceProvider.html#acf0a48764b8264467de39d4327f9117c',1,'BristolSU\Playground\Providers\ViewServiceProvider\boot()']]]
 ];

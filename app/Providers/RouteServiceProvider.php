@@ -39,7 +39,9 @@ class RouteServiceProvider extends ServiceProvider
 
 
         Route::bind('module_instance_override', function($slug) {
-            return ModuleInstance::where('slug', $slug)->firstOrFail();
+            $moduleInstance = ModuleInstance::where('slug', $slug)->firstOrFail();
+	    app()->instance(ModuleInstance::class, $moduleInstance);
+	    return $moduleInstance;
         });
 
         parent::boot();

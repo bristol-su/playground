@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['getgroup',['getGroup',['../classBristolSU_1_1Playground_1_1Support_1_1Authentication_1_1Authentication.html#a6dc89f75525be88b2fcf565c2d094748',1,'BristolSU::Playground::Support::Authentication::Authentication']]],
-  ['getrole',['getRole',['../classBristolSU_1_1Playground_1_1Support_1_1Authentication_1_1Authentication.html#abffde71806d29659973764e4268723b1',1,'BristolSU::Playground::Support::Authentication::Authentication']]],
-  ['getuser',['getUser',['../classBristolSU_1_1Playground_1_1Support_1_1Authentication_1_1Authentication.html#ad5a2609d898d9d5d923f2db5bcae9e46',1,'BristolSU::Playground::Support::Authentication::Authentication']]]
+  ['destroy',['destroy',['../classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Api_1_1ModuleInstanceServiceController.html#a09407a9a39be4311467abbed4f4af36d',1,'BristolSU\Playground\Http\Controllers\Api\ModuleInstanceServiceController\destroy()'],['../classBristolSU_1_1Playground_1_1Http_1_1Controllers_1_1Api_1_1ModuleModuleInstanceController.html#aaab76bbbd48cc5d5ef07606c1c1cbc3f',1,'BristolSU\Playground\Http\Controllers\Api\ModuleModuleInstanceController\destroy()']]]
 ];

@@ -85,10 +85,10 @@ Collaboration diagram for BristolSU\Playground\Support\Authentication\UserProvid
 Public Member Functions</h2></td></tr>
 <tr class="memitem:af5f1b87ddb6de67b38446e91257ac89b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBristolSU_1_1Playground_1_1Support_1_1Authentication_1_1UserProvider.html#af5f1b87ddb6de67b38446e91257ac89b">__construct</a> (UserRepository $userRepository)</td></tr>
 <tr class="separator:af5f1b87ddb6de67b38446e91257ac89b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a384194263db0da1c4e046f5056715752"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBristolSU_1_1Playground_1_1Support_1_1Authentication_1_1UserProvider.html#a384194263db0da1c4e046f5056715752">retrieveById</a> ($email)</td></tr>
-<tr class="separator:a384194263db0da1c4e046f5056715752"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c17787c637ac029af68458e7b55e183"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBristolSU_1_1Playground_1_1Support_1_1Authentication_1_1UserProvider.html#a8c17787c637ac029af68458e7b55e183">retrieveByToken</a> ($email, $token)</td></tr>
-<tr class="separator:a8c17787c637ac029af68458e7b55e183"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60df40291cab055d71e55d121721abea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBristolSU_1_1Playground_1_1Support_1_1Authentication_1_1UserProvider.html#a60df40291cab055d71e55d121721abea">retrieveById</a> ($id)</td></tr>
+<tr class="separator:a60df40291cab055d71e55d121721abea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cf5cea77a30eede72b9daad992e0b34"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBristolSU_1_1Playground_1_1Support_1_1Authentication_1_1UserProvider.html#a1cf5cea77a30eede72b9daad992e0b34">retrieveByToken</a> ($id, $token)</td></tr>
+<tr class="separator:a1cf5cea77a30eede72b9daad992e0b34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74c073a91edfb4fab686911acdea076d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBristolSU_1_1Playground_1_1Support_1_1Authentication_1_1UserProvider.html#a74c073a91edfb4fab686911acdea076d">updateRememberToken</a> (Authenticatable $user, $token)</td></tr>
 <tr class="separator:a74c073a91edfb4fab686911acdea076d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48dca8f27759c0d9c73be94c1258f467"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBristolSU_1_1Playground_1_1Support_1_1Authentication_1_1UserProvider.html#a48dca8f27759c0d9c73be94c1258f467">retrieveByCredentials</a> (array $credentials)</td></tr>
@@ -156,8 +156,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a384194263db0da1c4e046f5056715752"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a384194263db0da1c4e046f5056715752">&#9670;&nbsp;</a></span>retrieveById()</h2>
+<a id="a60df40291cab055d71e55d121721abea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60df40291cab055d71e55d121721abea">&#9670;&nbsp;</a></span>retrieveById()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -166,15 +166,15 @@ Private Attributes</h2></td></tr>
           <td class="memname">BristolSU\Playground\Support\Authentication\UserProvider::retrieveById </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>$email</em></td><td>)</td>
+          <td class="paramname"><em>$id</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Retrieve a user by their unique email.</p>
+<p>Retrieve a user by their unique id.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramtype">mixed</td><td class="paramname">$email</td><td></td></tr>
+    <tr><td class="paramtype">mixed</td><td class="paramname">$id</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -184,8 +184,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a8c17787c637ac029af68458e7b55e183"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8c17787c637ac029af68458e7b55e183">&#9670;&nbsp;</a></span>retrieveByToken()</h2>
+<a id="a1cf5cea77a30eede72b9daad992e0b34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cf5cea77a30eede72b9daad992e0b34">&#9670;&nbsp;</a></span>retrieveByToken()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -194,7 +194,7 @@ Private Attributes</h2></td></tr>
           <td class="memname">BristolSU\Playground\Support\Authentication\UserProvider::retrieveByToken </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>$email</em>, </td>
+          <td class="paramname"><em>$id</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -209,10 +209,10 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Retrieve a user by their unique email and "remember me" token.</p>
+<p>Retrieve a user by their unique id and "remember me" token.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramtype">mixed</td><td class="paramname">$email</td><td></td></tr>
+    <tr><td class="paramtype">mixed</td><td class="paramname">$id</td><td></td></tr>
     <tr><td class="paramtype">string</td><td class="paramname">$token</td><td></td></tr>
   </table>
   </dd>
@@ -297,7 +297,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="UserProvider_8php_source.html#l00108">108</a> of file <a class="el" href="UserProvider_8php_source.html">UserProvider.php</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UserProvider_8php_source.html#l00107">107</a> of file <a class="el" href="UserProvider_8php_source.html">UserProvider.php</a>.</p>
 
 </div>
 </div>

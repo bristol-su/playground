@@ -7,6 +7,7 @@ var searchData=
   ['commands',['Commands',['../namespaceBristolSU_1_1Playground_1_1Console_1_1Commands.html',1,'BristolSU::Playground::Console']]],
   ['console',['Console',['../namespaceBristolSU_1_1Playground_1_1Console.html',1,'BristolSU::Playground']]],
   ['controllers',['Controllers',['../namespaceBristolSU_1_1Playground_1_1Http_1_1Controllers.html',1,'BristolSU::Playground::Http']]],
+  ['events',['Events',['../namespaceBristolSU_1_1Playground_1_1Support_1_1Events.html',1,'BristolSU::Playground::Support']]],
   ['exceptions',['Exceptions',['../namespaceBristolSU_1_1Playground_1_1Exceptions.html',1,'BristolSU::Playground']]],
   ['http',['Http',['../namespaceBristolSU_1_1Playground_1_1Http.html',1,'BristolSU::Playground']]],
   ['middleware',['Middleware',['../namespaceBristolSU_1_1Playground_1_1Http_1_1Middleware.html',1,'BristolSU::Playground::Http']]],
