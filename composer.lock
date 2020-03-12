@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "04668a2fff7dc970504f034a4b46a4f2",
+    "content-hash": "aedd4d47e518cf9052d4477233b4608c",
     "packages": [
         {
             "name": "bristol-su/control",
@@ -108,16 +108,16 @@
         },
         {
             "name": "bristol-su/support",
-            "version": "v3.0.1",
+            "version": "v3.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bristol-su/support.git",
-                "reference": "64fcded1e6dbf5c0b03f5f39cfaead825eb3a5b9"
+                "reference": "3999307d92480932810662845daa2688c3cdffa4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bristol-su/support/zipball/64fcded1e6dbf5c0b03f5f39cfaead825eb3a5b9",
-                "reference": "64fcded1e6dbf5c0b03f5f39cfaead825eb3a5b9",
+                "url": "https://api.github.com/repos/bristol-su/support/zipball/3999307d92480932810662845daa2688c3cdffa4",
+                "reference": "3999307d92480932810662845daa2688c3cdffa4",
                 "shasum": ""
             },
             "require": {
@@ -176,69 +176,25 @@
                 "portal",
                 "sdk"
             ],
-            "time": "2020-02-28T20:41:51+00:00"
-        },
-        {
-            "name": "bristol-su/template",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/bristol-su/template.git",
-                "reference": "84121781280ce86e0339c0aa0c13cee1579f6440"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/bristol-su/template/zipball/84121781280ce86e0339c0aa0c13cee1579f6440",
-                "reference": "84121781280ce86e0339c0aa0c13cee1579f6440",
-                "shasum": ""
-            },
-            "require": {
-                "bristol-su/support": "^3.0",
-                "php": "^7.2"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "BristolSU\\Module\\Template\\ModuleServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "BristolSU\\Module\\Template\\": "app/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Toby Twigger",
-                    "email": "tobytwigger1@gmail.com"
-                }
-            ],
-            "description": "A template module for the Bristol SU Portal Project",
-            "time": "2020-02-22T13:55:31+00:00"
+            "time": "2020-03-11T15:30:12+00:00"
         },
         {
             "name": "bristol-su/typeform",
-            "version": "dev-master",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bristol-su/typeform.git",
-                "reference": "fbda4c65cbfd684c23a5fee40b9816473de15787"
+                "reference": "bc7aad40dcd49f328b96001efa1cf6881b36d6ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bristol-su/typeform/zipball/fbda4c65cbfd684c23a5fee40b9816473de15787",
-                "reference": "fbda4c65cbfd684c23a5fee40b9816473de15787",
+                "url": "https://api.github.com/repos/bristol-su/typeform/zipball/bc7aad40dcd49f328b96001efa1cf6881b36d6ad",
+                "reference": "bc7aad40dcd49f328b96001efa1cf6881b36d6ad",
                 "shasum": ""
             },
             "require": {
                 "bristol-su/support": "^3.0",
-                "bristol-su/typeform-service": "dev-master",
+                "bristol-su/typeform-service": "^1.0",
                 "ext-json": "*",
                 "php": "^7.2",
                 "watr/typeform": "^1.5"
@@ -269,20 +225,20 @@
                     "email": "toby.twigger@bristol.ac.uk"
                 }
             ],
-            "time": "2020-02-22T18:30:31+00:00"
+            "time": "2020-03-12T12:43:43+00:00"
         },
         {
             "name": "bristol-su/typeform-service",
-            "version": "dev-master",
+            "version": "v1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bristol-su/typeform-service.git",
-                "reference": "55c375afe54ff03985fc7ae5b36cb9bd39abc977"
+                "reference": "1b7b3ba67d27aa4d9a71fe40410df0cf0163efe1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bristol-su/typeform-service/zipball/55c375afe54ff03985fc7ae5b36cb9bd39abc977",
-                "reference": "55c375afe54ff03985fc7ae5b36cb9bd39abc977",
+                "url": "https://api.github.com/repos/bristol-su/typeform-service/zipball/1b7b3ba67d27aa4d9a71fe40410df0cf0163efe1",
+                "reference": "1b7b3ba67d27aa4d9a71fe40410df0cf0163efe1",
                 "shasum": ""
             },
             "require": {
@@ -317,7 +273,7 @@
                 }
             ],
             "description": "A third party service for typeform",
-            "time": "2020-02-22T17:47:36+00:00"
+            "time": "2020-03-09T17:21:47+00:00"
         },
         {
             "name": "bristol-su/upload-file",
@@ -1678,16 +1634,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v6.18.0",
+            "version": "v6.18.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "077b895d935b7fbcfb1d1eb34217fa4f80a130d8"
+                "reference": "367c2c8dfdfe83cb2ddbc029c0222174098d093a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/077b895d935b7fbcfb1d1eb34217fa4f80a130d8",
-                "reference": "077b895d935b7fbcfb1d1eb34217fa4f80a130d8",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/367c2c8dfdfe83cb2ddbc029c0222174098d093a",
+                "reference": "367c2c8dfdfe83cb2ddbc029c0222174098d093a",
                 "shasum": ""
             },
             "require": {
@@ -1820,7 +1776,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2020-03-03T13:14:27+00:00"
+            "time": "2020-03-10T14:11:04+00:00"
         },
         {
             "name": "laravel/passport",
@@ -2140,16 +2096,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.64",
+            "version": "1.0.65",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "d13c43dbd4b791f815215959105a008515d1a2e0"
+                "reference": "8f17b3ba67097aafb8318cd5c553b1acf7c891c8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/d13c43dbd4b791f815215959105a008515d1a2e0",
-                "reference": "d13c43dbd4b791f815215959105a008515d1a2e0",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/8f17b3ba67097aafb8318cd5c553b1acf7c891c8",
+                "reference": "8f17b3ba67097aafb8318cd5c553b1acf7c891c8",
                 "shasum": ""
             },
             "require": {
@@ -2220,7 +2176,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2020-02-05T18:14:17+00:00"
+            "time": "2020-03-08T18:53:20+00:00"
         },
         {
             "name": "league/oauth2-server",
@@ -2740,22 +2696,22 @@
         },
         {
             "name": "orchestra/testbench",
-            "version": "v4.6.0",
+            "version": "v4.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/orchestral/testbench.git",
-                "reference": "0b537bf4d34a8da92759b79fcbe371e10b0135f0"
+                "reference": "133e2756f15e8e605c22973d255290798f933e70"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orchestral/testbench/zipball/0b537bf4d34a8da92759b79fcbe371e10b0135f0",
-                "reference": "0b537bf4d34a8da92759b79fcbe371e10b0135f0",
+                "url": "https://api.github.com/repos/orchestral/testbench/zipball/133e2756f15e8e605c22973d255290798f933e70",
+                "reference": "133e2756f15e8e605c22973d255290798f933e70",
                 "shasum": ""
             },
             "require": {
-                "laravel/framework": "^6.9",
+                "laravel/framework": "^6.18",
                 "mockery/mockery": "~1.2.3 || ^1.3.1",
-                "orchestra/testbench-core": "^4.6",
+                "orchestra/testbench-core": "^4.7",
                 "php": ">=7.2",
                 "phpunit/phpunit": "^8.3 || ^9.0"
             },
@@ -2786,20 +2742,20 @@
                 "orchestral",
                 "testing"
             ],
-            "time": "2020-01-29T23:03:49+00:00"
+            "time": "2020-03-06T23:23:46+00:00"
         },
         {
             "name": "orchestra/testbench-core",
-            "version": "v4.6.0",
+            "version": "v4.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/orchestral/testbench-core.git",
-                "reference": "6e6f1c330d37563d2ecca125d6b672e752ab88b5"
+                "reference": "fad3769a7903021f5784d5d76aa6eb3a3904b215"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orchestral/testbench-core/zipball/6e6f1c330d37563d2ecca125d6b672e752ab88b5",
-                "reference": "6e6f1c330d37563d2ecca125d6b672e752ab88b5",
+                "url": "https://api.github.com/repos/orchestral/testbench-core/zipball/fad3769a7903021f5784d5d76aa6eb3a3904b215",
+                "reference": "fad3769a7903021f5784d5d76aa6eb3a3904b215",
                 "shasum": ""
             },
             "require": {
@@ -2807,13 +2763,13 @@
                 "php": ">=7.2"
             },
             "require-dev": {
-                "laravel/framework": "^6.9",
-                "laravel/laravel": "dev-master",
-                "mockery/mockery": "^1.2.3",
+                "laravel/framework": "^6.18.0",
+                "laravel/laravel": "6.x-dev",
+                "mockery/mockery": "~1.2.3 || ^1.3.1",
                 "phpunit/phpunit": "^8.3 || ^9.0"
             },
             "suggest": {
-                "laravel/framework": "Required for testing (^6.9).",
+                "laravel/framework": "Required for testing (^6.18).",
                 "mockery/mockery": "Allow using Mockery for testing (^1.2.3).",
                 "orchestra/testbench-browser-kit": "Allow using legacy Laravel BrowserKit for testing (^4.0).",
                 "orchestra/testbench-dusk": "Allow using Laravel Dusk for testing (^4.0).",
@@ -2851,7 +2807,7 @@
                 "orchestral",
                 "testing"
             ],
-            "time": "2020-01-29T22:59:50+00:00"
+            "time": "2020-03-06T23:07:37+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -7120,10 +7076,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "bristol-su/template": 20,
-        "bristol-su/typeform": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
