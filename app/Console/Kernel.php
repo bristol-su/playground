@@ -4,6 +4,7 @@ namespace BristolSU\Playground\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+use BristolSU\Support\ModuleInstance\Contracts\Scheduler\CommandStore;
 
 class Kernel extends ConsoleKernel
 {
@@ -24,6 +25,11 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
+	    foreach(app(CommandStore::class)->all() as $alias => $commands) {
+            foreach($commands as $command => $cron) {
+                $schedule->command($command)->cron($cron);
+            }
+        }
     }
 
     /**
