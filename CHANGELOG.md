@@ -5,7 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [1.2] - (16/03/2020)
+
+### Changed
+- Bump SDK version
+- Use the request parameters to track the activity instance
+
+### Added
+- Bind default testing Authentication and ActivityInstance contracts in tests
 
 ## [1.1.2] - (12/03/2020)
 
@@ -54,7 +61,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Open and save module instances
 - Change settings, permissions and third party connections
 
-[Unreleased]: https://github.com/bristol-su/playground/compare/v1.1.2...HEAD
+[Unreleased]: https://github.com/bristol-su/playground/compare/v1.2...HEAD
+[1.2]: https://github.com/bristol-su/playground/compare/v1.1.2...v1.2
 [1.1.2]: https://github.com/bristol-su/playground/compare/v1.1.1...v1.1.2
 [1.1.1]: https://github.com/bristol-su/playground/compare/v1.1...v1.1.1
 [1.1]: https://github.com/bristol-su/playground/compare/v1.0.3...v1.1

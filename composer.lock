@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aedd4d47e518cf9052d4477233b4608c",
+    "content-hash": "aa5da710b0d95766004413d74aab9391",
     "packages": [
         {
             "name": "bristol-su/control",
@@ -108,16 +108,16 @@
         },
         {
             "name": "bristol-su/support",
-            "version": "v3.0.2",
+            "version": "v3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bristol-su/support.git",
-                "reference": "3999307d92480932810662845daa2688c3cdffa4"
+                "reference": "f6a3e8a1623de5deee26f0129d8d35870b7e7d93"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bristol-su/support/zipball/3999307d92480932810662845daa2688c3cdffa4",
-                "reference": "3999307d92480932810662845daa2688c3cdffa4",
+                "url": "https://api.github.com/repos/bristol-su/support/zipball/f6a3e8a1623de5deee26f0129d8d35870b7e7d93",
+                "reference": "f6a3e8a1623de5deee26f0129d8d35870b7e7d93",
                 "shasum": ""
             },
             "require": {
@@ -176,7 +176,7 @@
                 "portal",
                 "sdk"
             ],
-            "time": "2020-03-11T15:30:12+00:00"
+            "time": "2020-03-16T13:45:25+00:00"
         },
         {
             "name": "bristol-su/typeform",
@@ -277,20 +277,20 @@
         },
         {
             "name": "bristol-su/upload-file",
-            "version": "v1.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bristol-su/upload-file.git",
-                "reference": "d857714a72a5b5e7a28ce31e83cd75f4c7349e34"
+                "reference": "dd719cdc67db44440f55bb27b9ab4b3bafe31ecc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bristol-su/upload-file/zipball/d857714a72a5b5e7a28ce31e83cd75f4c7349e34",
-                "reference": "d857714a72a5b5e7a28ce31e83cd75f4c7349e34",
+                "url": "https://api.github.com/repos/bristol-su/upload-file/zipball/dd719cdc67db44440f55bb27b9ab4b3bafe31ecc",
+                "reference": "dd719cdc67db44440f55bb27b9ab4b3bafe31ecc",
                 "shasum": ""
             },
             "require": {
-                "bristol-su/support": "^3.0",
+                "bristol-su/support": "^3.1",
                 "php": "^7.2"
             },
             "require-dev": {
@@ -319,7 +319,7 @@
                     "email": "toby.twigger@bristol.ac.uk"
                 }
             ],
-            "time": "2020-03-05T15:06:04+00:00"
+            "time": "2020-03-16T14:14:40+00:00"
         },
         {
             "name": "defuse/php-encryption",
@@ -6449,16 +6449,16 @@
         },
         {
             "name": "vlucas/phpdotenv",
-            "version": "v3.6.0",
+            "version": "v3.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "1bdf24f065975594f6a117f0f1f6cabf1333b156"
+                "reference": "8f7961f7b9deb3b432452c18093cf16f88205902"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/1bdf24f065975594f6a117f0f1f6cabf1333b156",
-                "reference": "1bdf24f065975594f6a117f0f1f6cabf1333b156",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/8f7961f7b9deb3b432452c18093cf16f88205902",
+                "reference": "8f7961f7b9deb3b432452c18093cf16f88205902",
                 "shasum": ""
             },
             "require": {
@@ -6467,7 +6467,11 @@
                 "symfony/polyfill-ctype": "^1.9"
             },
             "require-dev": {
+                "ext-filter": "*",
                 "phpunit/phpunit": "^4.8.35 || ^5.0 || ^6.0 || ^7.0"
+            },
+            "suggest": {
+                "ext-filter": "Required to use the boolean validator."
             },
             "type": "library",
             "extra": {
@@ -6502,7 +6506,7 @@
                 "env",
                 "environment"
             ],
-            "time": "2019-09-10T21:37:39+00:00"
+            "time": "2020-03-12T13:44:00+00:00"
         },
         {
             "name": "watr/typeform",

@@ -2,7 +2,11 @@
 
 namespace BristolSU\Playground\Tests;
 
+use BristolSU\Support\ActivityInstance\Contracts\ActivityInstanceResolver;
+use BristolSU\Support\Authentication\Contracts\Authentication;
+use BristolSU\Support\Testing\ActivityInstance\LaravelAuthActivityInstanceResolver;
 use BristolSU\Support\Testing\AssertsEloquentModels;
+use BristolSU\Support\Testing\Authentication\SessionAuthentication;
 use BristolSU\Support\Testing\CreatesSdkEnvironment;
 use BristolSU\Support\Testing\HandlesAuthentication;
 use Illuminate\Database\Eloquent\Factory as ModelFactory;
@@ -14,7 +18,6 @@ abstract class TestCase extends \Illuminate\Foundation\Testing\TestCase
 
     public function setUp(): void
     {
-
         parent::setUp();
         $this->app['config']->set('database.default', 'testing');
         $this->app['config']->set('database.connections.testing', [
@@ -26,7 +29,8 @@ abstract class TestCase extends \Illuminate\Foundation\Testing\TestCase
         $this->artisan('migrate', ['--database' => 'testing']);
         $this->createSdkEnvironment($this->app);
         $this->app->make(ModelFactory::class)->load(__DIR__ . '/../vendor/bristol-su/support/database/factories');
-
+        $this->app->bind(Authentication::class, SessionAuthentication::class);
+        $this->app->bind(ActivityInstanceResolver::class, LaravelAuthActivityInstanceResolver::class);
     }
 
 }
