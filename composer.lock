@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7215c2920bac456f6a0e3cce28e8b977",
+    "content-hash": "aa5da710b0d95766004413d74aab9391",
     "packages": [
         {
             "name": "bristol-su/control",
@@ -108,11 +108,17 @@
         },
         {
             "name": "bristol-su/support",
-            "version": "dev-develop",
+            "version": "v3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bristol-su/support.git",
+                "reference": "f6a3e8a1623de5deee26f0129d8d35870b7e7d93"
+            },
             "dist": {
-                "type": "path",
-                "url": "./../support",
-                "reference": "0a2f2b2717361ac7a352ce8eab91170d864e8163"
+                "type": "zip",
+                "url": "https://api.github.com/repos/bristol-su/support/zipball/f6a3e8a1623de5deee26f0129d8d35870b7e7d93",
+                "reference": "f6a3e8a1623de5deee26f0129d8d35870b7e7d93",
+                "shasum": ""
             },
             "require": {
                 "bristol-su/control": "^1.0",
@@ -154,11 +160,7 @@
                     "database/factories/"
                 ]
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "BristolSU\\Support\\Tests\\": "tests/"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-3.0-or-later"
             ],
@@ -173,7 +175,8 @@
                 "bristol su",
                 "portal",
                 "sdk"
-            ]
+            ],
+            "time": "2020-03-16T13:45:25+00:00"
         },
         {
             "name": "bristol-su/typeform",
@@ -274,20 +277,20 @@
         },
         {
             "name": "bristol-su/upload-file",
-            "version": "v1.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bristol-su/upload-file.git",
-                "reference": "d857714a72a5b5e7a28ce31e83cd75f4c7349e34"
+                "reference": "dd719cdc67db44440f55bb27b9ab4b3bafe31ecc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bristol-su/upload-file/zipball/d857714a72a5b5e7a28ce31e83cd75f4c7349e34",
-                "reference": "d857714a72a5b5e7a28ce31e83cd75f4c7349e34",
+                "url": "https://api.github.com/repos/bristol-su/upload-file/zipball/dd719cdc67db44440f55bb27b9ab4b3bafe31ecc",
+                "reference": "dd719cdc67db44440f55bb27b9ab4b3bafe31ecc",
                 "shasum": ""
             },
             "require": {
-                "bristol-su/support": "^3.0",
+                "bristol-su/support": "^3.1",
                 "php": "^7.2"
             },
             "require-dev": {
@@ -316,7 +319,7 @@
                     "email": "toby.twigger@bristol.ac.uk"
                 }
             ],
-            "time": "2020-03-05T15:06:04+00:00"
+            "time": "2020-03-16T14:14:40+00:00"
         },
         {
             "name": "defuse/php-encryption",
@@ -7075,18 +7078,9 @@
             "time": "2020-03-02T05:59:21+00:00"
         }
     ],
-    "aliases": [
-        {
-            "alias": "3.0.2",
-            "alias_normalized": "3.0.2.0",
-            "version": "dev-develop",
-            "package": "bristol-su/support"
-        }
-    ],
+    "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "bristol-su/support": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
