@@ -24,7 +24,7 @@ class HandlerTest extends TestCase
 
         $request = $this->prophesize(Request::class);
         $request->route('activity_slug')->shouldBeCalled()->willReturn($activity);
-        $request->url()->willReturn('https://example.com');
+        $request->fullUrl()->willReturn('https://example.com');
 
         $resourceIdGenerator = $this->prophesize(ResourceIdGenerator::class);
         $resourceIdGenerator->fromString('user')->shouldBeCalled()->willReturn(1);
@@ -52,7 +52,7 @@ class HandlerTest extends TestCase
 
         $request = $this->prophesize(Request::class);
         $request->route('activity_slug')->shouldBeCalled()->willReturn($activity);
-        $request->url()->willReturn('https://example.com');
+        $request->fullUrl()->willReturn('https://example.com?a=1');
 
         $resourceIdGenerator = $this->prophesize(ResourceIdGenerator::class);
         $resourceIdGenerator->fromString('user')->shouldBeCalled()->willReturn(1);
@@ -70,11 +70,10 @@ class HandlerTest extends TestCase
 
         $exception = new NotInActivityInstanceException();
         $handler = new Handler($this->app);
-        /** @var RedirectResponse $response */
         $response = $handler->render($request->reveal(), $exception);
 
         $this->assertInstanceOf(RedirectResponse::class, $response);
-        $this->assertEquals('https://example.com', $response->getTargetUrl());
+        $this->assertEquals('https://example.com?a=1', $response->getTargetUrl());
     }
 
 }

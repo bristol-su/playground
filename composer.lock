@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aedd4d47e518cf9052d4477233b4608c",
+    "content-hash": "7215c2920bac456f6a0e3cce28e8b977",
     "packages": [
         {
             "name": "bristol-su/control",
@@ -108,17 +108,11 @@
         },
         {
             "name": "bristol-su/support",
-            "version": "v3.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/bristol-su/support.git",
-                "reference": "3999307d92480932810662845daa2688c3cdffa4"
-            },
+            "version": "dev-develop",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/bristol-su/support/zipball/3999307d92480932810662845daa2688c3cdffa4",
-                "reference": "3999307d92480932810662845daa2688c3cdffa4",
-                "shasum": ""
+                "type": "path",
+                "url": "./../support",
+                "reference": "0a2f2b2717361ac7a352ce8eab91170d864e8163"
             },
             "require": {
                 "bristol-su/control": "^1.0",
@@ -160,7 +154,11 @@
                     "database/factories/"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "BristolSU\\Support\\Tests\\": "tests/"
+                }
+            },
             "license": [
                 "GPL-3.0-or-later"
             ],
@@ -175,8 +173,7 @@
                 "bristol su",
                 "portal",
                 "sdk"
-            ],
-            "time": "2020-03-11T15:30:12+00:00"
+            ]
         },
         {
             "name": "bristol-su/typeform",
@@ -6449,16 +6446,16 @@
         },
         {
             "name": "vlucas/phpdotenv",
-            "version": "v3.6.0",
+            "version": "v3.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "1bdf24f065975594f6a117f0f1f6cabf1333b156"
+                "reference": "8f7961f7b9deb3b432452c18093cf16f88205902"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/1bdf24f065975594f6a117f0f1f6cabf1333b156",
-                "reference": "1bdf24f065975594f6a117f0f1f6cabf1333b156",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/8f7961f7b9deb3b432452c18093cf16f88205902",
+                "reference": "8f7961f7b9deb3b432452c18093cf16f88205902",
                 "shasum": ""
             },
             "require": {
@@ -6467,7 +6464,11 @@
                 "symfony/polyfill-ctype": "^1.9"
             },
             "require-dev": {
+                "ext-filter": "*",
                 "phpunit/phpunit": "^4.8.35 || ^5.0 || ^6.0 || ^7.0"
+            },
+            "suggest": {
+                "ext-filter": "Required to use the boolean validator."
             },
             "type": "library",
             "extra": {
@@ -6502,7 +6503,7 @@
                 "env",
                 "environment"
             ],
-            "time": "2019-09-10T21:37:39+00:00"
+            "time": "2020-03-12T13:44:00+00:00"
         },
         {
             "name": "watr/typeform",
@@ -7074,9 +7075,18 @@
             "time": "2020-03-02T05:59:21+00:00"
         }
     ],
-    "aliases": [],
+    "aliases": [
+        {
+            "alias": "3.0.2",
+            "alias_normalized": "3.0.2.0",
+            "version": "dev-develop",
+            "package": "bristol-su/support"
+        }
+    ],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "bristol-su/support": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

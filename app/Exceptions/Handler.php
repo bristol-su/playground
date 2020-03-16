@@ -70,7 +70,7 @@ class Handler extends ExceptionHandler
                     app(ResourceIdGenerator::class)->fromString($activity->activity_for)
                 );
             app(ActivityInstanceResolver::class)->setActivityInstance($activityInstance);
-            return redirect()->to($request->url());
+            return redirect()->to($request->fullUrl());
         }
 
         return parent::render($request, $exception);

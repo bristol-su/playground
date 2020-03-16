@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- Bump SDK version
+- Use the request parameters to track the activity instance
+
+### Added
+- Bind default testing Authentication and ActivityInstance contracts in tests
+
 ## [1.1.2] - (12/03/2020)
 
 ### Added
