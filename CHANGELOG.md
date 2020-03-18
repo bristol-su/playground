@@ -5,6 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.1] - (18/03/2020)
+
+### Added
+- Updated Dependencies
+
 ## [1.2] - (16/03/2020)
 
 ### Changed
@@ -61,7 +66,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Open and save module instances
 - Change settings, permissions and third party connections
 
-[Unreleased]: https://github.com/bristol-su/playground/compare/v1.2...HEAD
+[Unreleased]: https://github.com/bristol-su/playground/compare/v1.2.1...HEAD
+[1.2.1]: https://github.com/bristol-su/playground/compare/v1.2...v1.2.1
 [1.2]: https://github.com/bristol-su/playground/compare/v1.1.2...v1.2
 [1.1.2]: https://github.com/bristol-su/playground/compare/v1.1.1...v1.1.2
 [1.1.1]: https://github.com/bristol-su/playground/compare/v1.1...v1.1.1
