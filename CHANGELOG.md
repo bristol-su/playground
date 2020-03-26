@@ -12,7 +12,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Confirmation before module instance is deleted
 
 ### Added
-- Added control to the playground
 - Assign Roles module
 
 ## [1.2.1] - (18/03/2020)

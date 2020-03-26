@@ -4,15 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4d2c060a24a1c6f6f259d94349b16e16",
+    "content-hash": "9769330b1f71a3859a47366463e4c476",
     "packages": [
         {
             "name": "bristol-su/assign-roles",
-            "version": "dev-master",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bristol-su/assign-roles.git",
+                "reference": "668fa3d974438f2bb34f01bbd87bf32130d81079"
+            },
             "dist": {
-                "type": "path",
-                "url": "./../../modules/assign-roles",
-                "reference": "ebbbee8c9db08bb3803ff5a4f0f9ca078e42c98f"
+                "type": "zip",
+                "url": "https://api.github.com/repos/bristol-su/assign-roles/zipball/668fa3d974438f2bb34f01bbd87bf32130d81079",
+                "reference": "668fa3d974438f2bb34f01bbd87bf32130d81079",
+                "shasum": ""
             },
             "require": {
                 "bristol-su/support": "^4.2",
@@ -34,11 +40,7 @@
                     "BristolSU\\Module\\AssignRoles\\": "app/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "BristolSU\\Module\\Tests\\AssignRoles\\": "tests/"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -48,7 +50,8 @@
                     "email": "tobytwigger1@gmail.com"
                 }
             ],
-            "description": "A module for the Bristol SU Portal Project to assign roles to members of groups"
+            "description": "A module for the Bristol SU Portal Project to assign roles to members of groups",
+            "time": "2020-03-26T13:15:35+00:00"
         },
         {
             "name": "bristol-su/control",
@@ -1011,23 +1014,23 @@
         },
         {
             "name": "firebase/php-jwt",
-            "version": "v5.1.0",
+            "version": "v5.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/firebase/php-jwt.git",
-                "reference": "4566062c68f76f43d44f1643f4970fe89757d4c6"
+                "reference": "feb0e820b8436873675fd3aca04f3728eb2185cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/firebase/php-jwt/zipball/4566062c68f76f43d44f1643f4970fe89757d4c6",
-                "reference": "4566062c68f76f43d44f1643f4970fe89757d4c6",
+                "url": "https://api.github.com/repos/firebase/php-jwt/zipball/feb0e820b8436873675fd3aca04f3728eb2185cb",
+                "reference": "feb0e820b8436873675fd3aca04f3728eb2185cb",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.8|^5"
+                "phpunit/phpunit": ">=4.8 <=9"
             },
             "type": "library",
             "autoload": {
@@ -1053,7 +1056,11 @@
             ],
             "description": "A simple library to encode and decode JSON Web Tokens (JWT) in PHP. Should conform to the current spec.",
             "homepage": "https://github.com/firebase/php-jwt",
-            "time": "2020-02-24T23:15:03+00:00"
+            "keywords": [
+                "jwt",
+                "php"
+            ],
+            "time": "2020-03-25T18:49:23+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -1865,16 +1872,16 @@
         },
         {
             "name": "league/commonmark",
-            "version": "1.3.1",
+            "version": "1.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/commonmark.git",
-                "reference": "8015f806173c6ee54de25a87c2d69736696e88db"
+                "reference": "75542a366ccbe1896ed79fcf3e8e68206d6c4257"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/8015f806173c6ee54de25a87c2d69736696e88db",
-                "reference": "8015f806173c6ee54de25a87c2d69736696e88db",
+                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/75542a366ccbe1896ed79fcf3e8e68206d6c4257",
+                "reference": "75542a366ccbe1896ed79fcf3e8e68206d6c4257",
                 "shasum": ""
             },
             "require": {
@@ -1935,7 +1942,7 @@
                 "md",
                 "parser"
             ],
-            "time": "2020-02-28T18:53:50+00:00"
+            "time": "2020-03-25T19:55:28+00:00"
         },
         {
             "name": "league/event",
