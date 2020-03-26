@@ -12,9 +12,11 @@
     "require": {
         "php": "^7.2",
         "bristol-su/static-page": "^1.0",
-        "bristol-su/support": "^4.0",
+        "bristol-su/support": "^4.2",
         "bristol-su/typeform": "^1.0",
         "bristol-su/upload-file": "^1.0",
+	"bristol-su/assign-roles": "dev-develop",
+	"bristol-su/assign-roles": "@dev",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "^6.2",
         "laravel/tinker": "^2.0"
@@ -67,5 +69,11 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
         ]
-    }
+    },
+    "repositories": [
+	{
+	    "type": "path",
+	    "url": "./../../modules/assign-roles"
+	}
+    ]
 }

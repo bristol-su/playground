@@ -54,12 +54,30 @@
             },
 
             deleteModuleInstance(moduleInstance) {
-                this.$http.delete('/api/module/' + this.portalModule.alias + '/module-instance/' + moduleInstance.id)
-                    .then(response => {
-                        this.$notify.success('Deleted module ' + moduleInstance.name);
-                        this.moduleInstances.splice(this.moduleInstances.indexOf(moduleInstance), 1);
+                this.$bvModal.msgBoxConfirm('Are you sure you want to delete this module?', {
+                    title: 'Please Confirm',
+                    size: 'sm',
+                    buttonSize: 'sm',
+                    okVariant: 'danger',
+                    okTitle: 'YES',
+                    cancelTitle: 'NO',
+                    footerClass: 'p-2',
+                    hideHeaderClose: false,
+                    centered: true
+                })
+                    .then(value => {
+                        if(value) {
+                            this.$http.delete('/api/module/' + this.portalModule.alias + '/module-instance/' + moduleInstance.id)
+                                .then(response => {
+                                    this.$notify.success('Deleted module ' + moduleInstance.name);
+                                    this.moduleInstances.splice(this.moduleInstances.indexOf(moduleInstance), 1);
+                                })
+                                .catch(error => this.$notify.warning('Could not delete module instance'));
+                        }
                     })
-                    .catch(error => this.$notify.warning('Could not delete module instance'));
+                    .catch(err => {
+                        // An error occurred
+                    });
             }
         },
 

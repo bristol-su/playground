@@ -47,13 +47,7 @@
 
         methods: {
             update() {
-                axios.all(Object.keys(this.currentModel).filter(key => {
-                    let settings = this.settings.filter(setting => setting.key === key);
-                    if(settings.length > 0) {
-                        return this.currentModel[key] !== settings[0].value;
-                    }
-                    return true;
-                }).map(key => {
+                axios.all(Object.keys(this.currentModel).map(key => {
                     let settings = this.settings.filter(setting => setting.key === key);
                     if(settings.length > 0) {
                         return this.$http.patch(
@@ -70,10 +64,10 @@
 
             updateModel() {
                 let settings = {};
-                this.settings.forEach(setting => settings[setting.key] = setting.value);
-                Object.keys(this.currentModel).forEach(key => {
+		Object.keys(this.currentModel).forEach(key => {
                     settings[key] = this.currentModel[key].value;
                 });
+		this.settings.forEach(setting => settings[setting.key] = setting.value);
                 this.currentModel = VueFormGenerator.schema.createDefaultObject(this.moduleSettings.schema, settings);
             }
         },

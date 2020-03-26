@@ -18,4 +18,5 @@ Auth::routes(['verify' => false]);
 
 Route::middleware(['auth:web', 'nonmodule'])->group(function() {
     Route::get('/', 'HomeController@index');
+    Route::get('/control', 'ControlController@index')->name('control');
 });
