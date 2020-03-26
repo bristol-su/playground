@@ -12,3 +12,6 @@ npm-debug.log
 yarn-error.log
 /coverage
 /.idea
+.vapor/
+.env.production
+.env.staging
