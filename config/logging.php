@@ -35,6 +35,13 @@ return [
     */
 
     'channels' => [
+
+        'vapor-slack' => [
+            'driver' => 'stack',
+            'channels' => ['stderr', 'verbose-slack'],
+            'ignore_exceptions' => false,
+        ],
+
         'stack' => [
             'driver' => 'stack',
             'channels' => ['daily'],
@@ -60,6 +67,14 @@ return [
             'username' => 'Laravel Log',
             'emoji' => ':boom:',
             'level' => 'critical',
+        ],
+
+        'verbose-slack' => [
+            'driver' => 'slack',
+            'url' => env('LOG_SLACK_WEBHOOK_URL'),
+            'username' => 'Laravel Log',
+            'emoji' => ':boom:',
+            'level' => 'debug',
         ],
 
         'papertrail' => [
