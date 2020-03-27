@@ -10,7 +10,7 @@
     ],
     "license": "GPL-3.0-or-later",
     "require": {
-        "php": "^7.2",
+        "php": "^7.3",
         "bristol-su/assign-roles": "dev-develop",
         "bristol-su/static-page": "^1.0",
         "bristol-su/support": "^4.2",

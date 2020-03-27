@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Fix js bug with loading old settings into the settings pane
 - Confirmation before module instance is deleted
+- Do not report NotInActivityInstanceException
+- Remove serveStatic function
 
 ### Added
 - Assign Roles module

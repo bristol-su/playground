@@ -66,10 +66,4 @@ return [
 
     ],
 
-    'static_content' => [
-        'bucket' => env('AWS_STATIC_BUCKET'),
-        'folder' => env('AWS_STATIC_FOLDER'),
-        'url' => env('AWS_STATIC_URL')
-    ]
-
 ];
