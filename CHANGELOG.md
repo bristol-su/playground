@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Assign Roles module
+- Failed jobs table
 
 ## [1.2.1] - (18/03/2020)
 
