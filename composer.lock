@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "940ac06ddb27841592310bbd1468df66",
+    "content-hash": "a79eeeacf01c96b3758e56e8ca5c1003",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -242,16 +242,16 @@
         },
         {
             "name": "bristol-su/support",
-            "version": "v4.2",
+            "version": "v4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bristol-su/support.git",
-                "reference": "3c5f05d0998166ded12b5824bdf15017f2b591dd"
+                "reference": "63e34e036e81e31bb5506ea01e9b320af4aaa813"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bristol-su/support/zipball/3c5f05d0998166ded12b5824bdf15017f2b591dd",
-                "reference": "3c5f05d0998166ded12b5824bdf15017f2b591dd",
+                "url": "https://api.github.com/repos/bristol-su/support/zipball/63e34e036e81e31bb5506ea01e9b320af4aaa813",
+                "reference": "63e34e036e81e31bb5506ea01e9b320af4aaa813",
                 "shasum": ""
             },
             "require": {
@@ -314,16 +314,16 @@
         },
         {
             "name": "bristol-su/typeform",
-            "version": "dev-master",
+            "version": "v1.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bristol-su/typeform.git",
-                "reference": "0f4a110ccc7699ceeb4b7248f6e303e534188c66"
+                "reference": "7ce4fbd3f2ab105f617d41c177ac8053e4b271a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bristol-su/typeform/zipball/0f4a110ccc7699ceeb4b7248f6e303e534188c66",
-                "reference": "0f4a110ccc7699ceeb4b7248f6e303e534188c66",
+                "url": "https://api.github.com/repos/bristol-su/typeform/zipball/7ce4fbd3f2ab105f617d41c177ac8053e4b271a8",
+                "reference": "7ce4fbd3f2ab105f617d41c177ac8053e4b271a8",
                 "shasum": ""
             },
             "require": {
@@ -359,7 +359,7 @@
                     "email": "toby.twigger@bristol.ac.uk"
                 }
             ],
-            "time": "2020-03-31T11:01:23+00:00"
+            "time": "2020-03-31T15:17:38+00:00"
         },
         {
             "name": "bristol-su/typeform-service",
@@ -411,16 +411,16 @@
         },
         {
             "name": "bristol-su/upload-file",
-            "version": "v1.0.3",
+            "version": "v1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bristol-su/upload-file.git",
-                "reference": "3796ea21b71deb672dad460937d7d7de20d328d0"
+                "reference": "aceee8eebef9971a0d96b5f840c9641b462cb52b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bristol-su/upload-file/zipball/3796ea21b71deb672dad460937d7d7de20d328d0",
-                "reference": "3796ea21b71deb672dad460937d7d7de20d328d0",
+                "url": "https://api.github.com/repos/bristol-su/upload-file/zipball/aceee8eebef9971a0d96b5f840c9641b462cb52b",
+                "reference": "aceee8eebef9971a0d96b5f840c9641b462cb52b",
                 "shasum": ""
             },
             "require": {
@@ -453,7 +453,7 @@
                     "email": "toby.twigger@bristol.ac.uk"
                 }
             ],
-            "time": "2020-03-31T10:08:39+00:00"
+            "time": "2020-03-31T14:47:46+00:00"
         },
         {
             "name": "defuse/php-encryption",
@@ -2557,16 +2557,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.32.1",
+            "version": "2.32.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "ecb525c766deb3bbbb6a0082ea0e41d3d9ae477c"
+                "reference": "f10e22cf546704fab1db4ad4b9dedbc5c797a0dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/ecb525c766deb3bbbb6a0082ea0e41d3d9ae477c",
-                "reference": "ecb525c766deb3bbbb6a0082ea0e41d3d9ae477c",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/f10e22cf546704fab1db4ad4b9dedbc5c797a0dc",
+                "reference": "f10e22cf546704fab1db4ad4b9dedbc5c797a0dc",
                 "shasum": ""
             },
             "require": {
@@ -2624,7 +2624,7 @@
                 "datetime",
                 "time"
             ],
-            "time": "2020-03-26T13:04:10+00:00"
+            "time": "2020-03-31T13:43:19+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -7393,8 +7393,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "bristol-su/assign-roles": 20,
-        "bristol-su/typeform": 20
+        "bristol-su/assign-roles": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
