@@ -14,7 +14,7 @@
         "bristol-su/assign-roles": "dev-develop",
         "bristol-su/static-page": "^1.0",
         "bristol-su/support": "^4.2",
-        "bristol-su/typeform": "^1.0",
+        "bristol-su/typeform": "dev-master",
         "bristol-su/upload-file": "^1.0",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "^6.2",

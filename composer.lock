@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "70bcb1e0a3b007effd459750875ed123",
+    "content-hash": "940ac06ddb27841592310bbd1468df66",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -314,16 +314,16 @@
         },
         {
             "name": "bristol-su/typeform",
-            "version": "v1.1.2",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bristol-su/typeform.git",
-                "reference": "e49d23e7e99f27fac49f570f3fe1b7a29bd71fbf"
+                "reference": "22e1748edc0d961338f62b2f758b512434d67221"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bristol-su/typeform/zipball/e49d23e7e99f27fac49f570f3fe1b7a29bd71fbf",
-                "reference": "e49d23e7e99f27fac49f570f3fe1b7a29bd71fbf",
+                "url": "https://api.github.com/repos/bristol-su/typeform/zipball/22e1748edc0d961338f62b2f758b512434d67221",
+                "reference": "22e1748edc0d961338f62b2f758b512434d67221",
                 "shasum": ""
             },
             "require": {
@@ -359,7 +359,7 @@
                     "email": "toby.twigger@bristol.ac.uk"
                 }
             ],
-            "time": "2020-03-31T10:08:07+00:00"
+            "time": "2020-03-31T10:53:14+00:00"
         },
         {
             "name": "bristol-su/typeform-service",
@@ -7393,7 +7393,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "bristol-su/assign-roles": 20
+        "bristol-su/assign-roles": 20,
+        "bristol-su/typeform": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
