@@ -314,16 +314,16 @@
         },
         {
             "name": "bristol-su/typeform",
-            "version": "v1.1",
+            "version": "v1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bristol-su/typeform.git",
-                "reference": "e0f88c3542d9cd6b30eb3cc3f5e00753307fa83f"
+                "reference": "e49d23e7e99f27fac49f570f3fe1b7a29bd71fbf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bristol-su/typeform/zipball/e0f88c3542d9cd6b30eb3cc3f5e00753307fa83f",
-                "reference": "e0f88c3542d9cd6b30eb3cc3f5e00753307fa83f",
+                "url": "https://api.github.com/repos/bristol-su/typeform/zipball/e49d23e7e99f27fac49f570f3fe1b7a29bd71fbf",
+                "reference": "e49d23e7e99f27fac49f570f3fe1b7a29bd71fbf",
                 "shasum": ""
             },
             "require": {
@@ -359,7 +359,7 @@
                     "email": "toby.twigger@bristol.ac.uk"
                 }
             ],
-            "time": "2020-03-30T23:56:37+00:00"
+            "time": "2020-03-31T10:08:07+00:00"
         },
         {
             "name": "bristol-su/typeform-service",
@@ -411,16 +411,16 @@
         },
         {
             "name": "bristol-su/upload-file",
-            "version": "v1.0.2",
+            "version": "v1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bristol-su/upload-file.git",
-                "reference": "9045fdb9d12461176da24e72513a3e55e88ec4cd"
+                "reference": "3796ea21b71deb672dad460937d7d7de20d328d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bristol-su/upload-file/zipball/9045fdb9d12461176da24e72513a3e55e88ec4cd",
-                "reference": "9045fdb9d12461176da24e72513a3e55e88ec4cd",
+                "url": "https://api.github.com/repos/bristol-su/upload-file/zipball/3796ea21b71deb672dad460937d7d7de20d328d0",
+                "reference": "3796ea21b71deb672dad460937d7d7de20d328d0",
                 "shasum": ""
             },
             "require": {
@@ -453,7 +453,7 @@
                     "email": "toby.twigger@bristol.ac.uk"
                 }
             ],
-            "time": "2020-03-18T20:49:59+00:00"
+            "time": "2020-03-31T10:08:39+00:00"
         },
         {
             "name": "defuse/php-encryption",
@@ -6536,16 +6536,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "8.5.2",
+            "version": "8.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "018b6ac3c8ab20916db85fa91bf6465acb64d1e0"
+                "reference": "67750516bc02f300e2742fed2f50177f8f37bedf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/018b6ac3c8ab20916db85fa91bf6465acb64d1e0",
-                "reference": "018b6ac3c8ab20916db85fa91bf6465acb64d1e0",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/67750516bc02f300e2742fed2f50177f8f37bedf",
+                "reference": "67750516bc02f300e2742fed2f50177f8f37bedf",
                 "shasum": ""
             },
             "require": {
@@ -6615,7 +6615,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2020-01-08T08:49:49+00:00"
+            "time": "2020-03-31T08:52:04+00:00"
         },
         {
             "name": "scrivo/highlight.php",
