@@ -831,6 +831,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "CsvUpload",
   props: {
@@ -877,6 +887,18 @@ __webpack_require__.r(__webpack_exports__);
       set: function set(show) {
         this.$emit('update:show', show);
       }
+    },
+    hasErrors: function hasErrors() {
+      return this.errorArray.length > 0;
+    },
+    errorArray: function errorArray() {
+      var _this2 = this;
+
+      var errors = [];
+      Object.keys(this.errors).forEach(function (error) {
+        errors = errors.concat(_this2.errors[error]);
+      });
+      return errors;
     }
   }
 });
@@ -1454,7 +1476,7 @@ __webpack_require__.r(__webpack_exports__);
         _this3.showNewRow = false;
       })["catch"](function (error) {
         if (error.response.status === 422) {
-          _this3.errors = error.response.data.errors;
+          _this3.csvErrors = error.response.data.errors;
         } else {
           _this3.$notify.alert('Row could not be updated: ' + error.response.data.message);
         }
@@ -67484,7 +67506,28 @@ var render = function() {
                 { staticClass: "text-center" },
                 [_c("b-spinner", { attrs: { label: "Spinning" } })],
                 1
-              )
+              ),
+          _vm._v(" "),
+          _vm.hasErrors
+            ? _c("div", [
+                _vm._v(
+                  "\n            Please fix the errors below, then re-upload the csv template.\n            "
+                ),
+                _c(
+                  "ul",
+                  _vm._l(_vm.errorArray, function(error) {
+                    return _c("li", [
+                      _vm._v(
+                        "\n                    " +
+                          _vm._s(error) +
+                          "\n                "
+                      )
+                    ])
+                  }),
+                  0
+                )
+              ])
+            : _vm._e()
         ],
         1
       )
@@ -81927,8 +81970,8 @@ var vue = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/toby/development/bristolsu/portal/modules/data-entry/resources/js/module.js */"./resources/js/module.js");
-module.exports = __webpack_require__(/*! /home/toby/development/bristolsu/portal/modules/data-entry/resources/sass/module.scss */"./resources/sass/module.scss");
+__webpack_require__(/*! /mnt/5F242F4A45A0248A/development/bristolsu/portal/modules/data-entry/resources/js/module.js */"./resources/js/module.js");
+module.exports = __webpack_require__(/*! /mnt/5F242F4A45A0248A/development/bristolsu/portal/modules/data-entry/resources/sass/module.scss */"./resources/sass/module.scss");
 
 
 /***/ })

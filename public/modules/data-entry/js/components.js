@@ -22667,7 +22667,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/toby/development/bristolsu/portal/modules/data-entry/resources/js/components.js */"./resources/js/components.js");
+module.exports = __webpack_require__(/*! /mnt/5F242F4A45A0248A/development/bristolsu/portal/modules/data-entry/resources/js/components.js */"./resources/js/components.js");
 
 
 /***/ })

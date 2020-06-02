@@ -14,19 +14,19 @@
         "bootstrap": "^4.5.0",
         "cross-env": "^5.1",
         "jquery": "^3.5.1",
-        "laravel-mix": "^5.0",
+        "laravel-mix": "^5.0.4",
         "lodash": "^4.17.13",
         "popper.js": "^1.16.1",
         "resolve-url-loader": "^2.3.1",
         "sass": "^1.26.7",
-        "sass-loader": "7.*",
+        "sass-loader": "^8.0.2",
         "vue": "^2.6.11",
         "vue-template-compiler": "^2.6.11"
     },
     "dependencies": {
-        "awesome-notifications": "^3.1.0",
-        "bootstrap-vue": "^2.9.0",
-        "moment": "^2.24.0",
+        "awesome-notifications": "^3.1.1",
+        "bootstrap-vue": "^2.15.0",
+        "moment": "^2.26.0",
         "vue-form-generator": "^2.3.4"
     }
 }
