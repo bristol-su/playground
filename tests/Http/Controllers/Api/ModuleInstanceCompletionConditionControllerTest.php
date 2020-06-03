@@ -12,7 +12,7 @@ use BristolSU\Support\User\User;
 use Prophecy\Argument;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
-class ModuleInstanceCompletionConditionTest extends TestCase
+class ModuleInstanceCompletionConditionControllerTest extends TestCase
 {
 
     /** @test */
