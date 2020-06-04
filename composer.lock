@@ -198,12 +198,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/bristol-su/data-entry.git",
-                "reference": "cf0c4ee3024e527e8e1df0496f6ddef7480761f7"
+                "reference": "244da7b2c70dc472358124007a59c894e3a9e279"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bristol-su/data-entry/zipball/cf0c4ee3024e527e8e1df0496f6ddef7480761f7",
-                "reference": "cf0c4ee3024e527e8e1df0496f6ddef7480761f7",
+                "url": "https://api.github.com/repos/bristol-su/data-entry/zipball/244da7b2c70dc472358124007a59c894e3a9e279",
+                "reference": "244da7b2c70dc472358124007a59c894e3a9e279",
                 "shasum": ""
             },
             "require": {
@@ -238,7 +238,7 @@
                 }
             ],
             "description": "A module for the Bristol SU Portal Project to allow entering and management of data in a given data structure",
-            "time": "2020-06-04T11:04:51+00:00"
+            "time": "2020-06-04T11:19:34+00:00"
         },
         {
             "name": "bristol-su/static-page",
