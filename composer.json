@@ -1,3 +1,4 @@
+
 {
     "name": "bristol-su/playground",
     "type": "project",
@@ -12,7 +13,7 @@
     "require": {
         "php": "^7.3",
         "bristol-su/assign-roles": "dev-develop",
-        "bristol-su/static-page": "^1.0",
+        "bristol-su/static-page": "dev-master",
         "bristol-su/support": "^4.3",
         "bristol-su/typeform": "^1.0",
         "bristol-su/upload-file": "^1.0",

@@ -90,13 +90,12 @@
 /*!******************************************************************************!*\
   !*** ./node_modules/@tinymce/tinymce-vue/lib/es2015/main/ts/ScriptLoader.js ***!
   \******************************************************************************/
-/*! exports provided: create, load */
+/*! exports provided: ScriptLoader */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "create", function() { return create; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "load", function() { return load; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ScriptLoader", function() { return ScriptLoader; });
 /* harmony import */ var _Utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Utils */ "./node_modules/@tinymce/tinymce-vue/lib/es2015/main/ts/Utils.js");
 /**
  * Copyright (c) 2018-present, Ephox, Inc.
@@ -106,38 +105,55 @@ __webpack_require__.r(__webpack_exports__);
  *
  */
 
-var injectScriptTag = function (scriptId, doc, url, callback) {
-    var scriptTag = doc.createElement('script');
-    scriptTag.referrerPolicy = 'origin';
-    scriptTag.type = 'application/javascript';
-    scriptTag.id = scriptId;
-    scriptTag.addEventListener('load', callback);
-    scriptTag.src = url;
-    if (doc.head) {
-        doc.head.appendChild(scriptTag);
-    }
-};
-var create = function () {
+var createState = function () {
     return {
         listeners: [],
         scriptId: Object(_Utils__WEBPACK_IMPORTED_MODULE_0__["uuid"])('tiny-script'),
         scriptLoaded: false
     };
 };
-var load = function (state, doc, url, callback) {
-    if (state.scriptLoaded) {
-        callback();
-    }
-    else {
-        state.listeners.push(callback);
-        if (!doc.getElementById(state.scriptId)) {
-            injectScriptTag(state.scriptId, doc, url, function () {
-                state.listeners.forEach(function (fn) { return fn(); });
-                state.scriptLoaded = true;
-            });
+var CreateScriptLoader = function () {
+    var state = createState();
+    var injectScriptTag = function (scriptId, doc, url, callback) {
+        var scriptTag = doc.createElement('script');
+        scriptTag.referrerPolicy = 'origin';
+        scriptTag.type = 'application/javascript';
+        scriptTag.id = scriptId;
+        scriptTag.src = url;
+        var handler = function () {
+            scriptTag.removeEventListener('load', handler);
+            callback();
+        };
+        scriptTag.addEventListener('load', handler);
+        if (doc.head) {
+            doc.head.appendChild(scriptTag);
         }
-    }
+    };
+    var load = function (doc, url, callback) {
+        if (state.scriptLoaded) {
+            callback();
+        }
+        else {
+            state.listeners.push(callback);
+            if (!doc.getElementById(state.scriptId)) {
+                injectScriptTag(state.scriptId, doc, url, function () {
+                    state.listeners.forEach(function (fn) { return fn(); });
+                    state.scriptLoaded = true;
+                });
+            }
+        }
+    };
+    // Only to be used by tests.
+    var reinitialize = function () {
+        state = createState();
+    };
+    return {
+        load: load,
+        reinitialize: reinitialize
+    };
 };
+var ScriptLoader = CreateScriptLoader();
+
 
 
 /***/ }),
@@ -174,7 +190,7 @@ var getTinymce = function () {
 /*!***********************************************************************!*\
   !*** ./node_modules/@tinymce/tinymce-vue/lib/es2015/main/ts/Utils.js ***!
   \***********************************************************************/
-/*! exports provided: bindHandlers, bindModelHandlers, initEditor, uuid, isTextarea, mergePlugins */
+/*! exports provided: bindHandlers, bindModelHandlers, initEditor, uuid, isTextarea, mergePlugins, isNullOrUndefined */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -185,6 +201,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "uuid", function() { return uuid; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isTextarea", function() { return isTextarea; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mergePlugins", function() { return mergePlugins; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isNullOrUndefined", function() { return isNullOrUndefined; });
 /**
  * Copyright (c) 2018-present, Ephox, Inc.
  *
@@ -314,6 +331,8 @@ var normalizePluginArray = function (plugins) {
 var mergePlugins = function (initPlugins, inputPlugins) {
     return normalizePluginArray(initPlugins).concat(normalizePluginArray(inputPlugins));
 };
+var isNullOrUndefined = function (value) { return value === null || value === undefined; };
+
 
 
 /***/ }),
@@ -354,7 +373,6 @@ var __assign = (undefined && undefined.__assign) || function () {
 
 
 
-var scriptState = _ScriptLoader__WEBPACK_IMPORTED_MODULE_0__["create"]();
 var renderInline = function (h, id, tagName) {
     return h(tagName ? tagName : 'div', {
         attrs: { id: id }
@@ -396,10 +414,12 @@ var Editor = {
             initialise(this)();
         }
         else if (this.element && this.element.ownerDocument) {
-            var doc = this.element.ownerDocument;
             var channel = this.$props.cloudChannel ? this.$props.cloudChannel : '5';
             var apiKey = this.$props.apiKey ? this.$props.apiKey : 'no-api-key';
-            _ScriptLoader__WEBPACK_IMPORTED_MODULE_0__["load"](scriptState, doc, "https://cdn.tiny.cloud/1/" + apiKey + "/tinymce/" + channel + "/tinymce.min.js", initialise(this));
+            var scriptSrc = Object(_Utils__WEBPACK_IMPORTED_MODULE_2__["isNullOrUndefined"])(this.$props.tinymceScriptSrc) ?
+                "https://cdn.tiny.cloud/1/" + apiKey + "/tinymce/" + channel + "/tinymce.min.js" :
+                this.$props.tinymceScriptSrc;
+            _ScriptLoader__WEBPACK_IMPORTED_MODULE_0__["ScriptLoader"].load(this.element.ownerDocument, scriptSrc, initialise(this));
         }
     },
     beforeDestroy: function () {
@@ -445,6 +465,7 @@ var editorProps = {
     toolbar: [String, Array],
     value: String,
     disabled: Boolean,
+    tinymceScriptSrc: String,
     outputFormat: {
         type: String,
         validator: function (prop) { return prop === 'html' || prop === 'text'; }
@@ -735,7 +756,7 @@ function normalizeComponent (
       // for template-only hot-reload because in that case the render fn doesn't
       // go through the normalizer
       options._injectStyles = hook
-      // register for functioal component in vue file
+      // register for functional component in vue file
       var originalRender = options.render
       options.render = function renderWithStyleInjection (h, context) {
         hook.call(context)
@@ -881,7 +902,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/toby/development/bristolsu/portal/modules/static-page/resources/js/components.js */"./resources/js/components.js");
+module.exports = __webpack_require__(/*! /mnt/5F242F4A45A0248A/development/bristolsu/portal/modules/static-page/resources/js/components.js */"./resources/js/components.js");
 
 
 /***/ })
