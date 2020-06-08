@@ -7,4 +7,5 @@ return [
     'url_prefix' => '/_connector/typeform',
     'urlAuthorize' => 'https://api.typeform.com/oauth/authorize',
     'urlAccessToken' => 'https://api.typeform.com/oauth/token',
+    'base_uri' => 'https://api.typeform.com'
 ];

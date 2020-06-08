@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "349f2c504f133cadc171ef6b673368f1",
+    "content-hash": "efa6c5079a50ead0ba7d514c9d15571f",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -92,16 +92,16 @@
         },
         {
             "name": "bristol-su/assign-roles",
-            "version": "dev-develop",
+            "version": "v1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bristol-su/assign-roles.git",
-                "reference": "487a44b7d381cbd32fff2cdc06b17b0fb451142c"
+                "reference": "50df9e0691cb577aef70872fc93438142e5e9563"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bristol-su/assign-roles/zipball/487a44b7d381cbd32fff2cdc06b17b0fb451142c",
-                "reference": "487a44b7d381cbd32fff2cdc06b17b0fb451142c",
+                "url": "https://api.github.com/repos/bristol-su/assign-roles/zipball/50df9e0691cb577aef70872fc93438142e5e9563",
+                "reference": "50df9e0691cb577aef70872fc93438142e5e9563",
                 "shasum": ""
             },
             "require": {
@@ -135,7 +135,7 @@
                 }
             ],
             "description": "A module for the Bristol SU Portal Project to assign roles to members of groups",
-            "time": "2020-04-27T14:32:23+00:00"
+            "time": "2020-06-08T14:01:26+00:00"
         },
         {
             "name": "bristol-su/control",
@@ -194,16 +194,16 @@
         },
         {
             "name": "bristol-su/data-entry",
-            "version": "dev-develop",
+            "version": "v1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bristol-su/data-entry.git",
-                "reference": "a7ad85febd365ea92dbd6e65ce8af072d350992c"
+                "reference": "e397a549da3e3f00ca4f7a5f7e4f792ada13145d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bristol-su/data-entry/zipball/a7ad85febd365ea92dbd6e65ce8af072d350992c",
-                "reference": "a7ad85febd365ea92dbd6e65ce8af072d350992c",
+                "url": "https://api.github.com/repos/bristol-su/data-entry/zipball/e397a549da3e3f00ca4f7a5f7e4f792ada13145d",
+                "reference": "e397a549da3e3f00ca4f7a5f7e4f792ada13145d",
                 "shasum": ""
             },
             "require": {
@@ -238,20 +238,20 @@
                 }
             ],
             "description": "A module for the Bristol SU Portal Project to allow entering and management of data in a given data structure",
-            "time": "2020-06-08T10:47:20+00:00"
+            "time": "2020-06-08T14:43:38+00:00"
         },
         {
             "name": "bristol-su/static-page",
-            "version": "dev-master",
+            "version": "v1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bristol-su/static-page.git",
-                "reference": "b274007c24cf16974b0923c4978274d029c74455"
+                "reference": "746a7bdbc6e258e434ce7bd5c5347b4fe8911ead"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bristol-su/static-page/zipball/b274007c24cf16974b0923c4978274d029c74455",
-                "reference": "b274007c24cf16974b0923c4978274d029c74455",
+                "url": "https://api.github.com/repos/bristol-su/static-page/zipball/746a7bdbc6e258e434ce7bd5c5347b4fe8911ead",
+                "reference": "746a7bdbc6e258e434ce7bd5c5347b4fe8911ead",
                 "shasum": ""
             },
             "require": {
@@ -288,7 +288,7 @@
                 }
             ],
             "description": "A static page module for the Bristol SU Portal Project, to display text or HTML",
-            "time": "2020-06-08T12:47:16+00:00"
+            "time": "2020-06-08T13:54:35+00:00"
         },
         {
             "name": "bristol-su/support",
@@ -8139,11 +8139,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "bristol-su/assign-roles": 20,
-        "bristol-su/static-page": 20,
-        "bristol-su/data-entry": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

@@ -136,7 +136,6 @@ __webpack_require__.r(__webpack_exports__);
       scope: 'offline+accounts:read+responses:read+webhooks:read+webhooks:write+forms:read',
       state: '12345',
       redirect_uri: '/_connector/typeform/redirect',
-      code_uri: '/api/_connector/typeform/code',
       authTokens: [],
       loadingCodes: false,
       intervalId: null
@@ -158,7 +157,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       this.loadingCodes = true;
-      return this.$http.get(this.code_uri).then(function (response) {
+      return this.$http.get('/api/_connector/typeform/code').then(function (response) {
         var newLogin = _this2.isNewLogin(response.data);
 
         _this2.authTokens = response.data;
