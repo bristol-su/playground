@@ -1,0 +1,43 @@
+= Module Tools
+
+The module tools are tools the playground provides to help with
+interacting with a module. These currently consist of the settings tool,
+the permissions tool and the services tool.
+
+== Settings
+
+The settings tool uses the default settings SDK tools and wraps an API
+around it. By default, no settings are set and so the settings are their
+defaults. When edited, a 'module instance setting' model is saved,
+representing the setting. When the page is then refreshed, this setting
+will come into effect.
+
+== Permissions
+
+For permissions, the playground has overridden the default behaviour for
+ease. Instead, there is a single table called 'module_permissions'. This
+holds an ability, result and module instance id. The playground also
+registers a permission tester, which is put in the first position. When
+a permission is tested, the permission tester sees if there is a row
+matching the ability and module instance id being tested.
+
+If a row is not found, the permission tester returns true. This allows
+for all permissions to be given by default.
+
+If a row is found, the permission tester returns whatever the result of
+the row is.
+
+== Services
+
+The services tool allows for external services to be established and
+changed. When the services tool is opened, it displays all services that
+are needed or wanted by the module and allows us to choose the
+connection by clicking the connection in the dropdown. Once selected, we
+can test the connection using the 'test' button.
+
+To change a connection, we use the service API to join a connection to a
+module, or update or remove it. To test a connection, we use the
+Connection API. We also use the Connection API to create a new
+connection, having presented the connection settings schema.
+
+As normal, the page is reloaded after a service is changed.

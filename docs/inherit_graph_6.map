@@ -1,7 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node2" href="$classBristolSU_1_1Playground_1_1Http_1_1Middleware_1_1CheckForMaintenanceMode.html" title="BristolSU\\Playground\l\\Http\\Middleware\\CheckForMaintenanceMode" alt="" coords="141,5,429,47"/>
-<area shape="rect" id="node3" href="$classBristolSU_1_1Playground_1_1Http_1_1Middleware_1_1EncryptCookies.html" title="BristolSU\\Playground\l\\Http\\Middleware\\EncryptCookies" alt="" coords="176,71,395,112"/>
-<area shape="rect" id="node4" href="$classBristolSU_1_1Playground_1_1Http_1_1Middleware_1_1TrimStrings.html" title="BristolSU\\Playground\l\\Http\\Middleware\\TrimStrings" alt="" coords="189,136,381,177"/>
-<area shape="rect" id="node5" href="$classBristolSU_1_1Playground_1_1Http_1_1Middleware_1_1TrustProxies.html" title="BristolSU\\Playground\l\\Http\\Middleware\\TrustProxies" alt="" coords="186,201,385,243"/>
-<area shape="rect" id="node6" href="$classBristolSU_1_1Playground_1_1Http_1_1Middleware_1_1VerifyCsrfToken.html" title="BristolSU\\Playground\l\\Http\\Middleware\\VerifyCsrf\lToken" alt="" coords="193,267,377,323"/>
-</map>

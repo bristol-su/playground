@@ -1,0 +1,3 @@
+= Introduction
+
+A description about what the playground is and what it's used for.

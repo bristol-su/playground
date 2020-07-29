@@ -1,0 +1,7 @@
+name: playground
+title: Playground
+version: develop
+start_page: ROOT:index.adoc
+nav:
+ - modules/ROOT/nav.adoc
+ - modules/developers/nav.adoc

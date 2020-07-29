@@ -1,0 +1,97 @@
+= Authentication
+
+In the SDK environment, there are two types of Authentication we need to
+think about. The first is logging into the site and confirming you are
+who you say you are, and the second is the authentication of a
+user/group/role from Control. These are inherently disparate ideas,
+since one user may belong to many groups and roles.
+
+== Standard Authentication
+
+To authenticate a user for the playground, we want to allow anyone to
+sign up and log in. This means removing all restrictions in terms of
+email verification, whilst keeping the security associated with the
+default Laravel authentication framework.
+
+=== Registration
+
+To register, we ask the user for a first name, last name, email and
+password. By relying on the default authentication structure but
+overriding the `+public function create($data)+` method which handles
+the creation of a user, we can simply adjust the authentication. We also
+need to change the way the user is logged in, to make use of the SDK
+authentication rather than the Laravel guards.
+
+For now, we will continue to use the Laravel guards knowing this is what
+the SDK uses behind the scenes, but this should be changed soon in a
+future update. To allow this to work, we've created a UserProvider for
+the database user model the SDK uses.
+
+The new create method should first create a data user with the given
+first and last name, a preferred name made up of the first and last
+name, and an email address. These are all required by validation, so
+will all be available.
+
+We then create a control user, which is linked to the new data user.
+Finally, we create a database user linked to the control user. To bypass
+the email verification, we set 'email verified' to the current timestamp
+instantly.
+
+This behaviour will be changed in the future to allow customisation
+through .env or the UI.
+
+Finally, we hash the password, save the database user and return it to
+be handled by the rest of the register function. This function uses the
+default Laravel authentication but calls
+`+$userAuthentication->setUser($user);+` instead of using the guards.
+Finally, a redirect response is returned.
+
+=== Logging In
+
+Logging in is always done through email (unlike the portal which allows
+the behaviour to be changed). This allows us to use most of the default
+logging in framework provided by Laravel. However, we have to override
+the `+attemptLogin()+` method to allow us to use the SDK authentication.
+
+Again, we will for now continue to use the Laravel guards for
+development speed. This should be changed in the future.
+
+=== Forgot Password
+
+Having created a UserProvider for the database user, we can just use the
+default laravel authentication framework for this controller.
+
+=== Reset Password
+
+Having created a UserProvider for the database user, we can just use the
+default laravel authentication framework for this controller.
+
+=== Future Auth Tools
+
+There is also a verification controller and a controller to handle
+confirming passwords. These are currently not used, and so have been
+left as the default, but they may be implemented in a future update.
+
+== Control Authentication
+
+The portal uses the Authentication contract to set and retrieve the
+user/group/role combination. In the case of the portal, this is set when
+you click into an activity, since the user chooses how to enter the
+activity.
+
+The playground tries to simplify this for the user by automatically
+logging them in. On the playground, a user shouldn't care about which
+group or role they are, just that there is one. Therefore, the
+authentication contract works as follows.
+
+* All setUser/setGroup/setRole methods are not implemented (throw an
+error)
+* getUser always returns the user from the databaseuser.
+* getGroup finds/creates a group the user is a member of, or returns
+null if the activity is only a user activity
+* getRole finds/creates a role the user is in, or returns null if the
+activity is only a user/group activity.
+
+Using this method, we never need to think about logging into a
+user/group/role. As long as the user is logged into a database user, the
+authentication contract will always return the correct things.

@@ -1,0 +1,6 @@
+.Developers
+* xref:introduction.adoc[Introduction]
+* xref:authentication.adoc[Authentication]
+* xref:homepage.adoc[The homepage]
+* xref:api.adoc[API reference]
+* xref:module-tools.adoc[Module Tools]

@@ -1,0 +1,22 @@
+= The homepage
+
+The Homepage should generally list all available modules, and allow you
+to spin up a module instance or open an old module instance. The
+homepage looks like the below:
+
+image::playground-homepage.png[]
+
+Clicking on new uses the API to create a new module instance. It also
+creates a new activity for each module instance, where the
+'activity_for' parameter is specified when the module is set up. Having
+done this, it redirects to the module page and allows the SDK to take
+over the rendering of the module.
+
+We can also retrieve all module instances through the API for a specific
+module. This allows us to list the previously created modules when
+'Open' is pressed, and is a simple case of redirecting a user to the
+module instance when they click open.
+
+This whole process simply uses the API to render information on the
+frontend, and redirects the user when a module instance is requested to
+be rendered.

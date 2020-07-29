@@ -1,0 +1,37 @@
+= Introduction
+
+Just as the portal is a frontend realisation of the SDK, as to is the
+playground. It uses the same SDK, just behaves differently to provide a
+useful tool.
+
+The portal is all about setting up and completing activities. Modules
+must be set up before they can be used, which increases development time
+if you just want to stage a module (either a complete one or one in
+development) to test it out.
+
+This is what the playground solves. It shows a list of all installed
+modules, and with a single click will set them up as if they were on the
+portal, but allow you to change permissions, settings and more quickly.
+This makes it the perfect tool for developing new modules, as you can
+see all your changes instantly and explore the workings of your module.
+
+This is also useful for non-technical users, as they can explore your
+module to see what settings/permissions change.
+
+Further updates will bring sharing of modules, meaning you can
+collaborate with a team of people on setting up a single module, before
+copying it across to the portal.
+
+This documentation will go through the parts of the playground, and how
+it uses the SDK to use module integrations differently to the portal.
+
+When using the SDK to render the framework, the only necessary steps are
+
+. Pull in the SDK to a Laravel app.
+. Create a frontend to redirect to
+/p/\{activity-slug}/\{module-instance-slug} (or /a/...)
+. Override login and register methods
+. Set up authentication config. This will be moved to the SDK soon.
+
+The portal will handle setting up the rest of the environment,
+migrations, permissions etc. All these things can be overridden.

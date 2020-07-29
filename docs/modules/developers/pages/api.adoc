@@ -1,0 +1,174 @@
+= API
+
+The API is used by the frontend to manage module instances. When a user
+decides to create a new version of a module, the API will create the
+module instance, then be used by the module tools for editing the
+module.
+
+This page is split into two parts; the first part will cover the API
+used to create and manage modules, and the second part will cover the
+API for the module tools.
+
+== Module Management API
+
+This group of API endpoints consists of the
+
+* Module API for retrieving information about registered modules
+* Module Instance API for managing module instances
+
+All APIs start with '/api', then append the route in the 'endpoint'
+column
+
+=== Module API
+
+The module API is used to retrieve information about registered modules.
+It provides endpoints to either retrieve information about all modules,
+or about a specific module
+
+[cols=",,",]
+|===
+|Method |Endpoint |Description
+
+|GET |/module |Get all modules registered with the playground
+
+|GET |/module/\{module-alias} |Get the module with the given module
+alias
+|===
+
+For the playground, this is used to load all modules on the homepage,
+and provide the module tools with raw information about the module.
+
+=== Module Instance API
+
+The module instance API is used to retrieve information about registered
+module instances, and create and delete them.
+
+[cols=",,",]
+|===
+|Method |Endpoint |Description
+
+|GET |/module/\{module-alias}/module-instance |Get all module instances
+of the given module type
+
+|POST |/module/\{module-alias}/module-instance |Create a new module
+instance of the given type. Accepts a name.
+
+|DELETE |/module/\{module-alias}/module-instance/\{slug} |Delete the
+module instance with the given slug.
+|===
+
+For the playground, this is used to create a new module instance from
+the homepage, or see all module instances (open button) and delete them.
+
+== Module Tools API
+
+The module tools API is used by the module tools, which sit in the
+header whenever a module is open. They allow properties of the module
+instance, such as the settings, services and permissions, to be changed.
+When changed, in general the module tools will call the endpoints to
+make the changes in the database, then once all changes have been made
+refresh the page to load the changes.
+
+=== Permissions API
+
+The permissions API is used to manage the permissions of the Module
+Tools. The permission framework has been customised for the playground,
+see the
+https://docs.bristolsustaging.co.uk/books/framework-development/page/module-tools[Module
+Tools] documentation for more information.
+
+[cols=",,",]
+|===
+|Method |Endpoint |Description
+
+|GET |/module-instance/\{slug}/permission |Get all permissions for the
+module instance with the given slug
+
+|POST |/module-instance/\{slug}/permission |Create a permission for the
+module instance with the given slug. Accepts an ability string
+('typeform.view-form') and a result (true/false)
+
+|PATCH |/module-instance/\{slug}/permission/\{id} |Update the permission
+with the given ID. Accepts a result parameter.
+|===
+
+=== Settings API
+
+The settings API is used to manage the settings of a module instance.
+
+[cols=",,",]
+|===
+|Method |Endpoint |Description
+
+|GET |/module-instance/\{slug}/setting |Get all settings for the module
+instance with the given slug
+
+|POST |/module-instance/\{slug}/setting |Create a setting for the module
+instance with the given slug. Accepts a key and a value.
+
+|PATCH |/module-instance/\{slug}/setting/\{id} |Update the setting with
+the given ID. Accepts a value parameter.
+|===
+
+=== Services
+
+==== Service API
+
+This API allows for assigning and removing connections from module
+requested services. This can be thought of as the pivot table link from
+a module instance to a connection.
+
+[cols=",,",]
+|===
+|Method |Endpoint |Description
+
+|GET |/module-instance/\{slug}/service |Get all services for the module
+instance with the given slug
+
+|POST |/module-instance/\{slug}/service |Create a service link for the
+module instance with the given slug. Accepts a service alias and a
+connection_id.
+
+|PATCH |/module-instance/\{slug}/service/\{id} |Update the service link
+with the given ID. Accepts a connection_id parameter.
+
+|DELETE |/module-instance/\{slug}/service/\{id} |Delete the service link
+with the given ID.
+|===
+
+==== Connection API
+
+The connection API allows us to create new connections, which are
+authenticated instances of a third party connector. We can also test
+them, and get all connections for a specific service. This allows us to
+construct a way to log in and link to third party systems without
+leaving a module.
+
+[cols=",,",]
+|===
+|Method |Endpoint |Description
+
+|POST |/connection |Create a new connection. Accepts a name,
+description, alias (of the connector) and settings (an object
+representing the settings for the connector).
+
+|GET |/connection/\{id}/test |Test the connection with the given ID.
+Returns ['result' => true] if ok, or false otherwise.
+
+|GET |/service/\{service}/connection |Get all connections belonging to
+the given service alias.
+|===
+
+==== Connector API
+
+This API is used to get all connector types from a given service alias.
+This is so that the user can be given the option of connectors to use
+for a specific service.
+
+[cols=",,",]
+|===
+|Method |Endpoint |Description
+
+|GET |/service/\{service}/connector |Get all connectors (registered
+connectors) for the given service.
+|===
