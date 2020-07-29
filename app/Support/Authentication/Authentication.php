@@ -56,7 +56,7 @@ class Authentication implements AuthenticationContract
     {
         $user = $this->auth->getUser();
         if($user instanceof \BristolSU\Support\User\User && $user->exists) {
-            return $this->userRepository->getById($user->id);
+            return $this->userRepository->getById($user->controlId());
         }
         return null;
     }
