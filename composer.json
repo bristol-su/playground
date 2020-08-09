@@ -14,7 +14,7 @@
         "php": "^7.3",
         "bristol-su/assign-roles": "^1.0",
         "bristol-su/static-page": "^1.0",
-        "bristol-su/support": "^4.3",
+        "bristol-su/support": "^4.7.0",
         "bristol-su/typeform": "^1.0",
         "bristol-su/upload-file": "^1.0",
         "bristol-su/data-entry": "^1.0",
@@ -64,7 +64,8 @@
     "scripts": {
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi"
+            "@php artisan package:discover --ansi",
+            "@php artisan vendor:publish --force --tag=module"
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
