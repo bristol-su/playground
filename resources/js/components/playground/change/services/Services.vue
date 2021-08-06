@@ -66,7 +66,7 @@
         },
 
         created() {
-            this.$http.get('/api/module-instance/' + portal.MODULE_INSTANCE_SLUG + '/service')
+            this.$http.get('/api/module-instance/' + window.portal.module_instance.slug + '/service')
                 .then(response => this.moduleInstanceServices = response.data)
                 .catch(error => this.$notify.alert('Could not load services'));
         },

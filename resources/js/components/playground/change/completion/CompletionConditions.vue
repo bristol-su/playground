@@ -59,13 +59,13 @@
         methods: {
             test() {
                 this.testing = true;
-                this.$http.post('/api/module-instance/' + portal.MODULE_INSTANCE_SLUG + '/completion-condition', {
+                this.$http.post('/api/module-instance/' + window.portal.module_instance.slug + '/completion-condition', {
                     alias: this.selectedConditionAlias,
                     settings: this.currentSettings
                 })
                     .then(response => {
-                        this.$http.get('/api/module-instance/' + portal.MODULE_INSTANCE_SLUG + '/completion-condition/test', {
-                            params: {activity_instance_id: portal.activityinstance.id}
+                        this.$http.get('/api/module-instance/' + window.portal.module_instance.slug + '/completion-condition/test', {
+                            params: {activity_instance_id: window.portal.activity_instance.id}
                         })
                             .then(response => {
                                 this.result = response.data.result;

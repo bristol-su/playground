@@ -103,7 +103,7 @@
             },
 
             loadModuleInformation() {
-                this.$http.get('/api/module/' + portal.ALIAS)
+                this.$http.get('/api/module/' + window.portal.module_instance.alias)
                 .then(response => this.portalModule = response.data)
                 .catch(error => this.$notify.alert('Could not load module data'));
             }
@@ -111,7 +111,7 @@
 
         computed: {
             aorp() {
-                return portal.A_OR_P;
+                return window.portal.admin ? 'a' : 'p';
             },
 
             oppositeUrl() {
@@ -121,7 +121,7 @@
                 } else {
                     aorp = 'a';
                 }
-                return portal.APP_URL + '/' + aorp + '/' + portal.ACTIVITY_SLUG + '/' + portal.MODULE_INSTANCE_SLUG + '/' + portal.ALIAS;
+                return window.portal.APP_URL + '/' + aorp + '/' + window.portal.activity.slug + '/' + window.portal.module_instance.alias + '/' + window.portal.module_instance.alias;
             },
             optional() {
                 if(this.portalModule.hasOwnProperty('services') && this.portalModule.services.hasOwnProperty('optional')) {
