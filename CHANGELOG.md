@@ -18,7 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated Dependencies
 - Support SDK v5
 - Use sidebar rather than dropdown for playground tools
-- 
+
 ### Added
 - Assign Roles module
 - Failed jobs table
