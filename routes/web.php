@@ -15,6 +15,6 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('portal-auth')->group(function() {
-    Route::get('/', [\BristolSU\Playground\Http\Controllers\HomeController::class, 'index']);
+    Route::get('/', [\BristolSU\Playground\Http\Controllers\HomeController::class, 'index'])->name('playground');
     Route::get('/control', [\BristolSU\Playground\Http\Controllers\ControlController::class, 'index'])->name('control');
 });
