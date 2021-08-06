@@ -104,7 +104,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /mnt/5F242F4A45A0248A/development/bristolsu/portal/support/playground/resources/js/control.js */"./resources/js/control.js");
+module.exports = __webpack_require__(/*! /var/www/html/resources/js/control.js */"./resources/js/control.js");
 
 
 /***/ })
