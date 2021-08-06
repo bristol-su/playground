@@ -30,7 +30,7 @@ class OverridePermissionTesterTest extends TestCase
     public function it_returns_true_if_the_module_permission_was_not_found(){
         $permission = new Permission('ability1', 'name1', 'description1');
         $user = $this->newUser();
-        $moduleInstance = factory(ModuleInstance::class)->create();
+        $moduleInstance = ModuleInstance::factory()->create();
         $this->instance(ModuleInstance::class, $moduleInstance);
 
         $tester = new OverridePermissionTester();
@@ -47,9 +47,9 @@ class OverridePermissionTesterTest extends TestCase
     public function it_returns_true_if_the_module_permission_result_is_true(){
         $permission = new Permission('ability1', 'name1', 'description1');
         $user = $this->newUser();
-        $moduleInstance = factory(ModuleInstance::class)->create();
+        $moduleInstance = ModuleInstance::factory()->create();
         $this->instance(ModuleInstance::class, $moduleInstance);
-        factory(ModulePermission::class)->create(['ability' => 'ability1', 'module_instance_id' => $moduleInstance->id(), 'result' => true]);
+        ModulePermission::factory()->create(['ability' => 'ability1', 'module_instance_id' => $moduleInstance->id(), 'result' => true]);
 
         $tester = new OverridePermissionTester();
         $this->assertDatabaseHas('module_permissions', [
@@ -65,9 +65,9 @@ class OverridePermissionTesterTest extends TestCase
     public function it_returns_false_if_the_module_permission_result_is_false(){
         $permission = new Permission('ability1', 'name1', 'description1');
         $user = $this->newUser();
-        $moduleInstance = factory(ModuleInstance::class)->create();
+        $moduleInstance = ModuleInstance::factory()->create();
         $this->instance(ModuleInstance::class, $moduleInstance);
-        factory(ModulePermission::class)->create(['ability' => 'ability1', 'module_instance_id' => $moduleInstance->id(), 'result' => false]);
+        ModulePermission::factory()->create(['ability' => 'ability1', 'module_instance_id' => $moduleInstance->id(), 'result' => false]);
 
         $tester = new OverridePermissionTester();
         $this->assertDatabaseHas('module_permissions', [

@@ -13,12 +13,12 @@ class ModuleInstanceSettingControllerTest extends TestCase
 
     /** @test */
     public function index_returns_all_settings(){
-        $this->be(factory(User::class)->create());
+        $this->beUser($this->newUser());
 
-        $moduleInstance = factory(ModuleInstance::class)->create();
+        $moduleInstance = ModuleInstance::factory()->create();
 
-        $settings = factory(ModuleInstanceSetting::class, 10)->create(['module_instance_id' => $moduleInstance->id]);
-        $otherSettings = factory(ModuleInstanceSetting::class, 10)->create();
+        $settings = ModuleInstanceSetting::factory()->count(10)->create(['module_instance_id' => $moduleInstance->id]);
+        $otherSettings = ModuleInstanceSetting::factory()->count(10)->create();
 
         $response = $this->json('get', '/api/module-instance/' . $moduleInstance->slug . '/setting');
 
@@ -30,7 +30,7 @@ class ModuleInstanceSettingControllerTest extends TestCase
     /** @test */
     public function store_creates_a_setting(){
         $this->be($user = factory(User::class)->create());
-        $moduleInstance = factory(ModuleInstance::class)->create();
+        $moduleInstance = ModuleInstance::factory()->create();
 
         $response = $this->json('post', '/api/module-instance/' . $moduleInstance->slug . '/setting', [
             'key' => 'setting1', 'value' => 'val1'
@@ -49,9 +49,9 @@ class ModuleInstanceSettingControllerTest extends TestCase
     /** @test */
     public function update_updates_a_setting(){
         $this->be($user = factory(User::class)->create());
-        $moduleInstance = factory(ModuleInstance::class)->create();
+        $moduleInstance = ModuleInstance::factory()->create();
 
-        $moduleInstanceSetting = factory(ModuleInstanceSetting::class)->create([
+        $moduleInstanceSetting = ModuleInstanceSetting::factory()->create([
             'module_instance_id' => $moduleInstance->id, 'key' => 'setting1', 'value' => 'val1'
         ]);
         $this->assertDatabaseHas('module_instance_settings', [

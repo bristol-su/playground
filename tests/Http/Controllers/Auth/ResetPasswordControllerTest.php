@@ -16,7 +16,7 @@ class ResetPasswordControllerTest extends TestCase
 
     /** @test */
     public function a_password_can_be_reset(){
-        $dataUser = factory(DataUser::class)->create(['email' => 'myemail@email.com']);
+        $dataUser = DataUser::factory()->create(['email' => 'myemail@email.com']);
         $controlUser = $this->newUser(['data_provider_id' => $dataUser->id()]);
         $databaseUser = factory(User::class)->create(['password' => Hash::make('secretpw'), 'control_id' => $controlUser->id()]);
 
@@ -43,7 +43,7 @@ class ResetPasswordControllerTest extends TestCase
 
     /** @test */
     public function password_is_not_reset_if_the_token_is_wrong(){
-        $dataUser = factory(DataUser::class)->create(['email' => 'myemail@email.com']);
+        $dataUser = DataUser::factory()->create(['email' => 'myemail@email.com']);
         $controlUser = $this->newUser(['data_provider_id' => $dataUser->id()]);
         $databaseUser = factory(User::class)->create(['password' => Hash::make('secretpw'), 'control_id' => $controlUser->id()]);
 
@@ -70,7 +70,7 @@ class ResetPasswordControllerTest extends TestCase
 
     /** @test */
     public function password_is_not_reset_if_the_token_is_not_given(){
-        $dataUser = factory(DataUser::class)->create(['email' => 'myemail@email.com']);
+        $dataUser = DataUser::factory()->create(['email' => 'myemail@email.com']);
         $controlUser = $this->newUser(['data_provider_id' => $dataUser->id()]);
         $databaseUser = factory(User::class)->create(['password' => Hash::make('secretpw'), 'control_id' => $controlUser->id()]);
 
@@ -95,7 +95,7 @@ class ResetPasswordControllerTest extends TestCase
 
     /** @test */
     public function password_is_not_reset_if_email_is_not_given(){
-        $dataUser = factory(DataUser::class)->create(['email' => 'myemail@email.com']);
+        $dataUser = DataUser::factory()->create(['email' => 'myemail@email.com']);
         $controlUser = $this->newUser(['data_provider_id' => $dataUser->id()]);
         $databaseUser = factory(User::class)->create(['password' => Hash::make('secretpw'), 'control_id' => $controlUser->id()]);
 
@@ -120,7 +120,7 @@ class ResetPasswordControllerTest extends TestCase
 
     /** @test */
     public function password_is_not_reset_if_password_is_not_given(){
-        $dataUser = factory(DataUser::class)->create(['email' => 'myemail@email.com']);
+        $dataUser = DataUser::factory()->create(['email' => 'myemail@email.com']);
         $controlUser = $this->newUser(['data_provider_id' => $dataUser->id()]);
         $databaseUser = factory(User::class)->create(['password' => Hash::make('secretpw'), 'control_id' => $controlUser->id()]);
 
@@ -144,7 +144,7 @@ class ResetPasswordControllerTest extends TestCase
 
     /** @test */
     public function password_is_not_reset_if_password_is_not_confirmed() {
-        $dataUser = factory(DataUser::class)->create(['email' => 'myemail@email.com']);
+        $dataUser = DataUser::factory()->create(['email' => 'myemail@email.com']);
         $controlUser = $this->newUser(['data_provider_id' => $dataUser->id()]);
         $databaseUser = factory(User::class)->create(['password' => Hash::make('secretpw'), 'control_id' => $controlUser->id()]);
 

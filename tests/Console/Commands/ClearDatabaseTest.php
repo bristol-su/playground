@@ -24,20 +24,20 @@ class ClearDatabaseTest extends TestCase
 
     /** @test */
     public function it_truncates_all_relevant_tables(){
-        factory(ActionInstanceField::class, 5)->create();
-        factory(ActionInstance::class, 5)->create();
-        factory(Activity::class, 5)->create();
-        factory(ActivityInstance::class, 5)->create();
-        factory(CompletionConditionInstance::class, 5)->create();
-        factory(Connection::class, 5)->create();
-        factory(FilterInstance::class, 5)->create();
-        factory(ModelPermission::class, 5)->create();
-        factory(ModuleInstance::class, 5)->create();
-        factory(ModuleInstanceSetting::class, 5)->create();
-        factory(ModuleInstancePermission::class, 5)->create();
-        factory(Logic::class, 5)->create();
-        factory(ModuleInstanceService::class, 5)->create();
-        factory(ModulePermission::class, 5)->create();
+        ActionInstanceField::factory()->count(5)->create();
+        ActionInstance::factory()->count(5)->create();
+        Activity::factory()->count(5)->create();
+        ActivityInstance::factory()->count(5)->create();
+        CompletionConditionInstance::factory()->count(5)->create();
+        Connection::factory()->count(5)->create();
+        FilterInstance::factory()->count(5)->create();
+        ModelPermission::factory()->count(5)->create();
+        ModuleInstance::factory()->count(5)->create();
+        ModuleInstanceSetting::factory()->count(5)->create();
+        ModuleInstancePermission::factory()->count(5)->create();
+        Logic::factory()->count(5)->create();
+        ModuleInstanceService::factory()->count(5)->create();
+        ModulePermission::factory()->count(5)->create();
 
         $command = new ClearDatabase();
         $tables = $command->tables;

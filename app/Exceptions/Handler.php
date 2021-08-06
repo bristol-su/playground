@@ -35,33 +35,9 @@ class Handler extends ExceptionHandler
         'password_confirmation',
     ];
 
-    /**
-     * Report or log an exception.
-     *
-     * @param Exception $exception
-     * @return void
-     * @throws Exception
-     */
-    public function report(Exception $exception)
+    public function register()
     {
-        parent::report($exception);
-    }
-
-    /**
-     * Render an exception into an HTTP response.
-     *
-     * - Logs into an activity instance if exception is NotInActivityInstanceException
-     *
-     * @param Request $request
-     * @param Exception $exception
-     * @return Response
-     * @throws ActivityRequiresGroup
-     * @throws ActivityRequiresRole
-     * @throws ActivityRequiresUser
-     */
-    public function render($request, Exception $exception)
-    {
-        if ($exception instanceof NotInActivityInstanceException) {
+        $this->renderable(function(NotInActivityInstanceException $exception, Request $request) {
             $activity = $request->route('activity_slug');
             $activityInstance = app(DefaultActivityInstanceGenerator::class)
                 ->generate(
@@ -71,8 +47,7 @@ class Handler extends ExceptionHandler
                 );
             app(ActivityInstanceResolver::class)->setActivityInstance($activityInstance);
             return redirect()->to($request->fullUrl());
-        }
-
-        return parent::render($request, $exception);
+        });
     }
+
 }

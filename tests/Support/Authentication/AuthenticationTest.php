@@ -26,7 +26,7 @@ class AuthenticationTest extends TestCase
         $userRepository = $this->prophesize(\BristolSU\ControlDB\Contracts\Repositories\User::class);
         $userRepository->getById($user->id())->shouldBeCalled()->willReturn($user);
 
-        $activity = factory(Activity::class)->create();
+        $activity = Activity::factory()->create();
         $this->instance(Activity::class, $activity);
         $authentication = new Authentication($databaseAuth->reveal(), $userRepository->reveal());
         $resolvedUser = $authentication->getUser();
@@ -43,7 +43,7 @@ class AuthenticationTest extends TestCase
 
         $userRepository = $this->prophesize(\BristolSU\ControlDB\Contracts\Repositories\User::class);
 
-        $activity = factory(Activity::class)->create();
+        $activity = Activity::factory()->create();
         $this->instance(Activity::class, $activity);
         $authentication = new Authentication($databaseAuth->reveal(), $userRepository->reveal());
         $this->assertNull($authentication->getUser());
@@ -91,7 +91,7 @@ class AuthenticationTest extends TestCase
             'group_id' => $group->id()
         ]);
 
-        $activity = factory(Activity::class)->create(['activity_for' => 'group']);
+        $activity = Activity::factory()->create(['activity_for' => 'group']);
         $this->instance(Activity::class, $activity);
         $authentication = resolve(Authentication::class);
         $resolvedGroup = $authentication->getGroup();
@@ -111,7 +111,7 @@ class AuthenticationTest extends TestCase
             'group_id' => $group->id()
         ]);
 
-        $activity = factory(Activity::class)->create(['activity_for' => 'user']);
+        $activity = Activity::factory()->create(['activity_for' => 'user']);
         $this->instance(Activity::class, $activity);
         $authentication = resolve(Authentication::class);
         $resolvedGroup = $authentication->getGroup();
@@ -131,7 +131,7 @@ class AuthenticationTest extends TestCase
             'role_id' => $role->id()
         ]);
 
-        $activity = factory(Activity::class)->create(['activity_for' => 'role']);
+        $activity = Activity::factory()->create(['activity_for' => 'role']);
         $this->instance(Activity::class, $activity);
         $authentication = resolve(Authentication::class);
         $resolvedRole = $authentication->getRole();
@@ -151,7 +151,7 @@ class AuthenticationTest extends TestCase
         $databaseUser = factory(User::class)->create(['control_id' => $user->id()]);
         $this->be($databaseUser);
 
-        $activity = factory(Activity::class)->create(['activity_for' => 'group']);
+        $activity = Activity::factory()->create(['activity_for' => 'group']);
         $this->instance(Activity::class, $activity);
         $authentication = resolve(Authentication::class);
         $resolvedGroup = $authentication->getGroup();
@@ -175,7 +175,7 @@ class AuthenticationTest extends TestCase
             'role_id' => $role->id()
         ]);
 
-        $activity = factory(Activity::class)->create(['activity_for' => 'role']);
+        $activity = Activity::factory()->create(['activity_for' => 'role']);
         $this->instance(Activity::class, $activity);
         $authentication = resolve(Authentication::class);
         $resolvedRole = $authentication->getRole();
@@ -195,7 +195,7 @@ class AuthenticationTest extends TestCase
             'role_id' => $role->id()
         ]);
 
-        $activity = factory(Activity::class)->create(['activity_for' => 'user']);
+        $activity = Activity::factory()->create(['activity_for' => 'user']);
         $this->instance(Activity::class, $activity);
         $authentication = resolve(Authentication::class);
         $resolvedRole = $authentication->getRole();
@@ -214,7 +214,7 @@ class AuthenticationTest extends TestCase
             'role_id' => $role->id()
         ]);
 
-        $activity = factory(Activity::class)->create(['activity_for' => 'group']);
+        $activity = Activity::factory()->create(['activity_for' => 'group']);
         $this->instance(Activity::class, $activity);
         $authentication = resolve(Authentication::class);
         $resolvedRole = $authentication->getRole();
@@ -228,7 +228,7 @@ class AuthenticationTest extends TestCase
         $databaseUser = factory(User::class)->create(['control_id' => $user->id()]);
         $this->be($databaseUser);
 
-        $activity = factory(Activity::class)->create(['activity_for' => 'role']);
+        $activity = Activity::factory()->create(['activity_for' => 'role']);
         $this->instance(Activity::class, $activity);
         $authentication = resolve(Authentication::class);
         $resolvedRole = $authentication->getRole();
@@ -246,7 +246,7 @@ class AuthenticationTest extends TestCase
         $databaseUser = factory(User::class)->create(['control_id' => $user->id()]);
         $this->be($databaseUser);
 
-        $activity = factory(Activity::class)->create(['activity_for' => 'role']);
+        $activity = Activity::factory()->create(['activity_for' => 'role']);
 
         $route = $this->prophesize(Route::class);
         $route->hasParameter('activity_slug')->willReturn(true);

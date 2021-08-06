@@ -19,8 +19,8 @@ class HandlerTest extends TestCase
 
     /** @test */
     public function it_logs_into_an_activity_instance_if_a_not_in_activity_instance_exception_thrown(){
-        $activity = factory(Activity::class)->create(['activity_for' => 'user']);
-        $activityInstance = factory(ActivityInstance::class)->create(['activity_id' => $activity->id]);
+        $activity = Activity::factory()->create(['activity_for' => 'user']);
+        $activityInstance = ActivityInstance::factory()->create(['activity_id' => $activity->id]);
 
         $request = $this->prophesize(Request::class);
         $request->route('activity_slug')->shouldBeCalled()->willReturn($activity);
@@ -47,8 +47,8 @@ class HandlerTest extends TestCase
 
     /** @test */
     public function it_refreshes_the_page_if_exception_was_a_NotInActivityInstanceException(){
-        $activity = factory(Activity::class)->create(['activity_for' => 'user']);
-        $activityInstance = factory(ActivityInstance::class)->create(['activity_id' => $activity->id]);
+        $activity = Activity::factory()->create(['activity_for' => 'user']);
+        $activityInstance = ActivityInstance::factory()->create(['activity_id' => $activity->id]);
 
         $request = $this->prophesize(Request::class);
         $request->route('activity_slug')->shouldBeCalled()->willReturn($activity);

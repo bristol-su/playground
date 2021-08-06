@@ -96,7 +96,7 @@ class UserProviderTest extends TestCase
 
     /** @test */
     public function retrieveByCredentials_returns_null_if_no_control_user_found_with_the_given_data_user(){
-        $dataUser = factory(DataUser::class)->create(['email' => 'email@email.com']);
+        $dataUser = DataUser::factory()->create(['email' => 'email@email.com']);
 
         $provider = new UserProvider(app(UserRepository::class));
         $this->assertNull($provider->retrieveByCredentials(['email' => 'email@email.com']));
@@ -104,7 +104,7 @@ class UserProviderTest extends TestCase
 
     /** @test */
     public function retrieveByCredentials_returns_null_if_no_database_user_found_with_the_given_control_user(){
-        $dataUser = factory(DataUser::class)->create(['email' => 'email@email.com']);
+        $dataUser = DataUser::factory()->create(['email' => 'email@email.com']);
         $controlUser = factory(\BristolSU\ControlDB\Models\User::class)->create(['data_provider_id' => $dataUser->id()]);
 
         $provider = new UserProvider(app(UserRepository::class));
@@ -113,7 +113,7 @@ class UserProviderTest extends TestCase
 
     /** @test */
     public function retrieveByCredentials_returns_a_user_with_the_correct_email(){
-        $dataUser = factory(DataUser::class)->create(['email' => 'email@email.com']);
+        $dataUser = DataUser::factory()->create(['email' => 'email@email.com']);
         $controlUser = factory(\BristolSU\ControlDB\Models\User::class)->create(['data_provider_id' => $dataUser->id()]);
         $databaseUser = factory(User::class)->create(['control_id' => $controlUser->id()]);
 

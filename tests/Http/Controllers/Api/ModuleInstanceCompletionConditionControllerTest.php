@@ -17,9 +17,9 @@ class ModuleInstanceCompletionConditionControllerTest extends TestCase
 
     /** @test */
     public function store_creates_a_new_completion_condition_and_assigns_it_to_the_module_instance(){
-        $this->be(factory(User::class)->create());
+        $this->beUser($this->newUser());
 
-        $moduleInstance = factory(ModuleInstance::class)->create(['slug' => 'modinstslug', 'name' => 'ModInstName1']);
+        $moduleInstance = ModuleInstance::factory()->create(['slug' => 'modinstslug', 'name' => 'ModInstName1']);
 
         $this->assertDatabaseHas('module_instances', [
             'id' => $moduleInstance->id,
@@ -58,9 +58,9 @@ class ModuleInstanceCompletionConditionControllerTest extends TestCase
 
     /** @test */
     public function test_returns_404_if_no_completion_condition_created(){
-        $this->be(factory(User::class)->create());
+        $this->beUser($this->newUser());
 
-        $moduleInstance = factory(ModuleInstance::class)->create([
+        $moduleInstance = ModuleInstance::factory()->create([
             'slug' => 'modinstslug', 'name' => 'ModInstName1',
             'completion_condition_instance_id' => null
         ]);
@@ -73,11 +73,11 @@ class ModuleInstanceCompletionConditionControllerTest extends TestCase
 
     /** @test */
     public function test_returns_test_results(){
-        $this->be(factory(User::class)->create());
+        $this->beUser($this->newUser());
 
-        $completionConditionInstance = factory(CompletionConditionInstance::class)->create();
-        $moduleInstance = factory(ModuleInstance::class)->create(['slug' => 'modinstslug', 'name' => 'ModInstName1', 'completion_condition_instance_id' => $completionConditionInstance->id]);
-        $activityInstance = factory(ActivityInstance::class)->create(['activity_id' => $moduleInstance->activity_id]);
+        $completionConditionInstance = CompletionConditionInstance::factory()->create();
+        $moduleInstance = ModuleInstance::factory()->create(['slug' => 'modinstslug', 'name' => 'ModInstName1', 'completion_condition_instance_id' => $completionConditionInstance->id]);
+        $activityInstance = ActivityInstance::factory()->create(['activity_id' => $moduleInstance->activity_id]);
 
         $activityInstanceResolver = $this->prophesize(ActivityInstanceResolver::class);
         $activityInstanceResolver->getActivityInstance()->shouldBeCalled()->willReturn($activityInstance);

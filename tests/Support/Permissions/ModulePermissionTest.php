@@ -11,9 +11,9 @@ class ModulePermissionTest extends TestCase
 
     /** @test */
     public function it_can_be_created(){
-        $moduleInstance = factory(ModuleInstance::class)->create();
+        $moduleInstance = ModuleInstance::factory()->create();
 
-        $modulePermission = factory(ModulePermission::class)->create([
+        $modulePermission = ModulePermission::factory()->create([
             'ability' => 'ability1',
             'result' => true,
             'module_instance_id' => $moduleInstance->id

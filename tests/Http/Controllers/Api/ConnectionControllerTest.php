@@ -18,7 +18,7 @@ class ConnectionControllerTest extends TestCase
     /** @test */
     public function store_creates_a_new_connection()
     {
-        $this->be(factory(User::class)->create());
+        $this->beUser($this->newUser());
         app(ConnectorStore::class)->register('Name1', 'Description1', 'dummy_1', 'service1', DummyConnector_1::class);
 
         $response = $this->json('POST', '/api/connection', [
@@ -47,7 +47,7 @@ class ConnectionControllerTest extends TestCase
         $this->be(factory(User::class)->create(['control_id' => $user->id()]));
 
         app(ConnectorStore::class)->register('Name1', 'Description1', 'dummy_1', 'service1', DummyConnector_1::class);
-        $connection = factory(Connection::class)->create(['alias' => 'dummy_1', 'settings' => ['result' => true]]);
+        $connection = Connection::factory()->create(['alias' => 'dummy_1', 'settings' => ['result' => true]]);
         $response = $this->json('GET', '/api/connection/' . $connection->id . '/test');
 
         $response->assertStatus(200);
@@ -61,7 +61,7 @@ class ConnectionControllerTest extends TestCase
         $this->be(factory(User::class)->create(['control_id' => $user->id()]));
 
         app(ConnectorStore::class)->register('Name1', 'Description1', 'dummy_1', 'service1', DummyConnector_1::class);
-        $connection = factory(Connection::class)->create(['alias' => 'dummy_1', 'settings' => ['result' => false]]);
+        $connection = Connection::factory()->create(['alias' => 'dummy_1', 'settings' => ['result' => false]]);
         $response = $this->json('GET', '/api/connection/' . $connection->id . '/test');
 
         $response->assertStatus(200);

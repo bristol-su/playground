@@ -2,6 +2,8 @@
 
 namespace BristolSU\Playground\Support\Authentication;
 
+use BristolSU\Auth\Authentication\Contracts\AuthenticationUserResolver;
+use BristolSU\Auth\User\AuthenticationUser;
 use BristolSU\ControlDB\Contracts\Repositories\DataGroup;
 use BristolSU\ControlDB\Contracts\Repositories\DataPosition;
 use BristolSU\ControlDB\Contracts\Repositories\DataRole;
@@ -9,7 +11,6 @@ use BristolSU\ControlDB\Contracts\Repositories\Pivots\UserGroup;
 use BristolSU\ControlDB\Contracts\Repositories\Pivots\UserRole;
 use BristolSU\Support\Activity\Activity;
 use BristolSU\Support\Authentication\Contracts\Authentication as AuthenticationContract;
-use BristolSU\Support\User\Contracts\UserAuthentication;
 use BristolSU\ControlDB\Contracts\Models\Group;
 use BristolSU\ControlDB\Contracts\Models\Role;
 use BristolSU\ControlDB\Contracts\Models\User;
@@ -26,7 +27,7 @@ class Authentication implements AuthenticationContract
     /**
      * Holds the database user authentication to get and set users from
      *
-     * @var UserAuthentication
+     * @var AuthenticationUserResolver
      */
     private $auth;
 
@@ -38,10 +39,10 @@ class Authentication implements AuthenticationContract
     private $userRepository;
 
     /**
-     * @param UserAuthentication $auth UserAuthentication to get the logged in database user
+     * @param AuthenticationUserResolver $auth UserAuthentication to get the logged in database user
      * @param UserRepository $userRepository UserRepository to resolve users
      */
-    public function __construct(UserAuthentication $auth, UserRepository $userRepository)
+    public function __construct(AuthenticationUserResolver $auth, UserRepository $userRepository)
     {
         $this->auth = $auth;
         $this->userRepository = $userRepository;
@@ -55,8 +56,8 @@ class Authentication implements AuthenticationContract
     public function getUser(): ?User
     {
         $user = $this->auth->getUser();
-        if($user instanceof \BristolSU\Support\User\User && $user->exists) {
-            return $this->userRepository->getById($user->controlId());
+        if($user !== null) {
+            return $user->controlUser();
         }
         return null;
     }
@@ -207,5 +208,20 @@ class Authentication implements AuthenticationContract
         $userRoleRepository->addUserToRole($this->getUser(), $role);
 
         return $role;
+    }
+
+    public function hasGroup(): bool
+    {
+        return $this->getGroup() !== null;
+    }
+
+    public function hasRole(): bool
+    {
+        return $this->getRole() !== null;
+    }
+
+    public function hasUser(): bool
+    {
+        return $this->getUser() !== null;
     }
 }

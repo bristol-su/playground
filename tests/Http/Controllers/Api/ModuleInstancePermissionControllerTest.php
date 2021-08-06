@@ -15,10 +15,10 @@ class ModuleInstancePermissionControllerTest extends TestCase
 
     /** @test */
     public function index_returns_all_permissions(){
-        $this->be(factory(User::class)->create());
-        $moduleInstance = factory(ModuleInstance::class)->create();
-        $permissions = factory(ModulePermission::class, 10)->create(['module_instance_id' => $moduleInstance->id, 'ability' => Str::random(5)]);
-        $otherPermissions = factory(ModulePermission::class, 10)->create(['ability' => Str::random(5)]);
+        $this->beUser($this->newUser());
+        $moduleInstance = ModuleInstance::factory()->create();
+        $permissions = ModulePermission::factory()->count(10)->create(['module_instance_id' => $moduleInstance->id, 'ability' => Str::random(5)]);
+        $otherPermissions = ModulePermission::factory()->count(10)->create(['ability' => Str::random(5)]);
 
         foreach($permissions as $permission) {
             Permission::register($permission->ability, 'Name1', 'Dsc1', 'alias', false);
@@ -37,8 +37,8 @@ class ModuleInstancePermissionControllerTest extends TestCase
 
     /** @test */
     public function store_creates_a_permission(){
-        $this->be(factory(User::class)->create());
-        $moduleInstance = factory(ModuleInstance::class)->create();
+        $this->beUser($this->newUser());
+        $moduleInstance = ModuleInstance::factory()->create();
 
         Permission::register('ability1', 'Name1', 'Dsc1', 'alias', false);
 
@@ -58,9 +58,9 @@ class ModuleInstancePermissionControllerTest extends TestCase
 
     /** @test */
     public function update_updates_a_permission(){
-        $this->be(factory(User::class)->create());
-        $moduleInstance = factory(ModuleInstance::class)->create();
-        $permission = factory(ModulePermission::class)->create(['result' => true, 'module_instance_id' => $moduleInstance->id, 'ability' => Str::random(5)]);
+        $this->beUser($this->newUser());
+        $moduleInstance = ModuleInstance::factory()->create();
+        $permission = ModulePermission::factory()->create(['result' => true, 'module_instance_id' => $moduleInstance->id, 'ability' => Str::random(5)]);
 
         Permission::register('ability1', 'Name1', 'Dsc1', 'alias', false);
 

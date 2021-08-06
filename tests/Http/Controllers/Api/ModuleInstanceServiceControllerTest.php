@@ -12,12 +12,12 @@ class ModuleInstanceServiceControllerTest extends TestCase
 {
     /** @test */
     public function index_returns_all_services(){
-        $this->be(factory(User::class)->create());
+        $this->beUser($this->newUser());
 
-        $moduleInstance = factory(ModuleInstance::class)->create();
+        $moduleInstance = ModuleInstance::factory()->create();
 
-        $services = factory(ModuleInstanceService::class, 10)->create(['module_instance_id' => $moduleInstance->id]);
-        $otherServices = factory(ModuleInstanceService::class, 10)->create();
+        $services = ModuleInstanceService::factory()->count(10)->create(['module_instance_id' => $moduleInstance->id]);
+        $otherServices = ModuleInstanceService::factory()->count(10)->create();
 
         $response = $this->json('get', '/api/module-instance/' . $moduleInstance->slug . '/service');
 
@@ -29,8 +29,8 @@ class ModuleInstanceServiceControllerTest extends TestCase
     /** @test */
     public function store_creates_a_service(){
         $this->be($user = factory(User::class)->create());
-        $moduleInstance = factory(ModuleInstance::class)->create();
-        $connection = factory(Connection::class)->create(['user_id' => $user->id]);
+        $moduleInstance = ModuleInstance::factory()->create();
+        $connection = Connection::factory()->create(['user_id' => $user->id]);
 
         $response = $this->json('post', '/api/module-instance/' . $moduleInstance->slug . '/service', [
             'service' => 'service1', 'connection_id' => $connection->id
@@ -49,11 +49,11 @@ class ModuleInstanceServiceControllerTest extends TestCase
     /** @test */
     public function update_updates_a_service(){
         $this->be($user = factory(User::class)->create());
-        $moduleInstance = factory(ModuleInstance::class)->create();
-        $connection1 = factory(Connection::class)->create(['user_id' => $user->id]);
-        $connection2 = factory(Connection::class)->create(['user_id' => $user->id]);
+        $moduleInstance = ModuleInstance::factory()->create();
+        $connection1 = Connection::factory()->create(['user_id' => $user->id]);
+        $connection2 = Connection::factory()->create(['user_id' => $user->id]);
 
-        $moduleInstanceService = factory(ModuleInstanceService::class)->create([
+        $moduleInstanceService = ModuleInstanceService::factory()->create([
             'module_instance_id' => $moduleInstance->id, 'service' => 'service1', 'connection_id' => $connection1->id
         ]);
         $this->assertDatabaseHas('module_instance_services', [
@@ -80,7 +80,7 @@ class ModuleInstanceServiceControllerTest extends TestCase
     /** @test */
     public function destroy_deletes_a_service(){
         $this->be($user = factory(User::class)->create());
-        $moduleInstanceService = factory(ModuleInstanceService::class)->create();
+        $moduleInstanceService = ModuleInstanceService::factory()->create();
 
         $this->assertDatabaseHas('module_instance_services', ['id' => $moduleInstanceService->id]);
 

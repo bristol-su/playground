@@ -12,9 +12,9 @@ class EventTest extends TestCase
 
     /** @test */
     public function an_event_row_can_be_created(){
-        $moduleInstance = factory(ModuleInstance::class)->create();
+        $moduleInstance = ModuleInstance::factory()->create();
 
-        factory(Event::class)->create([
+        Event::factory()->create([
             'module_instance_id' => $moduleInstance->id,
             'event' => 'SomeEventNamespace',
             'data' => [
@@ -31,9 +31,9 @@ class EventTest extends TestCase
 
     /** @test */
     public function getEventInformation_returns_null_if_event_not_registered(){
-        $moduleInstance = factory(ModuleInstance::class)->create();
+        $moduleInstance = ModuleInstance::factory()->create();
 
-        $event = factory(Event::class)->create([
+        $event = Event::factory()->create([
             'module_instance_id' => $moduleInstance->id,
             'event' => 'SomeEventNamespace',
             'data' => [
@@ -48,9 +48,9 @@ class EventTest extends TestCase
     public function getEventInformation_returns_event_information_if_event_registered(){
         app(EventManager::class)->registerEvent('module_alias', 'EventName', 'SomeEventNamespace', 'EventDescription');
 
-        $moduleInstance = factory(ModuleInstance::class)->create();
+        $moduleInstance = ModuleInstance::factory()->create();
 
-        $event = factory(Event::class)->create([
+        $event = Event::factory()->create([
             'module_instance_id' => $moduleInstance->id,
             'event' => 'SomeEventNamespace',
             'data' => [
@@ -69,9 +69,9 @@ class EventTest extends TestCase
     public function event_has_a_name_attribute(){
         app(EventManager::class)->registerEvent('module_alias', 'EventName', 'SomeEventNamespace', 'EventDescription');
 
-        $moduleInstance = factory(ModuleInstance::class)->create();
+        $moduleInstance = ModuleInstance::factory()->create();
 
-        $event = factory(Event::class)->create([
+        $event = Event::factory()->create([
             'module_instance_id' => $moduleInstance->id,
             'event' => 'SomeEventNamespace',
             'data' => [
@@ -86,9 +86,9 @@ class EventTest extends TestCase
     public function event_has_a_description_attribute(){
         app(EventManager::class)->registerEvent('module_alias', 'EventName', 'SomeEventNamespace', 'EventDescription');
 
-        $moduleInstance = factory(ModuleInstance::class)->create();
+        $moduleInstance = ModuleInstance::factory()->create();
 
-        $event = factory(Event::class)->create([
+        $event = Event::factory()->create([
             'module_instance_id' => $moduleInstance->id,
             'event' => 'SomeEventNamespace',
             'data' => [
@@ -101,9 +101,9 @@ class EventTest extends TestCase
 
     /** @test */
     public function event_name_is_null_if_event_not_registered(){
-        $moduleInstance = factory(ModuleInstance::class)->create();
+        $moduleInstance = ModuleInstance::factory()->create();
 
-        $event = factory(Event::class)->create([
+        $event = Event::factory()->create([
             'module_instance_id' => $moduleInstance->id,
             'event' => 'SomeEventNamespace',
             'data' => [
@@ -116,9 +116,9 @@ class EventTest extends TestCase
 
     /** @test */
     public function event_description_is_null_if_event_not_registered(){
-        $moduleInstance = factory(ModuleInstance::class)->create();
+        $moduleInstance = ModuleInstance::factory()->create();
 
-        $event = factory(Event::class)->create([
+        $event = Event::factory()->create([
             'module_instance_id' => $moduleInstance->id,
             'event' => 'SomeEventNamespace',
             'data' => [
@@ -131,7 +131,7 @@ class EventTest extends TestCase
 
     /** @test */
     public function data_is_converted_to_an_empty_array_if_null(){
-        $event = factory(Event::class)->create(['data' => null]);
+        $event = Event::factory()->create(['data' => null]);
 
         $this->assertEquals([], $event->data);
     }
