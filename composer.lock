@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a91e9d8040abb4a2756040f34d3c4fe3",
+    "content-hash": "fe7257305914c1942c9bb27129d9d3d8",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -64,16 +64,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.187.3",
+            "version": "3.190.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "b661446e7fc2a3b5fcede4e65a58c2acb9743a1c"
+                "reference": "5f6149b626e916dbfcd1b1b8e90c726060d5beba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/b661446e7fc2a3b5fcede4e65a58c2acb9743a1c",
-                "reference": "b661446e7fc2a3b5fcede4e65a58c2acb9743a1c",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/5f6149b626e916dbfcd1b1b8e90c726060d5beba",
+                "reference": "5f6149b626e916dbfcd1b1b8e90c726060d5beba",
                 "shasum": ""
             },
             "require": {
@@ -148,9 +148,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.187.3"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.190.1"
             },
-            "time": "2021-08-05T18:14:30+00:00"
+            "time": "2021-08-12T18:14:37+00:00"
         },
         {
             "name": "brick/math",
@@ -210,20 +210,20 @@
         },
         {
             "name": "bristol-su/assign-roles",
-            "version": "dev-feature/port-modules",
+            "version": "v2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bristol-su/assign-roles.git",
-                "reference": "b1edd687e8fa35733d6f486ff3fd1039d0c3a3fb"
+                "reference": "a91e91e2bdb7d6eb1699862b43d8395f3318742a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bristol-su/assign-roles/zipball/b1edd687e8fa35733d6f486ff3fd1039d0c3a3fb",
-                "reference": "b1edd687e8fa35733d6f486ff3fd1039d0c3a3fb",
+                "url": "https://api.github.com/repos/bristol-su/assign-roles/zipball/a91e91e2bdb7d6eb1699862b43d8395f3318742a",
+                "reference": "a91e91e2bdb7d6eb1699862b43d8395f3318742a",
                 "shasum": ""
             },
             "require": {
-                "bristol-su/support": "dev-portal-v4 as 4.2",
+                "bristol-su/support": "^5.0.0",
                 "php": "^8.0"
             },
             "require-dev": {
@@ -257,22 +257,22 @@
             "description": "A module for the Bristol SU Portal Project to assign roles to members of groups",
             "support": {
                 "issues": "https://github.com/bristol-su/assign-roles/issues",
-                "source": "https://github.com/bristol-su/assign-roles/tree/feature/port-modules"
+                "source": "https://github.com/bristol-su/assign-roles/tree/v2.0.0"
             },
-            "time": "2021-07-28T11:24:09+00:00"
+            "time": "2021-08-12T16:14:22+00:00"
         },
         {
             "name": "bristol-su/control",
-            "version": "dev-develop",
+            "version": "v3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bristol-su/control.git",
-                "reference": "4c781213583a2eb50700006a6e7e68fd4d92f96f"
+                "reference": "c01b10bbbd3ec21ad1ab87c8b119ceb382137405"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bristol-su/control/zipball/4c781213583a2eb50700006a6e7e68fd4d92f96f",
-                "reference": "4c781213583a2eb50700006a6e7e68fd4d92f96f",
+                "url": "https://api.github.com/repos/bristol-su/control/zipball/c01b10bbbd3ec21ad1ab87c8b119ceb382137405",
+                "reference": "c01b10bbbd3ec21ad1ab87c8b119ceb382137405",
                 "shasum": ""
             },
             "require": {
@@ -315,26 +315,26 @@
             "description": "An implementation of the control contracts",
             "support": {
                 "issues": "https://github.com/bristol-su/control/issues",
-                "source": "https://github.com/bristol-su/control/tree/develop"
+                "source": "https://github.com/bristol-su/control/tree/v3.0.1"
             },
-            "time": "2021-08-05T12:33:16+00:00"
+            "time": "2021-08-05T16:26:17+00:00"
         },
         {
             "name": "bristol-su/data-entry",
-            "version": "dev-feature/port-modules",
+            "version": "v2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bristol-su/data-entry.git",
-                "reference": "00e8f79dc351ce977d7aa3b108d40972eb650ed2"
+                "reference": "92844e614805f51dd90bb038b088e984c2e9710f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bristol-su/data-entry/zipball/00e8f79dc351ce977d7aa3b108d40972eb650ed2",
-                "reference": "00e8f79dc351ce977d7aa3b108d40972eb650ed2",
+                "url": "https://api.github.com/repos/bristol-su/data-entry/zipball/92844e614805f51dd90bb038b088e984c2e9710f",
+                "reference": "92844e614805f51dd90bb038b088e984c2e9710f",
                 "shasum": ""
             },
             "require": {
-                "bristol-su/support": "dev-portal-v4 as 4.0",
+                "bristol-su/support": "^5.0.0",
                 "league/csv": "^9.6",
                 "php": "^8.0"
             },
@@ -369,27 +369,26 @@
             "description": "A module for the Bristol SU Portal Project to allow entering and management of data in a given data structure",
             "support": {
                 "issues": "https://github.com/bristol-su/data-entry/issues",
-                "source": "https://github.com/bristol-su/data-entry/tree/feature/port-modules"
+                "source": "https://github.com/bristol-su/data-entry/tree/v2.0.0"
             },
-            "time": "2021-07-27T16:15:32+00:00"
+            "time": "2021-08-12T16:17:15+00:00"
         },
         {
             "name": "bristol-su/portal-auth",
-            "version": "dev-portal-v4",
+            "version": "v0.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bristol-su/portal-auth.git",
-                "reference": "172629274e5905acbbacdc597fc2181e3a6ba029"
+                "reference": "f44e65440c7d4ce19a6ad339ada64da9728dee7c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bristol-su/portal-auth/zipball/172629274e5905acbbacdc597fc2181e3a6ba029",
-                "reference": "172629274e5905acbbacdc597fc2181e3a6ba029",
+                "url": "https://api.github.com/repos/bristol-su/portal-auth/zipball/f44e65440c7d4ce19a6ad339ada64da9728dee7c",
+                "reference": "f44e65440c7d4ce19a6ad339ada64da9728dee7c",
                 "shasum": ""
             },
             "require": {
-                "bristol-su/control": "dev-develop",
-                "bristol-su/support": "dev-portal-v4",
+                "bristol-su/support": "^5.0.0",
                 "doctrine/dbal": "^2.10",
                 "ext-json": "*",
                 "laravel/framework": "^8.0",
@@ -400,7 +399,6 @@
             },
             "require-dev": {
                 "brianium/paratest": "^6.0",
-                "laravel/legacy-factories": "^1.1",
                 "orchestra/testbench": "^6.0",
                 "orchestra/testbench-dusk": "^6.9",
                 "phpspec/prophecy-phpunit": "^2.0.1",
@@ -442,26 +440,26 @@
             ],
             "support": {
                 "issues": "https://github.com/bristol-su/portal-auth/issues",
-                "source": "https://github.com/bristol-su/portal-auth/tree/portal-v4"
+                "source": "https://github.com/bristol-su/portal-auth/tree/v0.0.1"
             },
-            "time": "2021-07-27T10:52:57+00:00"
+            "time": "2021-08-12T22:03:13+00:00"
         },
         {
             "name": "bristol-su/static-page",
-            "version": "dev-feature/port-modules",
+            "version": "v2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bristol-su/static-page.git",
-                "reference": "f1c9a0e755d6816ad46103f4190ec07d9ed53652"
+                "reference": "3a443c10a26cd42cbb8b1d8e8af62e062e4f2db7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bristol-su/static-page/zipball/f1c9a0e755d6816ad46103f4190ec07d9ed53652",
-                "reference": "f1c9a0e755d6816ad46103f4190ec07d9ed53652",
+                "url": "https://api.github.com/repos/bristol-su/static-page/zipball/3a443c10a26cd42cbb8b1d8e8af62e062e4f2db7",
+                "reference": "3a443c10a26cd42cbb8b1d8e8af62e062e4f2db7",
                 "shasum": ""
             },
             "require": {
-                "bristol-su/support": "dev-portal-v4 as 4.0",
+                "bristol-su/support": "^5.0.0",
                 "php": "^8.0"
             },
             "require-dev": {
@@ -498,33 +496,34 @@
             "description": "A static page module for the Bristol SU Portal Project, to display text or HTML",
             "support": {
                 "issues": "https://github.com/bristol-su/static-page/issues",
-                "source": "https://github.com/bristol-su/static-page/tree/feature/port-modules"
+                "source": "https://github.com/bristol-su/static-page/tree/v2.0.0"
             },
-            "time": "2021-07-27T13:28:13+00:00"
+            "time": "2021-08-12T18:51:58+00:00"
         },
         {
             "name": "bristol-su/support",
-            "version": "dev-portal-v4",
+            "version": "v5.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bristol-su/support.git",
-                "reference": "419e185b06d62b93a622b008cfd01bec3d99d415"
+                "reference": "ca53c53d7f89b7242b200b0a05dd3cc51b221ee1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bristol-su/support/zipball/419e185b06d62b93a622b008cfd01bec3d99d415",
-                "reference": "419e185b06d62b93a622b008cfd01bec3d99d415",
+                "url": "https://api.github.com/repos/bristol-su/support/zipball/ca53c53d7f89b7242b200b0a05dd3cc51b221ee1",
+                "reference": "ca53c53d7f89b7242b200b0a05dd3cc51b221ee1",
                 "shasum": ""
             },
             "require": {
                 "aws/aws-sdk-php": "^3.158",
-                "bristol-su/control": "dev-develop as 3.0.0",
+                "bristol-su/control": "^3.0.1",
                 "doctrine/dbal": "^2.10",
                 "ext-json": "*",
                 "guzzlehttp/guzzle": "^7.0.0",
                 "laracasts/utilities": "^3.0",
                 "laravel/framework": "^8.0",
                 "php": "^8.0",
+                "spatie/eloquent-sortable": "^3.11",
                 "tobytwigger/form-schema-generator": "^1.3",
                 "venturecraft/revisionable": "^1.33"
             },
@@ -541,9 +540,7 @@
                         "BristolSU\\Support\\SupportServiceProvider"
                     ],
                     "dont-discover": [
-                        "laravel/passport",
-                        "venturecraft/revisionable",
-                        "twigger/blade-themes"
+                        "venturecraft/revisionable"
                     ]
                 }
             },
@@ -575,27 +572,27 @@
             ],
             "support": {
                 "issues": "https://github.com/bristol-su/support/issues",
-                "source": "https://github.com/bristol-su/support/tree/portal-v4"
+                "source": "https://github.com/bristol-su/support/tree/v5.0.0"
             },
-            "time": "2021-08-06T10:26:53+00:00"
+            "time": "2021-08-11T16:15:08+00:00"
         },
         {
             "name": "bristol-su/typeform",
-            "version": "dev-feature/port-modules",
+            "version": "v2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bristol-su/typeform.git",
-                "reference": "1cb5339b62c71fa81e314aecdc00c38c2ace232a"
+                "reference": "a6f275418712ec7ffd40481fb33f8fbc6bf8dc1e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bristol-su/typeform/zipball/1cb5339b62c71fa81e314aecdc00c38c2ace232a",
-                "reference": "1cb5339b62c71fa81e314aecdc00c38c2ace232a",
+                "url": "https://api.github.com/repos/bristol-su/typeform/zipball/a6f275418712ec7ffd40481fb33f8fbc6bf8dc1e",
+                "reference": "a6f275418712ec7ffd40481fb33f8fbc6bf8dc1e",
                 "shasum": ""
             },
             "require": {
-                "bristol-su/support": "dev-portal-v4 as 4.0",
-                "bristol-su/typeform-service": "dev-feature/port-modules as 1.0.1",
+                "bristol-su/support": "^5.0.0",
+                "bristol-su/typeform-service": "^2.0.0",
                 "ext-json": "*",
                 "php": "^8.0",
                 "spatie/laravel-rate-limited-job-middleware": "^1.4",
@@ -631,26 +628,26 @@
             ],
             "support": {
                 "issues": "https://github.com/bristol-su/typeform/issues",
-                "source": "https://github.com/bristol-su/typeform/tree/feature/port-modules"
+                "source": "https://github.com/bristol-su/typeform/tree/v2.0.0"
             },
-            "time": "2021-07-28T11:45:02+00:00"
+            "time": "2021-08-12T16:10:16+00:00"
         },
         {
             "name": "bristol-su/typeform-service",
-            "version": "dev-feature/port-modules",
+            "version": "v2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bristol-su/typeform-service.git",
-                "reference": "8636363c5c06e64c5afd15ed79d140388f9d9e99"
+                "reference": "23a58d125aa363465e712219146a90260d608c31"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bristol-su/typeform-service/zipball/8636363c5c06e64c5afd15ed79d140388f9d9e99",
-                "reference": "8636363c5c06e64c5afd15ed79d140388f9d9e99",
+                "url": "https://api.github.com/repos/bristol-su/typeform-service/zipball/23a58d125aa363465e712219146a90260d608c31",
+                "reference": "23a58d125aa363465e712219146a90260d608c31",
                 "shasum": ""
             },
             "require": {
-                "bristol-su/support": "dev-portal-v4 as 4.0",
+                "bristol-su/support": "^5.0",
                 "ext-json": "*",
                 "php": "^8.0"
             },
@@ -685,26 +682,26 @@
             "description": "A third party service for typeform",
             "support": {
                 "issues": "https://github.com/bristol-su/typeform-service/issues",
-                "source": "https://github.com/bristol-su/typeform-service/tree/feature/port-modules"
+                "source": "https://github.com/bristol-su/typeform-service/tree/v2.0.0"
             },
-            "time": "2021-07-28T11:43:14+00:00"
+            "time": "2021-08-12T14:56:26+00:00"
         },
         {
             "name": "bristol-su/upload-file",
-            "version": "dev-feature/port-modules",
+            "version": "v2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bristol-su/upload-file.git",
-                "reference": "76eb59b9c3ac5a948d2da58487aa98814026309c"
+                "reference": "89e20b1f5517a20c680779090f3fc472daab12c8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bristol-su/upload-file/zipball/76eb59b9c3ac5a948d2da58487aa98814026309c",
-                "reference": "76eb59b9c3ac5a948d2da58487aa98814026309c",
+                "url": "https://api.github.com/repos/bristol-su/upload-file/zipball/89e20b1f5517a20c680779090f3fc472daab12c8",
+                "reference": "89e20b1f5517a20c680779090f3fc472daab12c8",
                 "shasum": ""
             },
             "require": {
-                "bristol-su/support": "dev-portal-v4 as 4.0",
+                "bristol-su/support": "^5.0.0",
                 "php": "^8.0"
             },
             "require-dev": {
@@ -737,9 +734,9 @@
             ],
             "support": {
                 "issues": "https://github.com/bristol-su/upload-file/issues",
-                "source": "https://github.com/bristol-su/upload-file/tree/feature/port-modules"
+                "source": "https://github.com/bristol-su/upload-file/tree/v2.0.0"
             },
-            "time": "2021-07-27T14:22:18+00:00"
+            "time": "2021-08-12T18:51:54+00:00"
         },
         {
             "name": "defuse/php-encryption",
@@ -2223,16 +2220,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v8.53.1",
+            "version": "v8.54.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "5df423c2790f32b26baee90518bb659572aa404f"
+                "reference": "7b88554cd1aeb52b7f82689bf244182e7a81894b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/5df423c2790f32b26baee90518bb659572aa404f",
-                "reference": "5df423c2790f32b26baee90518bb659572aa404f",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/7b88554cd1aeb52b7f82689bf244182e7a81894b",
+                "reference": "7b88554cd1aeb52b7f82689bf244182e7a81894b",
                 "shasum": ""
             },
             "require": {
@@ -2387,7 +2384,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2021-08-05T14:04:08+00:00"
+            "time": "2021-08-10T14:25:51+00:00"
         },
         {
             "name": "laravel/passport",
@@ -2468,16 +2465,16 @@
         },
         {
             "name": "laravel/socialite",
-            "version": "v5.2.3",
+            "version": "v5.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/socialite.git",
-                "reference": "1960802068f81e44b2ae9793932181cf1cb91b5c"
+                "reference": "59e2f8d9d9663029c7746a92d60bbb7697953bb9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/socialite/zipball/1960802068f81e44b2ae9793932181cf1cb91b5c",
-                "reference": "1960802068f81e44b2ae9793932181cf1cb91b5c",
+                "url": "https://api.github.com/repos/laravel/socialite/zipball/59e2f8d9d9663029c7746a92d60bbb7697953bb9",
+                "reference": "59e2f8d9d9663029c7746a92d60bbb7697953bb9",
                 "shasum": ""
             },
             "require": {
@@ -2533,7 +2530,7 @@
                 "issues": "https://github.com/laravel/socialite/issues",
                 "source": "https://github.com/laravel/socialite"
             },
-            "time": "2021-04-06T14:38:16+00:00"
+            "time": "2021-08-10T17:44:52+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -5947,16 +5944,16 @@
         },
         {
             "name": "ramsey/uuid",
-            "version": "4.1.1",
+            "version": "4.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ramsey/uuid.git",
-                "reference": "cd4032040a750077205918c86049aa0f43d22947"
+                "reference": "fe665a03df4f056aa65af552a96e1976df8c8dae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ramsey/uuid/zipball/cd4032040a750077205918c86049aa0f43d22947",
-                "reference": "cd4032040a750077205918c86049aa0f43d22947",
+                "url": "https://api.github.com/repos/ramsey/uuid/zipball/fe665a03df4f056aa65af552a96e1976df8c8dae",
+                "reference": "fe665a03df4f056aa65af552a96e1976df8c8dae",
                 "shasum": ""
             },
             "require": {
@@ -5970,26 +5967,26 @@
                 "rhumsaa/uuid": "self.version"
             },
             "require-dev": {
-                "codeception/aspect-mock": "^3",
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.6.2 || ^0.7.0",
+                "captainhook/captainhook": "^5.10",
+                "captainhook/plugin-composer": "^5.3",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
                 "doctrine/annotations": "^1.8",
-                "goaop/framework": "^2",
+                "ergebnis/composer-normalize": "^2.15",
                 "mockery/mockery": "^1.3",
                 "moontoast/math": "^1.1",
                 "paragonie/random-lib": "^2",
+                "php-mock/php-mock": "^2.2",
                 "php-mock/php-mock-mockery": "^1.3",
-                "php-mock/php-mock-phpunit": "^2.5",
                 "php-parallel-lint/php-parallel-lint": "^1.1",
-                "phpbench/phpbench": "^0.17.1",
+                "phpbench/phpbench": "^1.0",
                 "phpstan/extension-installer": "^1.0",
                 "phpstan/phpstan": "^0.12",
                 "phpstan/phpstan-mockery": "^0.12",
                 "phpstan/phpstan-phpunit": "^0.12",
-                "phpunit/phpunit": "^8.5",
-                "psy/psysh": "^0.10.0",
-                "slevomat/coding-standard": "^6.0",
+                "phpunit/phpunit": "^8.5 || ^9",
+                "slevomat/coding-standard": "^7.0",
                 "squizlabs/php_codesniffer": "^3.5",
-                "vimeo/psalm": "3.9.4"
+                "vimeo/psalm": "^4.9"
             },
             "suggest": {
                 "ext-bcmath": "Enables faster math with arbitrary-precision integers using BCMath.",
@@ -6002,7 +5999,10 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.x-dev"
+                    "dev-main": "4.x-dev"
+                },
+                "captainhook": {
+                    "force-install": true
                 }
             },
             "autoload": {
@@ -6018,7 +6018,6 @@
                 "MIT"
             ],
             "description": "A PHP library for generating and working with universally unique identifiers (UUIDs).",
-            "homepage": "https://github.com/ramsey/uuid",
             "keywords": [
                 "guid",
                 "identifier",
@@ -6026,16 +6025,19 @@
             ],
             "support": {
                 "issues": "https://github.com/ramsey/uuid/issues",
-                "rss": "https://github.com/ramsey/uuid/releases.atom",
-                "source": "https://github.com/ramsey/uuid"
+                "source": "https://github.com/ramsey/uuid/tree/4.2.1"
             },
             "funding": [
                 {
                     "url": "https://github.com/ramsey",
                     "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/ramsey/uuid",
+                    "type": "tidelift"
                 }
             ],
-            "time": "2020-08-18T17:17:46+00:00"
+            "time": "2021-08-11T01:06:55+00:00"
         },
         {
             "name": "riverline/multipart-parser",
@@ -7056,6 +7058,74 @@
                 }
             ],
             "time": "2020-09-28T06:39:44+00:00"
+        },
+        {
+            "name": "spatie/eloquent-sortable",
+            "version": "3.11.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/eloquent-sortable.git",
+                "reference": "b06fa886559f8d40e31c8a69fd32bd45401dc5da"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/eloquent-sortable/zipball/b06fa886559f8d40e31c8a69fd32bd45401dc5da",
+                "reference": "b06fa886559f8d40e31c8a69fd32bd45401dc5da",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "^6.0|^7.0|^8.0",
+                "illuminate/support": "^6.0|^7.0|^8.0",
+                "php": "^7.3|^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^4.0|^5.0|^6.0",
+                "phpunit/phpunit": "^8.0|^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Spatie\\EloquentSortable\\EloquentSortableServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\EloquentSortable\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be"
+                }
+            ],
+            "description": "Sortable behaviour for eloquent models",
+            "homepage": "https://github.com/spatie/eloquent-sortable",
+            "keywords": [
+                "behaviour",
+                "eloquent",
+                "laravel",
+                "model",
+                "sort",
+                "sortable"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/eloquent-sortable/issues",
+                "source": "https://github.com/spatie/eloquent-sortable/tree/3.11.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/spatie",
+                    "type": "github"
+                }
+            ],
+            "time": "2021-01-18T00:32:12+00:00"
         },
         {
             "name": "spatie/laravel-rate-limited-job-middleware",
@@ -10503,16 +10573,16 @@
         },
         {
             "name": "nunomaduro/collision",
-            "version": "v5.6.0",
+            "version": "v5.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nunomaduro/collision.git",
-                "reference": "0122ac6b03c75279ef78d1c0ad49725dfc52a8d2"
+                "reference": "0f0f46b6345ee788325b5ce9d53c4e851b2293a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nunomaduro/collision/zipball/0122ac6b03c75279ef78d1c0ad49725dfc52a8d2",
-                "reference": "0122ac6b03c75279ef78d1c0ad49725dfc52a8d2",
+                "url": "https://api.github.com/repos/nunomaduro/collision/zipball/0f0f46b6345ee788325b5ce9d53c4e851b2293a0",
+                "reference": "0f0f46b6345ee788325b5ce9d53c4e851b2293a0",
                 "shasum": ""
             },
             "require": {
@@ -10524,7 +10594,7 @@
             "require-dev": {
                 "brianium/paratest": "^6.1",
                 "fideloper/proxy": "^4.4.1",
-                "friendsofphp/php-cs-fixer": "^2.17.3",
+                "friendsofphp/php-cs-fixer": "^3.0",
                 "fruitcake/laravel-cors": "^2.0.3",
                 "laravel/framework": "^8.0 || ^9.0",
                 "nunomaduro/larastan": "^0.6.2",
@@ -10587,63 +10657,12 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2021-07-26T20:39:06+00:00"
+            "time": "2021-08-12T13:56:54+00:00"
         }
     ],
-    "aliases": [
-        {
-            "package": "bristol-su/assign-roles",
-            "version": "dev-feature/port-modules",
-            "alias": "1.0",
-            "alias_normalized": "1.0.0.0"
-        },
-        {
-            "package": "bristol-su/data-entry",
-            "version": "dev-feature/port-modules",
-            "alias": "1.0",
-            "alias_normalized": "1.0.0.0"
-        },
-        {
-            "package": "bristol-su/portal-auth",
-            "version": "dev-portal-v4",
-            "alias": "1.0",
-            "alias_normalized": "1.0.0.0"
-        },
-        {
-            "package": "bristol-su/static-page",
-            "version": "dev-feature/port-modules",
-            "alias": "1.0",
-            "alias_normalized": "1.0.0.0"
-        },
-        {
-            "package": "bristol-su/support",
-            "version": "dev-portal-v4",
-            "alias": "4.7.0",
-            "alias_normalized": "4.7.0.0"
-        },
-        {
-            "package": "bristol-su/typeform",
-            "version": "dev-feature/port-modules",
-            "alias": "1.0",
-            "alias_normalized": "1.0.0.0"
-        },
-        {
-            "package": "bristol-su/upload-file",
-            "version": "dev-feature/port-modules",
-            "alias": "1.0",
-            "alias_normalized": "1.0.0.0"
-        }
-    ],
+    "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "bristol-su/assign-roles": 20,
-        "bristol-su/static-page": 20,
-        "bristol-su/support": 20,
-        "bristol-su/typeform": 20,
-        "bristol-su/upload-file": 20,
-        "bristol-su/data-entry": 20,
-        "bristol-su/portal-auth": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

@@ -1,4 +1,3 @@
-
 {
     "name": "bristol-su/playground",
     "type": "project",
@@ -11,13 +10,13 @@
     ],
     "license": "GPL-3.0-or-later",
     "require": {
-        "bristol-su/assign-roles": "dev-feature/port-modules as 1.0",
-        "bristol-su/static-page": "dev-feature/port-modules as 1.0",
-        "bristol-su/support": "dev-portal-v4 as 4.7.0",
-        "bristol-su/typeform": "dev-feature/port-modules as 1.0",
-        "bristol-su/upload-file": "dev-feature/port-modules as 1.0",
-        "bristol-su/data-entry": "dev-feature/port-modules as 1.0",
-        "bristol-su/portal-auth": "dev-portal-v4 as 1.0",
+        "bristol-su/assign-roles": "^2.0.0",
+        "bristol-su/static-page": "2.0.0",
+        "bristol-su/support": "^5.0.0",
+        "bristol-su/typeform": "^2.0.0",
+        "bristol-su/upload-file": "^2.0.0",
+        "bristol-su/data-entry": "^2.0.0",
+        "bristol-su/portal-auth": "^0.0.1",
         "php": "^8.0",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
