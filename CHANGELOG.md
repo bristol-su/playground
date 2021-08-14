@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.0] - (14/08/2021)
+
 ### Removed
 - All auth is now handled by portal-auth
 
@@ -84,7 +86,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Open and save module instances
 - Change settings, permissions and third party connections
 
-[Unreleased]: https://github.com/bristol-su/playground/compare/v1.2.1...HEAD
+[Unreleased]: https://github.com/bristol-su/playground/compare/v1.3.0...HEAD
+[1.3.0]: https://github.com/bristol-su/playground/compare/v1.2.1...v1.3.0
 [1.2.1]: https://github.com/bristol-su/playground/compare/v1.2...v1.2.1
 [1.2]: https://github.com/bristol-su/playground/compare/v1.1.2...v1.2
 [1.1.2]: https://github.com/bristol-su/playground/compare/v1.1.1...v1.1.2
