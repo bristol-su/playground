@@ -1,4 +1,6 @@
 require('./bootstrap');
+require('./ui-kit');
+
 import Vue from 'vue';
 import BootstrapVue from 'bootstrap-vue';
 import axios from 'axios';
