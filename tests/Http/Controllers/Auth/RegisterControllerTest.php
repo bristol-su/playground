@@ -95,7 +95,7 @@ class RegisterControllerTest extends TestCase
 
     /** @test */
     public function the_email_must_be_unique(){
-        $dataUser = factory(DataUser::class)->create(['email' => 'email@email.com']);
+        $dataUser = DataUser::factory()->create(['email' => 'email@email.com']);
 
         $response = $this->post('/register', [
             'first_name' => 'TestName1',

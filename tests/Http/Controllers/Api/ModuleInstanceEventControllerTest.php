@@ -12,13 +12,13 @@ class ModuleInstanceEventControllerTest extends TestCase
 
     /** @test */
     public function index_returns_all_events_belonging_to_a_module_instance(){
-        $this->be(factory(User::class)->create());
+        $this->beUser($this->newUser());
 
-        $moduleInstance = factory(ModuleInstance::class)->create(['slug' => 'modinst']);
+        $moduleInstance = ModuleInstance::factory()->create(['slug' => 'modinst']);
 
-        factory(Event::class)->create(['event' => 'ModInstEventNamespace', 'module_instance_id' => $moduleInstance->id, 'data' => ['user_id' => 1]]);
-        factory(Event::class)->create(['event' => 'ModInstEventNamespace2', 'module_instance_id' => $moduleInstance->id, 'data' => ['user_id' => 2]]);
-        factory(Event::class, 5)->create();
+        Event::factory()->create(['event' => 'ModInstEventNamespace', 'module_instance_id' => $moduleInstance->id, 'data' => ['user_id' => 1]]);
+        Event::factory()->create(['event' => 'ModInstEventNamespace2', 'module_instance_id' => $moduleInstance->id, 'data' => ['user_id' => 2]]);
+        Event::factory()->count(5)->create();
 
         $response = $this->getJson('/api/module-instance/modinst/event');
 

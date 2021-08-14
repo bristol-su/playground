@@ -9,7 +9,7 @@ import Playground from './components/playground/Playground';
 import ModuleIndex from './components/module/index/Index';
 
 const axiosInstance = axios.create({
-    baseURL: portal.APP_URL
+    baseURL: window.portal.APP_URL
 });
 
 axiosInstance.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';

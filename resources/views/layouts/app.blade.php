@@ -13,5 +13,5 @@
 @endpush
 
 @push('scripts')
-    
+
 @endpush

@@ -1,58 +1,67 @@
 <template>
     <div>
+        <b-button pill v-b-toggle.playground-sidebar>Toggle Playground Tools</b-button>
+        <b-sidebar id="playground-sidebar"
+                   title="Playground Tools"
+                   shadow
+                   right
+                   no-header
+                   backdrop-variant="dark"
+                   backdrop
+                    @hidden="refreshPage">
 
-        <li class="nav-item dropdown">
-            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                Module Tools <span class="caret"></span>
-            </a>
+            <template #default="{ hide }">
+                <div class="p-3 d-flex justify-content-between">
+                    <b-button pill
+                              v-if="active !== null"
+                              class="px-1"
+                              variant="outline-secondary"
+                              aria-label="Back to tools"
+                              @click="active = null"><i class="fa fa-arrow-circle-left" aria-hidden="true"/></b-button>
+                    <h4 class="px-1">Playground Tools</h4>
+                    <b-button pill
+                              class="px-1"
+                              variant="outline-secondary"
+                              aria-label="Close playground tools"
+                              @click="hide"><i class="fa fa-times-circle" aria-hidden="true"/></b-button>
+                </div>
 
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#" @click.prevent="show('settings-modal')">
-                    Settings
-                </a>
 
-                <a class="dropdown-item" href="#" @click.prevent="show('permissions-modal')">
-                    Permissions
-                </a>
+                <div v-show="active === 'settings'">
+                    <settings :module-settings="portalModule.settings"></settings>
+                </div>
+                <div v-show="active === 'permissions'">
+                    <permissions :permissions-of-module="portalModule.permissions"></permissions>
+                </div>
+                <div v-show="active === 'services'">
+                    <services :optional="optional" :required="required"></services>
+                </div>
+                <div v-show="active === 'completion-conditions'">
+                    <completion-conditions :conditions="portalModule.completionConditions"></completion-conditions>
+                </div>
+                <div v-show="active === 'events'">
+                    <events></events>
+                </div>
+                <div v-show="active === null">
+                    TESTING
+                    <b-list-group>
+                        <b-list-group-item href="#" @click.prevent="show('settings')">Settings</b-list-group-item>
+                        <b-list-group-item href="#" @click.prevent="show('permissions')">Permissions</b-list-group-item>
+                        <b-list-group-item href="#" @click.prevent="show('services')">Services</b-list-group-item>
+                        <b-list-group-item href="#" @click.prevent="show('completion-conditions')">Completion Conditions</b-list-group-item>
+                        <b-list-group-item href="#" @click.prevent="show('events')">Events</b-list-group-item>
+                        <b-list-group-item :href="oppositeUrl">
+                            Go to {{(aorp==='a'?'Participant':'Admin')}}
+                        </b-list-group-item>
+                        <b-list-group-item variant="success" href="#" @click="refreshPage">
+                            Apply new configuration
+                        </b-list-group-item>
+                    </b-list-group>
+                </div>
+            </template>
 
-                <a class="dropdown-item" href="#" @click.prevent="show('services-modal')">
-                    Services
-                </a>
+        </b-sidebar>
 
-                <a class="dropdown-item" href="#" @click.prevent="show('completion-conditions-modal')">
-                    Completion Conditions
-                </a>
-
-                <a class="dropdown-item" href="#" @click.prevent="show('events-modal')">
-                    Events
-                </a>
-
-                <a class="dropdown-item" :href="oppositeUrl">
-                    Go to {{(aorp==='a'?'Participant':'Admin')}}
-                </a>
-            </div>
-        </li>
-
-        <b-modal id="settings-modal" hide-backdrop content-class="shadow" title="Settings">
-            <settings :module-settings="portalModule.settings"></settings>
-        </b-modal>
-
-        <b-modal id="permissions-modal" hide-backdrop content-class="shadow" title="Permissions">
-            <permissions :permissions-of-module="portalModule.permissions"></permissions>
-        </b-modal>
-
-        <b-modal id="services-modal" hide-backdrop content-class="shadow" title="Services">
-            <services :optional="optional" :required="required"></services>
-        </b-modal>
-
-        <b-modal id="completion-conditions-modal" hide-backdrop content-class="shadow" title="Completion Conditions">
-            <completion-conditions :conditions="portalModule.completionConditions"></completion-conditions>
-        </b-modal>
-
-        <b-modal id="events-modal" hide-backdrop content-class="shadow" title="Events">
-            <events></events>
-        </b-modal>
     </div>
 </template>
 
@@ -81,7 +90,8 @@
                 portalModule: {},
                 refreshable: [
                     'settings-modal', 'permissions-modal', 'services-modal'
-                ]
+                ],
+                active: null
             }
         },
 
@@ -90,28 +100,32 @@
         },
 
         mounted() {
-            this.$root.$on('bv::modal::hidden', (bvEvent, modalId) => {
-                if(this.refreshable.indexOf(modalId) !== -1) {
-                    window.location.reload(true);
-                }
-            })
+            // this.$root.$on('bv::modal::hidden', (bvEvent, modalId) => {
+            //     if(this.refreshable.indexOf(modalId) !== -1) {
+            //         window.location.reload(true);
+            //     }
+            // })
         },
 
         methods: {
             show(id) {
-                this.$bvModal.show(id);
+                this.active = id;
             },
 
             loadModuleInformation() {
-                this.$http.get('/api/module/' + portal.ALIAS)
+                this.$http.get('/api/module/' + window.portal.module_instance.alias)
                 .then(response => this.portalModule = response.data)
                 .catch(error => this.$notify.alert('Could not load module data'));
+            },
+
+            refreshPage() {
+                window.location.reload(true);
             }
         },
 
         computed: {
             aorp() {
-                return portal.A_OR_P;
+                return window.portal.admin ? 'a' : 'p';
             },
 
             oppositeUrl() {
@@ -121,7 +135,7 @@
                 } else {
                     aorp = 'a';
                 }
-                return portal.APP_URL + '/' + aorp + '/' + portal.ACTIVITY_SLUG + '/' + portal.MODULE_INSTANCE_SLUG + '/' + portal.ALIAS;
+                return window.portal.APP_URL + '/' + aorp + '/' + window.portal.activity.slug + '/' + window.portal.module_instance.slug + '/' + window.portal.module_instance.alias;
             },
             optional() {
                 if(this.portalModule.hasOwnProperty('services') && this.portalModule.services.hasOwnProperty('optional')) {

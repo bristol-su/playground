@@ -23,9 +23,5 @@ class AuthServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->app->bind(Authentication::class, \BristolSU\Playground\Support\Authentication\Authentication::class);
-
-        Auth::provider('data-user-provider', function($app) {
-            return $app->make(UserProvider::class);
-        });
     }
 }

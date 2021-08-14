@@ -59,7 +59,7 @@
 
         methods: {
             loadPermissions() {
-                this.$http.get('/api/module-instance/' + portal.MODULE_INSTANCE_SLUG + '/permission')
+                this.$http.get('/api/module-instance/' + window.portal.module_instance.slug + '/permission')
                     .then(response => {this.permissions = response.data})
                     .catch(error => this.$notify.alert('Could not load permissions'));
             },

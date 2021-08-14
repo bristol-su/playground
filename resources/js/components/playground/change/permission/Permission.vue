@@ -41,7 +41,7 @@
                 if(this.id === null) {
                     this.createPermission(value);
                 } else {
-                    this.$http.patch('/api/module-instance/' + portal.MODULE_INSTANCE_SLUG + '/permission/' + this.id, {
+                    this.$http.patch('/api/module-instance/' + window.portal.module_instance.slug + '/permission/' + this.id, {
                         result: value
                     })
                         .then(response => {
@@ -53,7 +53,7 @@
             },
 
             createPermission(value) {
-                this.$http.post('/api/module-instance/' + portal.MODULE_INSTANCE_SLUG + '/permission', {
+                this.$http.post('/api/module-instance/' + window.portal.module_instance.slug + '/permission', {
                     ability: this.permission.ability,
                     result: value
                 })

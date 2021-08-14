@@ -13,7 +13,7 @@ class ModuleModuleInstanceControllerTest extends TestCase
 
     /** @test */
     public function index_returns_all_module_instances_of_the_given_module(){
-        $this->be(factory(User::class)->create());
+        $this->beUser($this->newUser());
 
         $module = $this->prophesize(Module::class);
         $module->getAlias()->shouldBeCalled()->willReturn('module1');
@@ -22,8 +22,8 @@ class ModuleModuleInstanceControllerTest extends TestCase
         $moduleRepository->findByAlias('module1')->shouldBeCalled()->willReturn($module->reveal());
         $this->instance(ModuleRepository::class, $moduleRepository->reveal());
 
-        $moduleInstances = factory(ModuleInstance::class, 10)->create(['alias' => 'module1']);
-        $otherModuleInstances = factory(ModuleInstance::class, 10)->create();
+        $moduleInstances = ModuleInstance::factory()->count(10)->create(['alias' => 'module1']);
+        $otherModuleInstances = ModuleInstance::factory()->count(10)->create();
 
         $response = $this->json('GET', '/api/module/module1/module-instance');
 
@@ -34,7 +34,7 @@ class ModuleModuleInstanceControllerTest extends TestCase
 
     /** @test */
     public function store_creates_a_module_instance_of_the_given_module(){
-        $this->be(factory(User::class)->create());
+        $this->beUser($this->newUser());
 
         $module = $this->prophesize(Module::class);
         $module->getAlias()->willReturn('module1');
@@ -66,7 +66,7 @@ class ModuleModuleInstanceControllerTest extends TestCase
 
     /** @test */
     public function destroy_deletes_the_given_module_instance_of_the_given_module(){
-        $this->be(factory(User::class)->create());
+        $this->beUser($this->newUser());
 
         $module = $this->prophesize(Module::class);
         $module->getAlias()->willReturn('module1');
@@ -74,7 +74,7 @@ class ModuleModuleInstanceControllerTest extends TestCase
         $moduleRepository->findByAlias('module1')->shouldBeCalled()->willReturn($module->reveal());
         $this->instance(ModuleRepository::class, $moduleRepository->reveal());
 
-        $moduleInstance = factory(ModuleInstance::class)->create(['alias' => 'module1']);
+        $moduleInstance = ModuleInstance::factory()->create(['alias' => 'module1']);
 
         $this->assertDatabaseHas('module_instances', ['id' => $moduleInstance->id]);
         $response = $this->json('delete', '/api/module/module1/module-instance/'.$moduleInstance->id);

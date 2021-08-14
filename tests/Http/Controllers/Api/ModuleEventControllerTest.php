@@ -11,7 +11,7 @@ class ModuleEventControllerTest extends TestCase
 
     /** @test */
     public function index_returns_all_events_for_a_module(){
-        $this->be(factory(User::class)->create());
+        $this->beUser($this->newUser());
 
         $events = [
             ['name' => 'Name1', 'description' => 'Desc1', 'event' => 'Evt1'],

@@ -15,11 +15,11 @@ class ServiceConnectionControllerTest extends TestCase
     public function index_returns_all_connections_satisfying_the_given_service(){
         $this->be($user = factory(User::class)->create());
 
-        $connection1 = factory(Connection::class)->create(['alias' => 'alias1', 'user_id' => $user->control_id]);
-        $connection1_1 = factory(Connection::class)->create(['alias' => 'alias1', 'user_id' => $user->control_id]);
-        $connection2 = factory(Connection::class)->create(['alias' => 'alias2', 'user_id' => $user->control_id]);
-        $connection2_2 = factory(Connection::class)->create(['alias' => 'alias2', 'user_id' => $user->control_id]);
-        $connection3 = factory(Connection::class)->create(['alias' => 'alias3', 'user_id' => $user->control_id]);
+        $connection1 = Connection::factory()->create(['alias' => 'alias1', 'user_id' => $user->control_id]);
+        $connection1_1 = Connection::factory()->create(['alias' => 'alias1', 'user_id' => $user->control_id]);
+        $connection2 = Connection::factory()->create(['alias' => 'alias2', 'user_id' => $user->control_id]);
+        $connection2_2 = Connection::factory()->create(['alias' => 'alias2', 'user_id' => $user->control_id]);
+        $connection3 = Connection::factory()->create(['alias' => 'alias3', 'user_id' => $user->control_id]);
 
         $registeredConnector1 = $this->prophesize(RegisteredConnector::class);
         $registeredConnector2 = $this->prophesize(RegisteredConnector::class);

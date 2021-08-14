@@ -16,7 +16,7 @@ class ForgotPasswordControllerTest extends TestCase
     public function an_email_is_sent_when_a_password_reset_is_requested(){
         Notification::fake();
 
-        $dataUser = factory(DataUser::class)->create(['email' => 'myemail@email.com']);
+        $dataUser = DataUser::factory()->create(['email' => 'myemail@email.com']);
         $controlUser = $this->newUser(['data_provider_id' => $dataUser->id()]);
         $databaseUser = factory(User::class)->create(['password' => Hash::make('secretpw'), 'control_id' => $controlUser->id()]);
 

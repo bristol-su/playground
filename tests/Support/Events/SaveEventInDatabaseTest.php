@@ -12,7 +12,7 @@ class SaveEventInDatabaseTest extends TestCase
 
     /** @test */
     public function it_creates_an_event_with_a_module_instance_id_and_event_name(){
-        $moduleInstance = factory(ModuleInstance::class)->create();
+        $moduleInstance = ModuleInstance::factory()->create();
         $this->instance(ModuleInstance::class, $moduleInstance);
 
         $listener = new SaveEventInDatabase();
@@ -27,7 +27,7 @@ class SaveEventInDatabaseTest extends TestCase
 
     /** @test */
     public function it_creates_an_event_with_a_module_instance_id_and_event_name_and_data(){
-        $moduleInstance = factory(ModuleInstance::class)->create();
+        $moduleInstance = ModuleInstance::factory()->create();
         $this->instance(ModuleInstance::class, $moduleInstance);
 
         $listener = new SaveEventInDatabase();

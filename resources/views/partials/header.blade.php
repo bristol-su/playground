@@ -15,12 +15,6 @@
 
             </ul>
 
-            <ul id="header-playground" class="navbar-nav ml-auto mr-auto">
-                @if(in_array('p', request()->segments()) || in_array('a', request()->segments()))
-                    <playground></playground>
-                @endif
-            </ul>
-
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
                 <!-- Authentication Links -->
@@ -54,7 +48,14 @@
                     </li>
                 @endguest
             </ul>
+
+
         </div>
     </div>
 </nav>
 
+<div id="header-playground" class="float-right">
+    @if(in_array('p', request()->segments()) || in_array('a', request()->segments()))
+        <playground></playground>
+    @endif
+</div>

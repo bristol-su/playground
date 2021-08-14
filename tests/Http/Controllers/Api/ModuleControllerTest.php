@@ -12,7 +12,7 @@ class ModuleControllerTest extends TestCase
 
     /** @test */
     public function index_returns_all_modules(){
-        $this->be(factory(User::class)->create());
+        $this->beUser($this->newUser());
         $module1 = $this->prophesize(Module::class);
         $module2 = $this->prophesize(Module::class);
         $module3 = $this->prophesize(Module::class);
@@ -36,7 +36,7 @@ class ModuleControllerTest extends TestCase
 
     /** @test */
     public function show_returns_a_module(){
-        $this->be(factory(User::class)->create());
+        $this->beUser($this->newUser());
         $module1 = $this->prophesize(Module::class);
         $module1->toJson(0)->shouldBeCalled()->willReturn(json_encode(['alias' => 'module1']));
 

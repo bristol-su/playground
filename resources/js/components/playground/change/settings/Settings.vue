@@ -36,7 +36,7 @@
         },
 
         created() {
-            this.$http.get('/api/module-instance/' + portal.MODULE_INSTANCE_SLUG + '/setting')
+            this.$http.get('/api/module-instance/' + window.portal.module_instance.slug + '/setting')
                 .then(response => {
                     this.settings = response.data;
                     this.updateModel();
@@ -51,10 +51,10 @@
                     let settings = this.settings.filter(setting => setting.key === key);
                     if(settings.length > 0) {
                         return this.$http.patch(
-                            '/api/module-instance/' + portal.MODULE_INSTANCE_SLUG + '/setting/' + settings[0].id,
+                            '/api/module-instance/' + window.portal.module_instance.slug + '/setting/' + settings[0].id,
                             {value: this.currentModel[key]});
                     }
-                    return this.$http.post('/api/module-instance/' + portal.MODULE_INSTANCE_SLUG + '/setting',
+                    return this.$http.post('/api/module-instance/' + window.portal.module_instance.slug + '/setting',
                         {key: key, value: this.currentModel[key]});
                 }))
                 .then(responses => window.location.reload(true))

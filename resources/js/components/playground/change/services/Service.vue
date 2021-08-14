@@ -76,7 +76,7 @@
             },
 
             updateService(connectionId) {
-                this.$http.patch('/api/module-instance/' + portal.MODULE_INSTANCE_SLUG + '/service/' + this.id, {
+                this.$http.patch('/api/module-instance/' + window.portal.module_instance.slug + '/service/' + this.id, {
                     connection_id: connectionId
                 })
                     .then(response => {
@@ -87,7 +87,7 @@
             },
 
             createService(connectionId) {
-                this.$http.post('/api/module-instance/' + portal.MODULE_INSTANCE_SLUG + '/service', {
+                this.$http.post('/api/module-instance/' + window.portal.module_instance.slug + '/service', {
                     service: this.service,
                     connection_id: connectionId
                 })
@@ -99,7 +99,7 @@
             },
 
             deleteService() {
-                this.$http.delete('/api/module-instance/' + portal.MODULE_INSTANCE_SLUG + '/service/' + this.id)
+                this.$http.delete('/api/module-instance/' + window.portal.module_instance.slug + '/service/' + this.id)
                     .then(response => {
                         this.$emit('deleteService');
                         this.$notify.success('Service deleted');
