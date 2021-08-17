@@ -24,7 +24,7 @@ if (mix.inProduction()) {
 mix.webpackConfig({
     plugins: [
         new webpack.ProvidePlugin({
-            'ui-kit': '@bristol-su/portal-ui-kit'
+            'ui-kit': '@bristol-su/frontend-toolkit'
         })
     ]
 });

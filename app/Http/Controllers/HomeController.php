@@ -2,6 +2,9 @@
 
 namespace BristolSU\Playground\Http\Controllers;
 
+use FormSchema\Generator\Field;
+use FormSchema\Generator\Form;
+use FormSchema\Generator\Group;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\View\View;
 

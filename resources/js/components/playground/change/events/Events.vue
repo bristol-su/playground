@@ -53,12 +53,12 @@
 
         methods: {
             loadEvents() {
-                this.$http.get('/api/module-instance/' + window.portal.module_instance.slug + '/event')
+                this.$basicHttp.get('/api/module-instance/' + window.portal.module_instance.slug + '/event')
                     .then(response => this.events = response.data)
                     .catch(error => this.$notify.alert('Could not load events: ' + error.message));
             },
             loadEventTypes() {
-                this.$http.get('/api/module/' + portal.module_instance.alias + '/event')
+                this.$basicHttp.get('/api/module/' + portal.module_instance.alias + '/event')
                     .then(response => this.eventTypes = response.data)
                     .catch(error => this.$notify.alert('Could not load event types: ' + error.message));
             },

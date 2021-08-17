@@ -39,7 +39,7 @@
 
         methods: {
             createModule() {
-                this.$http.post('/api/module/' + this.portalModule.alias + '/module-instance', {
+                this.$basicHttp.post('/api/module/' + this.portalModule.alias + '/module-instance', {
                     name: this.name, activity_for: this.activityFor
                 })
                     .then(response => {

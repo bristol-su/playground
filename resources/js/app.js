@@ -1,5 +1,4 @@
 require('./bootstrap');
-require('./ui-kit');
 
 import Vue from 'vue';
 import BootstrapVue from 'bootstrap-vue';
@@ -7,7 +6,9 @@ import axios from 'axios';
 import AWN from "awesome-notifications";
 import VueFormGenerator from 'vue-form-generator'
 
+import Toolkit from '@bristol-su/frontend-toolkit';
 import Playground from './components/playground/Playground';
+
 import ModuleIndex from './components/module/index/Index';
 
 const axiosInstance = axios.create({
@@ -15,13 +16,16 @@ const axiosInstance = axios.create({
 });
 
 axiosInstance.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+
 let token = document.head.querySelector('meta[name="csrf-token"]');
 if (token) {
     axiosInstance.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
 }
+window.axios = Vue.prototype.$basicHttp = axiosInstance;
 
-window.axios = Vue.prototype.$http = axiosInstance;
 Vue.prototype.$notify = new AWN({position: 'top-right'});
+global.Toolkit = Toolkit;
+Vue.use(Toolkit);
 Vue.use(BootstrapVue);
 Vue.use(VueFormGenerator);
 

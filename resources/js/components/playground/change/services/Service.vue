@@ -47,7 +47,7 @@
         },
 
         created() {
-            this.$http.get('/api/service/' + this.service + '/connection')
+            this.$basicHttp.get('/api/service/' + this.service + '/connection')
                 .then(response => this.connections = response.data)
                 .catch(error => this.$notify.alert('Could not load connections: ' + error.message));
         },
@@ -76,7 +76,7 @@
             },
 
             updateService(connectionId) {
-                this.$http.patch('/api/module-instance/' + window.portal.module_instance.slug + '/service/' + this.id, {
+                this.$basicHttp.patch('/api/module-instance/' + window.portal.module_instance.slug + '/service/' + this.id, {
                     connection_id: connectionId
                 })
                     .then(response => {
@@ -87,7 +87,7 @@
             },
 
             createService(connectionId) {
-                this.$http.post('/api/module-instance/' + window.portal.module_instance.slug + '/service', {
+                this.$basicHttp.post('/api/module-instance/' + window.portal.module_instance.slug + '/service', {
                     service: this.service,
                     connection_id: connectionId
                 })
@@ -99,7 +99,7 @@
             },
 
             deleteService() {
-                this.$http.delete('/api/module-instance/' + window.portal.module_instance.slug + '/service/' + this.id)
+                this.$basicHttp.delete('/api/module-instance/' + window.portal.module_instance.slug + '/service/' + this.id)
                     .then(response => {
                         this.$emit('deleteService');
                         this.$notify.success('Service deleted');

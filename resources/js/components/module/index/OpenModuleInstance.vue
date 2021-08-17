@@ -43,9 +43,9 @@
         },
 
         created() {
-            this.$http.get('/api/module/' + this.portalModule.alias + '/module-instance')
+            this.$basicHttp.get('/api/module/' + this.portalModule.alias + '/module-instance')
                 .then(response => this.moduleInstances = response.data)
-                .catch(error => this.$http.alert('Could not load saved modules'));
+                .catch(error => this.$basicHttp.alert('Could not load saved modules'));
         },
 
         methods: {
@@ -67,7 +67,7 @@
                 })
                     .then(value => {
                         if(value) {
-                            this.$http.delete('/api/module/' + this.portalModule.alias + '/module-instance/' + moduleInstance.id)
+                            this.$basicHttp.delete('/api/module/' + this.portalModule.alias + '/module-instance/' + moduleInstance.id)
                                 .then(response => {
                                     this.$notify.success('Deleted module ' + moduleInstance.name);
                                     this.moduleInstances.splice(this.moduleInstances.indexOf(moduleInstance), 1);

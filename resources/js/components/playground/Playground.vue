@@ -28,7 +28,7 @@
 
 
                 <div v-show="active === 'settings'">
-                    <settings :module-settings="portalModule.settings"></settings>
+                    <settings v-if="Object.keys(portalModule).length > 0" :module-settings="portalModule.settings"></settings>
                 </div>
                 <div v-show="active === 'permissions'">
                     <permissions :permissions-of-module="portalModule.permissions"></permissions>
@@ -113,7 +113,7 @@
             },
 
             loadModuleInformation() {
-                this.$http.get('/api/module/' + window.portal.module_instance.alias)
+                this.$basicHttp.get('/api/module/' + window.portal.module_instance.alias)
                 .then(response => this.portalModule = response.data)
                 .catch(error => this.$notify.alert('Could not load module data'));
             },

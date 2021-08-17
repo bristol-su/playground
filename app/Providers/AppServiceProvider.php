@@ -4,6 +4,8 @@ namespace BristolSU\Playground\Providers;
 
 use BristolSU\Playground\Support\Permissions\OverridePermissionTester;
 use BristolSU\Support\Permissions\Facade\PermissionTester;
+use FormSchema\Transformers\PortalUiKitTransformer;
+use FormSchema\Transformers\Transformer;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 
@@ -21,7 +23,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-
+        $this->app->singleton(Transformer::class,  PortalUiKitTransformer::class);
     }
 
     /**

@@ -31,7 +31,7 @@
         },
         methods: {
             testConnection() {
-                this.$http.get('/api/connection/' + this.connectionId + '/test')
+                this.$basicHttp.get('/api/connection/' + this.connectionId + '/test')
                     .then(response => {this.testResult = response.data.result})
                     .catch(error => this.$notify.alert('Testing could not be completed: ' + error.message));
             }

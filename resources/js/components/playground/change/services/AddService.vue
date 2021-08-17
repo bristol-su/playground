@@ -41,7 +41,7 @@
         },
 
         created() {
-            this.$http.get('/api/service/' + this.service + '/connector')
+            this.$basicHttp.get('/api/service/' + this.service + '/connector')
                 .then(response => this.connectors = response.data)
                 .catch(error => this.$notify.alert('Could not load connectors.'));
         }

@@ -28,9 +28,9 @@
             ></b-form-textarea>
         </b-form-group>
 
-        <vue-form-generator :schema="connector.settings.schema" :model="form.settings" :options="connector.settings.options">
+        <p-dynamic-form :schema="connector.settings" v-model="form.settings">
 
-        </vue-form-generator>
+        </p-dynamic-form>
 
         <b-button variant="info" size="lg" @click="saveNewConnection">Save Connection</b-button>
     </div>
@@ -64,7 +64,7 @@
 
         methods: {
             saveNewConnection() {
-                this.$http.post('/api/connection', this.form)
+                this.$basicHttp.post('/api/connection', this.form)
                     .then(response => {
                         this.$notify.success('Connection established');
                         this.$emit('newConnection', response.data);

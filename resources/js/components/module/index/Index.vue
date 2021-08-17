@@ -29,7 +29,7 @@
         },
 
         created() {
-            this.$http.get('/api/module')
+            this.$basicHttp.get('/api/module')
                 .then(response => this.modules = response.data)
                 .catch(error => this.$notify.alert('Could not load modules'));
         },

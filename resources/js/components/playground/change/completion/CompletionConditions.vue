@@ -5,9 +5,9 @@
         </div>
         <div v-if="selectedCondition.hasOwnProperty('alias')" style="padding-top: 15px;">
             <h3>Condition Settings</h3>
-            <vue-form-generator :schema="selectedCondition.options.schema" :model="currentSettings" :options="selectedCondition.options.options">
+            <p-dynamic-form :schema="selectedCondition.options" v-model="currentSettings">
 
-            </vue-form-generator>
+            </p-dynamic-form>
 
             <div style="width: 100%">
                 <b-button variant="secondary" width="100%" @click="test">{{testButtonText}}</b-button>
@@ -23,8 +23,6 @@
 </template>
 
 <script>
-    import VueFormGenerator from 'vue-form-generator';
-
     export default {
         name: "CompletionConditions",
 
@@ -51,7 +49,7 @@
         watch: {
             selectedConditionAlias(val) {
                 if(val !== null) {
-                    this.currentSettings = VueFormGenerator.schema.createDefaultObject(this.selectedCondition.options.schema);
+                    this.currentSettings = this.selectedCondition.options;
                 }
             }
         },
@@ -59,12 +57,12 @@
         methods: {
             test() {
                 this.testing = true;
-                this.$http.post('/api/module-instance/' + window.portal.module_instance.slug + '/completion-condition', {
+                this.$basicHttp.post('/api/module-instance/' + window.portal.module_instance.slug + '/completion-condition', {
                     alias: this.selectedConditionAlias,
                     settings: this.currentSettings
                 })
                     .then(response => {
-                        this.$http.get('/api/module-instance/' + window.portal.module_instance.slug + '/completion-condition/test', {
+                        this.$basicHttp.get('/api/module-instance/' + window.portal.module_instance.slug + '/completion-condition/test', {
                             params: {activity_instance_id: window.portal.activity_instance.id}
                         })
                             .then(response => {
