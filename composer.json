@@ -9,8 +9,7 @@
     ],
     "license": "GPL-3.0-or-later",
     "require": {
-        "bristol-su/support": "dev-PR-350/ui-kit as v5.0.0",
-        "bristol-su/upload-file": "dev-PR-350/ui-kit as v2.0.0",
+        "bristol-su/support": "v5.0.0",
         "bristol-su/portal-auth": "^0.0.1",
         "php": "^8.0",
         "fideloper/proxy": "^4.4",
@@ -49,29 +48,6 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "repositories": [
-        {
-            "type": "path",
-            "url": "./repos/tobytwigger/form-schema-generator",
-            "options": {
-                "symlink": true
-            }
-        },
-        {
-            "type": "path",
-            "url": "./repos/bristol-su/upload-file",
-            "options": {
-                "symlink": true
-            }
-        },
-        {
-            "type": "path",
-            "url": "./repos/bristol-su/support",
-            "options": {
-                "symlink": true
-            }
-        }
-    ],
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",

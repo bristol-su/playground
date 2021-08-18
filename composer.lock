@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9fc6783bf1d3337d95725e60239199fc",
+    "content-hash": "b1893d838a24ef1dd07124699de955e7",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -64,16 +64,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.190.2",
+            "version": "3.190.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "8ca6a5f9834de3eb3fb84b28fc12c9088bc01293"
+                "reference": "b66a54a7825ce5a639fe929906746249d903ae5d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/8ca6a5f9834de3eb3fb84b28fc12c9088bc01293",
-                "reference": "8ca6a5f9834de3eb3fb84b28fc12c9088bc01293",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/b66a54a7825ce5a639fe929906746249d903ae5d",
+                "reference": "b66a54a7825ce5a639fe929906746249d903ae5d",
                 "shasum": ""
             },
             "require": {
@@ -148,9 +148,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.190.2"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.190.4"
             },
-            "time": "2021-08-13T18:12:28+00:00"
+            "time": "2021-08-17T18:17:31+00:00"
         },
         {
             "name": "brick/math",
@@ -343,11 +343,17 @@
         },
         {
             "name": "bristol-su/support",
-            "version": "dev-PR-350/ui-kit",
+            "version": "v5.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bristol-su/support.git",
+                "reference": "ca53c53d7f89b7242b200b0a05dd3cc51b221ee1"
+            },
             "dist": {
-                "type": "path",
-                "url": "./repos/bristol-su/support",
-                "reference": "384e9668de66edfa97f734f183667a17c715fac0"
+                "type": "zip",
+                "url": "https://api.github.com/repos/bristol-su/support/zipball/ca53c53d7f89b7242b200b0a05dd3cc51b221ee1",
+                "reference": "ca53c53d7f89b7242b200b0a05dd3cc51b221ee1",
+                "shasum": ""
             },
             "require": {
                 "aws/aws-sdk-php": "^3.158",
@@ -389,30 +395,7 @@
                     "Database\\Seeders\\": "database/seeders/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "BristolSU\\Support\\Tests\\": "tests/"
-                }
-            },
-            "scripts": {
-                "test": [
-                    "vendor/bristol-su/portal-code-style/src/PHPUnit/phpunit.sh"
-                ],
-                "code-style": [
-                    "vendor/bristol-su/portal-code-style/src/PhpCS/phpcs_fixer.sh",
-                    "vendor/bristol-su/portal-code-style/src/Rector/rector.sh",
-                    "vendor/bristol-su/portal-code-style/src/SecurityChecker/security.sh"
-                ],
-                "fix-code-style": [
-                    "vendor/bin/php-cs-fixer fix --config .php_cs --verbose --using-cache=no"
-                ],
-                "phpstan": [
-                    "vendor/bristol-su/portal-code-style/src/PHPStan/phpstan.sh"
-                ],
-                "coverage": [
-                    "vendor/bin/phpunit --colors=always --process-isolation --verbose --configuration phpunit.xml --coverage-html coverage"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-3.0-or-later"
             ],
@@ -428,59 +411,11 @@
                 "portal",
                 "sdk"
             ],
-            "transport-options": {
-                "symlink": true,
-                "relative": true
-            }
-        },
-        {
-            "name": "bristol-su/upload-file",
-            "version": "dev-PR-350/ui-kit",
-            "dist": {
-                "type": "path",
-                "url": "./repos/bristol-su/upload-file",
-                "reference": "d41135a9fc45c2b20a25b70b733c28e179be569d"
+            "support": {
+                "issues": "https://github.com/bristol-su/support/issues",
+                "source": "https://github.com/bristol-su/support/tree/v5.0.0"
             },
-            "require": {
-                "bristol-su/support": "^5.0.0",
-                "php": "^8.0"
-            },
-            "require-dev": {
-                "laravel/legacy-factories": "^1.1",
-                "orchestra/testbench": "^6.19",
-                "phpspec/prophecy-phpunit": "^2.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "BristolSU\\Module\\UploadFile\\ModuleServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "BristolSU\\Module\\UploadFile\\": "app/"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "BristolSU\\Module\\Tests\\UploadFile\\": "tests/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Toby Twigger",
-                    "email": "toby.twigger@bristol.ac.uk"
-                }
-            ],
-            "transport-options": {
-                "symlink": true,
-                "relative": true
-            }
+            "time": "2021-08-11T16:15:08+00:00"
         },
         {
             "name": "defuse/php-encryption",
@@ -1964,16 +1899,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v8.54.0",
+            "version": "v8.55.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "7b88554cd1aeb52b7f82689bf244182e7a81894b"
+                "reference": "997e2aa23e9103137715018ae926c52f8a1703f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/7b88554cd1aeb52b7f82689bf244182e7a81894b",
-                "reference": "7b88554cd1aeb52b7f82689bf244182e7a81894b",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/997e2aa23e9103137715018ae926c52f8a1703f2",
+                "reference": "997e2aa23e9103137715018ae926c52f8a1703f2",
                 "shasum": ""
             },
             "require": {
@@ -2046,7 +1981,7 @@
                 "illuminate/view": "self.version"
             },
             "require-dev": {
-                "aws/aws-sdk-php": "^3.186.4",
+                "aws/aws-sdk-php": "^3.189.0",
                 "doctrine/dbal": "^2.6|^3.0",
                 "filp/whoops": "^2.8",
                 "guzzlehttp/guzzle": "^6.5.5|^7.0.1",
@@ -2059,7 +1994,7 @@
                 "symfony/cache": "^5.1.4"
             },
             "suggest": {
-                "aws/aws-sdk-php": "Required to use the SQS queue driver, DynamoDb failed job storage and SES mail driver (^3.186.4).",
+                "aws/aws-sdk-php": "Required to use the SQS queue driver, DynamoDb failed job storage and SES mail driver (^3.189.0).",
                 "brianium/paratest": "Required to run tests in parallel (^6.0).",
                 "doctrine/dbal": "Required to rename columns and drop SQLite columns (^2.6|^3.0).",
                 "ext-ftp": "Required to use the Flysystem FTP driver.",
@@ -2128,7 +2063,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2021-08-10T14:25:51+00:00"
+            "time": "2021-08-17T14:13:34+00:00"
         },
         {
             "name": "laravel/passport",
@@ -2799,16 +2734,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.1.4",
+            "version": "1.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "f3ad69181b8afed2c9edf7be5a2918144ff4ea32"
+                "reference": "18634df356bfd4119fe3d6156bdb990c414c14ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/f3ad69181b8afed2c9edf7be5a2918144ff4ea32",
-                "reference": "f3ad69181b8afed2c9edf7be5a2918144ff4ea32",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/18634df356bfd4119fe3d6156bdb990c414c14ea",
+                "reference": "18634df356bfd4119fe3d6156bdb990c414c14ea",
                 "shasum": ""
             },
             "require": {
@@ -2881,7 +2816,7 @@
             ],
             "support": {
                 "issues": "https://github.com/thephpleague/flysystem/issues",
-                "source": "https://github.com/thephpleague/flysystem/tree/1.1.4"
+                "source": "https://github.com/thephpleague/flysystem/tree/1.1.5"
             },
             "funding": [
                 {
@@ -2889,7 +2824,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2021-06-23T21:56:05+00:00"
+            "time": "2021-08-17T13:49:42+00:00"
         },
         {
             "name": "league/flysystem-aws-s3-v3",
@@ -3604,16 +3539,16 @@
         },
         {
             "name": "nette/utils",
-            "version": "v3.2.2",
+            "version": "v3.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/utils.git",
-                "reference": "967cfc4f9a1acd5f1058d76715a424c53343c20c"
+                "reference": "5c36cc1ba9bb6abb8a9e425cf054e0c3fd5b9822"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/utils/zipball/967cfc4f9a1acd5f1058d76715a424c53343c20c",
-                "reference": "967cfc4f9a1acd5f1058d76715a424c53343c20c",
+                "url": "https://api.github.com/repos/nette/utils/zipball/5c36cc1ba9bb6abb8a9e425cf054e0c3fd5b9822",
+                "reference": "5c36cc1ba9bb6abb8a9e425cf054e0c3fd5b9822",
                 "shasum": ""
             },
             "require": {
@@ -3683,9 +3618,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/utils/issues",
-                "source": "https://github.com/nette/utils/tree/v3.2.2"
+                "source": "https://github.com/nette/utils/tree/v3.2.3"
             },
-            "time": "2021-03-03T22:53:25+00:00"
+            "time": "2021-08-16T21:05:00+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -9413,10 +9348,16 @@
         {
             "name": "tobytwigger/form-schema-generator",
             "version": "dev-PR-361",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tobytwigger/form-schema-generator.git",
+                "reference": "74e5dde69fd4e5944c0857c07de35327d955bc77"
+            },
             "dist": {
-                "type": "path",
-                "url": "./repos/tobytwigger/form-schema-generator",
-                "reference": "bc6c4ffd533af8728d9ad6cbdba8202230438afa"
+                "type": "zip",
+                "url": "https://api.github.com/repos/tobytwigger/form-schema-generator/zipball/74e5dde69fd4e5944c0857c07de35327d955bc77",
+                "reference": "74e5dde69fd4e5944c0857c07de35327d955bc77",
+                "shasum": ""
             },
             "require": {
                 "ext-json": "*",
@@ -9432,16 +9373,7 @@
                     "FormSchema\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "FormSchema\\Tests\\": "tests/"
-                }
-            },
-            "scripts": {
-                "test": [
-                    "vendor/bin/phpunit --colors=always --process-isolation --verbose --configuration phpunit.xml"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -9452,10 +9384,11 @@
                 }
             ],
             "description": "JSON schema generator in php, for vue-form-generator",
-            "transport-options": {
-                "symlink": true,
-                "relative": true
-            }
+            "support": {
+                "issues": "https://github.com/tobytwigger/form-schema-generator/issues",
+                "source": "https://github.com/tobytwigger/form-schema-generator/tree/PR-361"
+            },
+            "time": "2021-08-15T22:12:30+00:00"
         },
         {
             "name": "venturecraft/revisionable",
@@ -9802,16 +9735,16 @@
         },
         {
             "name": "facade/ignition",
-            "version": "2.11.2",
+            "version": "2.11.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/facade/ignition.git",
-                "reference": "7c4e7a7da184cd00c7ce6eacc590200bb9672de7"
+                "reference": "1b8d83c5dac7c5ee8429daf284ce3f19b1d17ea2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/facade/ignition/zipball/7c4e7a7da184cd00c7ce6eacc590200bb9672de7",
-                "reference": "7c4e7a7da184cd00c7ce6eacc590200bb9672de7",
+                "url": "https://api.github.com/repos/facade/ignition/zipball/1b8d83c5dac7c5ee8429daf284ce3f19b1d17ea2",
+                "reference": "1b8d83c5dac7c5ee8429daf284ce3f19b1d17ea2",
                 "shasum": ""
             },
             "require": {
@@ -9874,7 +9807,7 @@
                 "issues": "https://github.com/facade/ignition/issues",
                 "source": "https://github.com/facade/ignition"
             },
-            "time": "2021-07-20T14:01:22+00:00"
+            "time": "2021-08-17T11:45:33+00:00"
         },
         {
             "name": "facade/ignition-contracts",
@@ -10067,16 +10000,16 @@
         },
         {
             "name": "laravel/sail",
-            "version": "v1.9.0",
+            "version": "v1.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/sail.git",
-                "reference": "3e1aa8679b10ae9210eebfbc2ee5f3600f356702"
+                "reference": "05cf80b1365a0b556f6c21ed5c71a27971d06ec8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/sail/zipball/3e1aa8679b10ae9210eebfbc2ee5f3600f356702",
-                "reference": "3e1aa8679b10ae9210eebfbc2ee5f3600f356702",
+                "url": "https://api.github.com/repos/laravel/sail/zipball/05cf80b1365a0b556f6c21ed5c71a27971d06ec8",
+                "reference": "05cf80b1365a0b556f6c21ed5c71a27971d06ec8",
                 "shasum": ""
             },
             "require": {
@@ -10123,7 +10056,7 @@
                 "issues": "https://github.com/laravel/sail/issues",
                 "source": "https://github.com/laravel/sail"
             },
-            "time": "2021-08-03T18:51:44+00:00"
+            "time": "2021-08-17T16:00:47+00:00"
         },
         {
             "name": "nunomaduro/collision",
@@ -10216,18 +10149,6 @@
     ],
     "aliases": [
         {
-            "package": "bristol-su/support",
-            "version": "dev-PR-350/ui-kit",
-            "alias": "v5.0.0",
-            "alias_normalized": "5.0.0.0"
-        },
-        {
-            "package": "bristol-su/upload-file",
-            "version": "dev-PR-350/ui-kit",
-            "alias": "v2.0.0",
-            "alias_normalized": "2.0.0.0"
-        },
-        {
             "package": "tobytwigger/form-schema-generator",
             "version": "dev-PR-361",
             "alias": "v1.3",
@@ -10236,8 +10157,6 @@
     ],
     "minimum-stability": "dev",
     "stability-flags": {
-        "bristol-su/support": 20,
-        "bristol-su/upload-file": 20,
         "tobytwigger/form-schema-generator": 20
     },
     "prefer-stable": true,

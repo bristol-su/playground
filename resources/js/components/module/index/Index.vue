@@ -1,5 +1,8 @@
 <template>
     <div>
+        <p-dynamic-form :schema="form">
+
+        </p-dynamic-form>
         <b-row>
             <b-col style="text-align: center;">
                 <h3>Choose a module</h3>
@@ -33,7 +36,35 @@
                 .then(response => this.modules = response.data)
                 .catch(error => this.$notify.alert('Could not load modules'));
         },
-
+        computed: {
+            form() {
+                let schema = this.$tools.generator.form.newForm('Upload a new file')
+                    .withGroup(
+                        this.$tools.generator.group.newGroup()
+                            .withField(
+                                this.$tools.generator.field.text('title')
+                                    .label('Name of the document')
+                                    .required(true)
+                                    .value(this.defaultDocumentTitle)
+                            )
+                            .withField(
+                                this.$tools.generator.field.text('description')
+                                    .label('A description for the document')
+                                    .required(false)
+                            )
+                            .withField(
+                                this.$tools.generator.field.file('file')
+                                    .label('The file(s) to upload')
+                                    .required(true)
+                                    .hint('You can upload files of the type ' + this.allowedExtensionsText)
+                            )
+                    )
+                    .generate()
+                    .asJson();
+                console.log(schema);
+                return schema;
+            }
+        }
     }
 </script>
 
