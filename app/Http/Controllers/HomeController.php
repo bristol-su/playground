@@ -14,6 +14,7 @@ use Illuminate\View\View;
 class HomeController extends Controller
 {
 
+
     /**
      * Show the homepage
      *

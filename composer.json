@@ -10,8 +10,8 @@
     "license": "GPL-3.0-or-later",
     "require": {
         "bristol-su/support": "dev-PR-350/ui-kit as v5.0.0",
-        "bristol-su/upload-file": "dev-PR-350/ui-kit as v2.0.0",
-        "bristol-su/portal-auth": "^0.0.1",
+        "bristol-su/upload-file": "dev-PR-302 as v2.0.0",
+        "bristol-su/portal-auth": "dev-pr-350/ui-kit as v0.0.1",
         "php": "^8.0",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
@@ -50,6 +50,13 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "repositories": [
+        {
+            "type": "path",
+            "url": "./repos/bristol-su/portal-auth",
+            "options": {
+                "symlink": true
+            }
+        },
         {
             "type": "path",
             "url": "./repos/tobytwigger/form-schema-generator",
