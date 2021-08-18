@@ -56,7 +56,7 @@
                                 this.$tools.generator.field.file('file')
                                     .label('The file(s) to upload')
                                     .required(true)
-                                    .hint('You can upload files of the type ' + this.allowedExtensionsText)
+                                    .hint('You can upload files of the type aaa')
                             )
                     )
                     .generate()
