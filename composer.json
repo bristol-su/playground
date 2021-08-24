@@ -9,10 +9,11 @@
     ],
     "license": "GPL-3.0-or-later",
     "require": {
+        "php": "^8.0",
+        "barryvdh/laravel-debugbar": "^3.6",
+        "bristol-su/portal-auth": "dev-pr-350/ui-kit as v0.0.1",
         "bristol-su/support": "dev-PR-350/ui-kit as v5.0.0",
         "bristol-su/upload-file": "dev-PR-302 as v2.0.0",
-        "bristol-su/portal-auth": "dev-pr-350/ui-kit as v0.0.1",
-        "php": "^8.0",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
