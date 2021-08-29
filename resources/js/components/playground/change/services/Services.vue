@@ -1,34 +1,25 @@
 <template>
     <div>
-
-        <b-tabs content-class="mt-3">
-            <b-tab title="Required" active>
-                <b-list-group>
-                    <service
-                        v-for="service in required"
-                        :key="service"
-                        :service="service"
-                        :value="getValueFor(service)"
-                        :id="getIdFor(service)"
-                        @updateService="updateService"
-                        @deleteService="deleteService(service)"
-                        @newService="moduleInstanceServices.push($event)"></service>
-                </b-list-group>
-            </b-tab>
-            <b-tab title="Optional">
-                <b-list-group>
-                    <service
-                        v-for="service in optional"
-                        :key="service"
-                        :service="service"
-                        :value="getValueFor(service)"
-                        :id="getIdFor(service)"
-                        @updateService="updateService"
-                        @deleteService="deleteService(service)"
-                        @newService="moduleInstanceServices.push($event)"></service>
-                </b-list-group>
-            </b-tab>
-        </b-tabs>
+        Required:
+        <service
+            v-for="service in required"
+            :key="service"
+            :service="service"
+            :value="getValueFor(service)"
+            :id="getIdFor(service)"
+            @updateService="updateService"
+            @deleteService="deleteService(service)"
+            @newService="moduleInstanceServices.push($event)"></service>
+        Optional:
+        <service
+            v-for="service in optional"
+            :key="service"
+            :service="service"
+            :value="getValueFor(service)"
+            :id="getIdFor(service)"
+            @updateService="updateService"
+            @deleteService="deleteService(service)"
+            @newService="moduleInstanceServices.push($event)"></service>
 
     </div>
 </template>
@@ -66,7 +57,7 @@
         },
 
         created() {
-            this.$basicHttp.get('/api/module-instance/' + window.portal.module_instance.slug + '/service')
+            this.$httpBasic.get('/module-instance/' + window.portal.module_instance.slug + '/service')
                 .then(response => this.moduleInstanceServices = response.data)
                 .catch(error => this.$notify.alert('Could not load services'));
         },

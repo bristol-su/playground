@@ -14,6 +14,10 @@
         "bristol-su/portal-auth": "dev-pr-350/ui-kit as v0.0.1",
         "bristol-su/support": "dev-PR-350/ui-kit as v5.0.0",
         "bristol-su/upload-file": "dev-PR-302 as v2.0.0",
+        "bristol-su/assign-roles": "dev-PR-23 as v2.0.0",
+        "bristol-su/static-page": "dev-PR-19 as v2.0.0",
+        "bristol-su/typeform": "dev-PR-20 as v2.0.0",
+        "bristol-su/typeform-service": "dev-PR-20 as v2.0.0",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
@@ -74,7 +78,35 @@
         },
         {
             "type": "path",
+            "url": "./repos/bristol-su/static-page",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
             "url": "./repos/bristol-su/support",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "./repos/bristol-su/typeform",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "./repos/bristol-su/typeform-service",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "./repos/bristol-su/assign-roles",
             "options": {
                 "symlink": true
             }

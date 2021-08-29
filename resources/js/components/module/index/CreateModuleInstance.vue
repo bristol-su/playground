@@ -1,21 +1,8 @@
 <template>
     <div>
-        <b-form @submit.prevent="createModule">
-            <b-form-group id="name-group" label="Name:" label-for="name">
-                <b-form-input
-                    id="name"
-                    placeholder="Enter name for the module"
-                    required
-                    v-model="name"
-                ></b-form-input>
-            </b-form-group>
+        <p-api-form :schema="form" @submit="createModule">
 
-            <b-form-group id="activity-for-group" label="For:" description="Who is the module to be used by - users, groups or roles?" label-for="activity-for">
-                <b-form-select id="activity-for" :options="activityForOptions" v-model="activityFor" required></b-form-select>
-            </b-form-group>
-
-            <b-button type="submit" variant="primary">Submit</b-button>
-        </b-form>
+        </p-api-form>
     </div>
 </template>
 
@@ -30,17 +17,10 @@
             }
         },
 
-        data() {
-            return {
-                name: '',
-                activityFor: null
-            }
-        },
-
         methods: {
-            createModule() {
-                this.$basicHttp.post('/api/module/' + this.portalModule.alias + '/module-instance', {
-                    name: this.name, activity_for: this.activityFor
+            createModule(data) {
+                this.$httpBasic.post('/module/' + this.portalModule.alias + '/module-instance', {
+                    name: data.name, activity_for: data.activityFor
                 })
                     .then(response => {
                         window.location.href = '/p/' + response.data.activity.slug + '/' + response.data.slug;
@@ -65,6 +45,26 @@
                 }
 
                 return options;
+            },
+            form() {
+                let activityForField = this.$tools.generator.field.select('activityFor')
+                    .label('Who is the module to be used by?')
+                    .hint('This defines what group of people would normally work together to complete it.')
+                    .required(true)
+                    .value('user');
+
+                this.activityForOptions.forEach(option => activityForField.withOption(option.value, option.text));
+
+                return this.$tools.generator.form.newForm()
+                    .withGroup(this.$tools.generator.group.newGroup()
+                        .withField(this.$tools.generator.field.text('name')
+                            .label('Name the module')
+                            .value('New ' + this.portalModule.name + ' Module')
+                            .required(true)
+                            .hint('This will help you identify it later')
+                        )
+                        .withField(activityForField)
+                    )
             }
         }
     }

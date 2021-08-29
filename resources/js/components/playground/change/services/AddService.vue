@@ -4,15 +4,13 @@
             Loading...
         </div>
         <div v-else-if="!connector.hasOwnProperty('alias')">
-            <b-row :key="c.alias" v-for="c in connectors" style="padding: 5px; width: 100%; text-align: center;">
-                <b-col>
-                    <b-button @click="connector = c"
-                              variant="outline-info">
-                        <p>{{c.name}}</p>
-                        <p><small>{{c.description}}</small></p>
-                    </b-button>
-                </b-col>
-            </b-row>
+            <p-button @click="connector = c"
+                      :key="c.alias"
+                      v-for="c in connectors"
+                      variant="secondary">
+                <p>{{c.name}}</p>
+                <p><small>{{c.description}}</small></p>
+            </p-button>
         </div>
         <div v-else>
             <add-connector :connector="connector" @newConnection="$emit('newConnection', $event)"></add-connector>
@@ -41,7 +39,7 @@
         },
 
         created() {
-            this.$basicHttp.get('/api/service/' + this.service + '/connector')
+            this.$httpBasic.get('/service/' + this.service + '/connector')
                 .then(response => this.connectors = response.data)
                 .catch(error => this.$notify.alert('Could not load connectors.'));
         }

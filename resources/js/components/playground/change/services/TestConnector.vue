@@ -1,8 +1,8 @@
 <template>
     <div>
-        <b-button :variant="variant" @click="testConnection" size="sm">
+        <p-button :variant="variant" @click="testConnection">
             <i :class="icon" class="fa"></i> Test
-        </b-button>
+        </p-button>
     </div>
 </template>
 
@@ -31,7 +31,7 @@
         },
         methods: {
             testConnection() {
-                this.$basicHttp.get('/api/connection/' + this.connectionId + '/test')
+                this.$httpBasic.get('/connection/' + this.connectionId + '/test')
                     .then(response => {this.testResult = response.data.result})
                     .catch(error => this.$notify.alert('Testing could not be completed: ' + error.message));
             }
@@ -40,11 +40,11 @@
         computed: {
             variant() {
                 if (this.testResult === true) {
-                    return 'outline-success';
+                    return 'success';
                 } else if (this.testResult === false) {
-                    return 'outline-danger';
+                    return 'danger';
                 } else {
-                    return 'outline-info';
+                    return 'info';
                 }
             },
             icon() {

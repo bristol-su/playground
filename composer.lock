@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0097c57ab489b4ae75958b7fa077013d",
+    "content-hash": "04a553117151670171fb6424c206b6be",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -64,16 +64,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.191.2",
+            "version": "3.191.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "d659144bf8618c891fd01f0f375f1f0b4db21b05"
+                "reference": "c003e59f8976f6fe045c27f6afc5d5004317f39b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/d659144bf8618c891fd01f0f375f1f0b4db21b05",
-                "reference": "d659144bf8618c891fd01f0f375f1f0b4db21b05",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/c003e59f8976f6fe045c27f6afc5d5004317f39b",
+                "reference": "c003e59f8976f6fe045c27f6afc5d5004317f39b",
                 "shasum": ""
             },
             "require": {
@@ -148,9 +148,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.191.2"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.191.5"
             },
-            "time": "2021-08-23T18:17:20+00:00"
+            "time": "2021-08-26T18:16:35+00:00"
         },
         {
             "name": "barryvdh/laravel-debugbar",
@@ -298,6 +298,56 @@
             "time": "2021-08-15T20:50:18+00:00"
         },
         {
+            "name": "bristol-su/assign-roles",
+            "version": "dev-PR-23",
+            "dist": {
+                "type": "path",
+                "url": "./repos/bristol-su/assign-roles",
+                "reference": "a91e91e2bdb7d6eb1699862b43d8395f3318742a"
+            },
+            "require": {
+                "bristol-su/support": "^5.0.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "laravel/legacy-factories": "^1.1",
+                "orchestra/testbench": "^6.19",
+                "phpspec/prophecy-phpunit": "^2.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "BristolSU\\Module\\AssignRoles\\ModuleServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BristolSU\\Module\\AssignRoles\\": "app/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "BristolSU\\Module\\Tests\\AssignRoles\\": "tests/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Toby Twigger",
+                    "email": "tobytwigger1@gmail.com"
+                }
+            ],
+            "description": "A module for the Bristol SU Portal Project to assign roles to members of groups",
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
             "name": "bristol-su/control",
             "version": "v3.0.1",
             "source": {
@@ -429,6 +479,59 @@
             }
         },
         {
+            "name": "bristol-su/static-page",
+            "version": "dev-PR-19",
+            "dist": {
+                "type": "path",
+                "url": "./repos/bristol-su/static-page",
+                "reference": "8b57f3666c14655aad0c231a402710e51ac2e50d"
+            },
+            "require": {
+                "bristol-su/support": "^5.0.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "laravel/legacy-factories": "^1.1",
+                "orchestra/testbench": "^6.19",
+                "phpspec/prophecy-phpunit": "^2.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "BristolSU\\Module\\StaticPage\\ModuleServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BristolSU\\Module\\StaticPage\\": "app/"
+                },
+                "classmap": [
+                    "database/factories/"
+                ]
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "BristolSU\\Module\\Tests\\StaticPage\\": "tests/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Toby Twigger",
+                    "email": "tobytwigger1@gmail.com"
+                }
+            ],
+            "description": "A static page module for the Bristol SU Portal Project, to display text or HTML",
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
             "name": "bristol-su/support",
             "version": "dev-PR-350/ui-kit",
             "dist": {
@@ -521,12 +624,116 @@
             }
         },
         {
+            "name": "bristol-su/typeform",
+            "version": "dev-PR-20",
+            "dist": {
+                "type": "path",
+                "url": "./repos/bristol-su/typeform",
+                "reference": "98f911362483adf4ff9cef784eb4ca566c4aedac"
+            },
+            "require": {
+                "bristol-su/support": "^5.0.0",
+                "bristol-su/typeform-service": "^2.0.0",
+                "ext-json": "*",
+                "php": "^8.0",
+                "spatie/laravel-rate-limited-job-middleware": "^1.4",
+                "watr/typeform": "^1.5"
+            },
+            "require-dev": {
+                "laravel/legacy-factories": "^1.1",
+                "orchestra/testbench": "^6.19",
+                "phpspec/prophecy-phpunit": "^2.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "BristolSU\\Module\\Typeform\\ModuleServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BristolSU\\Module\\Typeform\\": "app/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "BristolSU\\Module\\Tests\\Typeform\\": "tests/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Toby Twigger",
+                    "email": "toby.twigger@bristol.ac.uk"
+                }
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "bristol-su/typeform-service",
+            "version": "dev-PR-20",
+            "dist": {
+                "type": "path",
+                "url": "./repos/bristol-su/typeform-service",
+                "reference": "23a58d125aa363465e712219146a90260d608c31"
+            },
+            "require": {
+                "bristol-su/support": "^5.0",
+                "ext-json": "*",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "laravel/legacy-factories": "^1.1",
+                "orchestra/testbench": "^6.19",
+                "phpspec/prophecy-phpunit": "^2.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "BristolSU\\Service\\Typeform\\TypeformServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BristolSU\\Service\\Typeform\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "BristolSU\\Service\\Tests\\Typeform\\": "tests/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Toby Twigger",
+                    "email": "toby.twigger@bristol.ac.uk"
+                }
+            ],
+            "description": "A third party service for typeform",
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
             "name": "bristol-su/upload-file",
             "version": "dev-PR-302",
             "dist": {
                 "type": "path",
                 "url": "./repos/bristol-su/upload-file",
-                "reference": "c164b7914cf70e5127d5ea27ff2cf2c5a1488d3e"
+                "reference": "b59516043ab9e65c88a202aa7cdf522c64990c7a"
             },
             "require": {
                 "bristol-su/support": "^5.0.0",
@@ -2051,16 +2258,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v8.55.0",
+            "version": "v8.56.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "997e2aa23e9103137715018ae926c52f8a1703f2"
+                "reference": "d700f336dc672dcbfe46db05d4e5fe9347b3a5b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/997e2aa23e9103137715018ae926c52f8a1703f2",
-                "reference": "997e2aa23e9103137715018ae926c52f8a1703f2",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/d700f336dc672dcbfe46db05d4e5fe9347b3a5b6",
+                "reference": "d700f336dc672dcbfe46db05d4e5fe9347b3a5b6",
                 "shasum": ""
             },
             "require": {
@@ -2215,7 +2422,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2021-08-17T14:13:34+00:00"
+            "time": "2021-08-24T13:46:30+00:00"
         },
         {
             "name": "laravel/passport",
@@ -6940,6 +7147,66 @@
             "time": "2021-01-18T00:32:12+00:00"
         },
         {
+            "name": "spatie/laravel-rate-limited-job-middleware",
+            "version": "1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-rate-limited-job-middleware.git",
+                "reference": "7b72592e0d823e2948c413f5e661de0fd3431db5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-rate-limited-job-middleware/zipball/7b72592e0d823e2948c413f5e661de0fd3431db5",
+                "reference": "7b72592e0d823e2948c413f5e661de0fd3431db5",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/redis": "^6.0|^7.0|^8.0",
+                "php": "^7.3|^8.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.4",
+                "orchestra/testbench": "^4.0|^5.0|^6.0",
+                "phpunit/phpunit": "^8.2|^9.0",
+                "symfony/var-dumper": "^4.3|^5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\RateLimitedMiddleware\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A middleware that can rate limit jobs",
+            "homepage": "https://github.com/spatie/laravel-rate-limited-job-middleware",
+            "keywords": [
+                "laravel-rate-limited-job-middleware",
+                "spatie"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/laravel-rate-limited-job-middleware/issues",
+                "source": "https://github.com/spatie/laravel-rate-limited-job-middleware/tree/1.5.0"
+            },
+            "funding": [
+                {
+                    "url": "https://www.patreon.com/spatie",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2020-11-27T09:36:55+00:00"
+        },
+        {
             "name": "spatie/macroable",
             "version": "1.0.1",
             "source": {
@@ -9636,7 +9903,7 @@
             "dist": {
                 "type": "path",
                 "url": "./repos/tobytwigger/form-schema-generator",
-                "reference": "f06ed68371a837cb359cb474af92085b49b7557b"
+                "reference": "9d332c68fa772d619960565640f8d3e6b4224f01"
             },
             "require": {
                 "ext-json": "*",
@@ -9894,6 +10161,54 @@
                 }
             ],
             "time": "2020-11-12T00:07:28+00:00"
+        },
+        {
+            "name": "watr/typeform",
+            "version": "1.5.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wearetherobots/typeform.git",
+                "reference": "4a98e689524b54dfecf5142f261a02e4564ae9d3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wearetherobots/typeform/zipball/4a98e689524b54dfecf5142f261a02e4564ae9d3",
+                "reference": "4a98e689524b54dfecf5142f261a02e4564ae9d3",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "~6.0|^7.0"
+            },
+            "require-dev": {
+                "php-vcr/php-vcr": "^1.4",
+                "phpunit/phpunit": "~7|^8.0",
+                "psy/psysh": "@stable"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ],
+                "psr-4": {
+                    "WATR\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ricardo Tapia",
+                    "email": "rtapia92@gmail.com"
+                }
+            ],
+            "description": "A simple wrapper for Typeform API calls",
+            "support": {
+                "issues": "https://github.com/wearetherobots/typeform/issues",
+                "source": "https://github.com/wearetherobots/typeform/tree/1.5.2"
+            },
+            "time": "2021-07-21T16:12:26+00:00"
         },
         {
             "name": "webmozart/assert",
@@ -10287,16 +10602,16 @@
         },
         {
             "name": "laravel/sail",
-            "version": "v1.10.0",
+            "version": "v1.10.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/sail.git",
-                "reference": "05cf80b1365a0b556f6c21ed5c71a27971d06ec8"
+                "reference": "267fafeaf0e0311952316ae0f3c765abc7516469"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/sail/zipball/05cf80b1365a0b556f6c21ed5c71a27971d06ec8",
-                "reference": "05cf80b1365a0b556f6c21ed5c71a27971d06ec8",
+                "url": "https://api.github.com/repos/laravel/sail/zipball/267fafeaf0e0311952316ae0f3c765abc7516469",
+                "reference": "267fafeaf0e0311952316ae0f3c765abc7516469",
                 "shasum": ""
             },
             "require": {
@@ -10343,20 +10658,20 @@
                 "issues": "https://github.com/laravel/sail/issues",
                 "source": "https://github.com/laravel/sail"
             },
-            "time": "2021-08-17T16:00:47+00:00"
+            "time": "2021-08-23T13:43:27+00:00"
         },
         {
             "name": "nunomaduro/collision",
-            "version": "v5.8.0",
+            "version": "v5.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nunomaduro/collision.git",
-                "reference": "0c3c393462eada1233513664e2d22bb9f69ca393"
+                "reference": "63456f5c3e8c4bc52bd573e5c85674d64d84fd43"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nunomaduro/collision/zipball/0c3c393462eada1233513664e2d22bb9f69ca393",
-                "reference": "0c3c393462eada1233513664e2d22bb9f69ca393",
+                "url": "https://api.github.com/repos/nunomaduro/collision/zipball/63456f5c3e8c4bc52bd573e5c85674d64d84fd43",
+                "reference": "63456f5c3e8c4bc52bd573e5c85674d64d84fd43",
                 "shasum": ""
             },
             "require": {
@@ -10431,10 +10746,16 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2021-08-13T14:23:01+00:00"
+            "time": "2021-08-26T15:32:09+00:00"
         }
     ],
     "aliases": [
+        {
+            "package": "bristol-su/assign-roles",
+            "version": "dev-PR-23",
+            "alias": "v2.0.0",
+            "alias_normalized": "2.0.0.0"
+        },
         {
             "package": "bristol-su/portal-auth",
             "version": "dev-pr-350/ui-kit",
@@ -10442,10 +10763,28 @@
             "alias_normalized": "0.0.1.0"
         },
         {
+            "package": "bristol-su/static-page",
+            "version": "dev-PR-19",
+            "alias": "v2.0.0",
+            "alias_normalized": "2.0.0.0"
+        },
+        {
             "package": "bristol-su/support",
             "version": "dev-PR-350/ui-kit",
             "alias": "v5.0.0",
             "alias_normalized": "5.0.0.0"
+        },
+        {
+            "package": "bristol-su/typeform",
+            "version": "dev-PR-20",
+            "alias": "v2.0.0",
+            "alias_normalized": "2.0.0.0"
+        },
+        {
+            "package": "bristol-su/typeform-service",
+            "version": "dev-PR-20",
+            "alias": "v2.0.0",
+            "alias_normalized": "2.0.0.0"
         },
         {
             "package": "bristol-su/upload-file",
@@ -10465,6 +10804,10 @@
         "bristol-su/portal-auth": 20,
         "bristol-su/support": 20,
         "bristol-su/upload-file": 20,
+        "bristol-su/assign-roles": 20,
+        "bristol-su/static-page": 20,
+        "bristol-su/typeform": 20,
+        "bristol-su/typeform-service": 20,
         "tobytwigger/form-schema-generator": 20
     },
     "prefer-stable": true,

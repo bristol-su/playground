@@ -1,13 +1,14 @@
 <template>
-    <b-list-group-item class="flex-column align-items-start">
-        <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">{{permission.name}}</h5>
-            <b-form-checkbox :checked="this.value" @input="updatePermission($event)" switch size="lg"/>
-        </div>
-        <p class="mb-1">
-            {{permission.description}}
-        </p>
-    </b-list-group-item>
+    <div>
+        <p-switch
+            :id="permission.ability"
+            :label="permission.name"
+            :hint="permission.description"
+            :value="value"
+            @input="updatePermission($event)">
+
+        </p-switch>
+    </div>
 </template>
 
 <script>
@@ -41,7 +42,7 @@
                 if(this.id === null) {
                     this.createPermission(value);
                 } else {
-                    this.$basicHttp.patch('/api/module-instance/' + window.portal.module_instance.slug + '/permission/' + this.id, {
+                    this.$httpBasic.patch('/module-instance/' + window.portal.module_instance.slug + '/permission/' + this.id, {
                         result: value
                     })
                         .then(response => {
@@ -53,7 +54,7 @@
             },
 
             createPermission(value) {
-                this.$basicHttp.post('/api/module-instance/' + window.portal.module_instance.slug + '/permission', {
+                this.$httpBasic.post('/module-instance/' + window.portal.module_instance.slug + '/permission', {
                     ability: this.permission.ability,
                     result: value
                 })

@@ -1,33 +1,23 @@
 <template>
     <div>
-
-        <b-tabs content-class="mt-3">
-            <b-tab title="Participant" active>
-                <b-list-group>
-                    <permission
-                        v-for="permission in participantPermissions"
-                        :key="permission.ability"
-                        :permission="permission"
-                        :value="getValueFor(permission.ability)"
-                        :id="getIdFor(permission.ability)"
-                        @newPermission="permissions.push($event)"
-                        @updatePermission="updatePermission"></permission>
-                </b-list-group>
-            </b-tab>
-            <b-tab title="Admin">
-                <b-list-group>
-                    <permission
-                        v-for="permission in adminPermissions"
-                        :key="permission.ability"
-                        :permission="permission"
-                        :value="getValueFor(permission.ability)"
-                        :id="getIdFor(permission.ability)"
-                        @newPermission="permissions.push($event)"
-                        @updatePermission="updatePermission"></permission>
-                </b-list-group>
-            </b-tab>
-        </b-tabs>
-
+        <permission
+            v-if="!$tools.environment.authentication.admin()"
+            v-for="permission in participantPermissions"
+            :key="permission.ability"
+            :permission="permission"
+            :value="getValueFor(permission.ability)"
+            :id="getIdFor(permission.ability)"
+            @newPermission="permissions.push($event)"
+            @updatePermission="updatePermission"></permission>
+        <permission
+            v-if="$tools.environment.authentication.admin()"
+            v-for="permission in adminPermissions"
+            :key="permission.ability"
+            :permission="permission"
+            :value="getValueFor(permission.ability)"
+            :id="getIdFor(permission.ability)"
+            @newPermission="permissions.push($event)"
+            @updatePermission="updatePermission"></permission>
     </div>
 </template>
 
@@ -59,7 +49,7 @@
 
         methods: {
             loadPermissions() {
-                this.$basicHttp.get('/api/module-instance/' + window.portal.module_instance.slug + '/permission')
+                this.$httpBasic.get('/module-instance/' + window.portal.module_instance.slug + '/permission')
                     .then(response => {this.permissions = response.data})
                     .catch(error => this.$notify.alert('Could not load permissions'));
             },

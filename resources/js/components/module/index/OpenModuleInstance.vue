@@ -1,15 +1,10 @@
 <template>
     <div>
-        <b-table :items="moduleInstances" :fields="fields">
-            <template v-slot:cell(actions)="data">
-                <b-button size="sm" variant="info" @click="openModuleInstance(data.item)">Open</b-button>
-                <b-button size="sm" variant="danger" @click="deleteModuleInstance(data.item)">Delete</b-button>
+        <p-table :items="moduleInstances" :columns="columns" :viewable="true" :deletable="true" @view="openModuleInstance($event)" @delete="openModuleInstance($event)">
+            <template #cell(updated_at)="{row}">
+                {{row.updated_at | datetime }}
             </template>
-
-            <template v-slot:cell(updated_at)="data">
-                {{data.item.updated_at | datetime }}
-            </template>
-        </b-table>
+        </p-table>
     </div>
 </template>
 
@@ -28,10 +23,9 @@
         data() {
             return {
                 moduleInstances: [],
-                fields: [
+                columns: [
                     {key: 'name', label: 'Name'},
-                    {key: 'updated_at', label: 'Last Modified'},
-                    {key: 'actions', label: ''}
+                    {key: 'updated_at', label: 'Last Modified'}
                 ]
             }
         },
@@ -43,9 +37,9 @@
         },
 
         created() {
-            this.$basicHttp.get('/api/module/' + this.portalModule.alias + '/module-instance')
+            this.$httpBasic.get('/module/' + this.portalModule.alias + '/module-instance')
                 .then(response => this.moduleInstances = response.data)
-                .catch(error => this.$basicHttp.alert('Could not load saved modules'));
+                .catch(error => this.$notify.alert('Could not load saved modules'));
         },
 
         methods: {
@@ -54,30 +48,15 @@
             },
 
             deleteModuleInstance(moduleInstance) {
-                this.$bvModal.msgBoxConfirm('Are you sure you want to delete this module?', {
-                    title: 'Please Confirm',
-                    size: 'sm',
-                    buttonSize: 'sm',
-                    okVariant: 'danger',
-                    okTitle: 'YES',
-                    cancelTitle: 'NO',
-                    footerClass: 'p-2',
-                    hideHeaderClose: false,
-                    centered: true
-                })
-                    .then(value => {
-                        if(value) {
-                            this.$basicHttp.delete('/api/module/' + this.portalModule.alias + '/module-instance/' + moduleInstance.id)
-                                .then(response => {
-                                    this.$notify.success('Deleted module ' + moduleInstance.name);
-                                    this.moduleInstances.splice(this.moduleInstances.indexOf(moduleInstance), 1);
-                                })
-                                .catch(error => this.$notify.warning('Could not delete module instance'));
-                        }
+                this.$ui.confirm.delete('Delete ' + moduleInstance.name + '?', 'Are you sure you want to delete the ' + moduleInstance.alias + ' module?')
+                    .then(() => {
+                        this.$httpBasic.delete('/module/' + this.portalModule.alias + '/module-instance/' + moduleInstance.id)
+                            .then(response => {
+                                this.$notify.success('Deleted module ' + moduleInstance.name);
+                                this.moduleInstances.splice(this.moduleInstances.indexOf(moduleInstance), 1);
+                            })
+                            .catch(error => this.$notify.warning('Could not delete module instance'));
                     })
-                    .catch(err => {
-                        // An error occurred
-                    });
             }
         },
 
