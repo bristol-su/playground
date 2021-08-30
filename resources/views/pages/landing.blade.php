@@ -11,7 +11,7 @@
             Login
         </p-button>
         <p-button variant="secondary" class="w-full px-16 py-2 my-2 text-base font-medium text-white transition duration-500 ease-in-out transform border-black rounded-md focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 hover:bg-blueGray-900" href="{{route('register')}}">
-            Register
+            Register an account
         </p-button>
     </p-featured-card>
 @endsection
