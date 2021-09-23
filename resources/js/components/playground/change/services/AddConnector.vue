@@ -1,38 +1,14 @@
 <template>
     <div>
-        <b-form-group
-            id="name-group"
-            label="Connection Name:"
-            label-for="name"
-            description="A name for the connection."
-        >
-            <b-form-input
-                id="name"
-                v-model="form.name"
-                type="text"
-                required
-                :placeholder="defaultName"
-            ></b-form-input>
-        </b-form-group>
+        <p-dynamic-form :schema="metaFormSchema" v-model="metaForm">
 
-        <b-form-group
-            id="description-group"
-            label="Connection description:"
-            label-for="description"
-            description="A description for the connection to help you identify it in the future."
-        >
-            <b-form-textarea
-                id="name"
-                v-model="form.description"
-                rows="2"
-            ></b-form-textarea>
-        </b-form-group>
+        </p-dynamic-form>
 
-        <vue-form-generator :schema="connector.settings.schema" :model="form.settings" :options="connector.settings.options">
+        <p-dynamic-form :schema="connector.settings" v-model="form.settings">
 
-        </vue-form-generator>
+        </p-dynamic-form>
 
-        <b-button variant="info" size="lg" @click="saveNewConnection">Save Connection</b-button>
+        <p-button variant="info" @click="saveNewConnection">Save Connection</p-button>
     </div>
 </template>
 
@@ -49,9 +25,11 @@
 
         data() {
             return {
-                form: {
+                metaForm: {
                     name: '',
-                    description: '',
+                    description: ''
+                },
+                form: {
                     alias: this.connector.alias,
                     settings: {}
                 }
@@ -64,7 +42,12 @@
 
         methods: {
             saveNewConnection() {
-                this.$http.post('/api/connection', this.form)
+                this.$httpBasic.post('/connection', {
+                    name: this.metaForm.name,
+                    description: this.metaForm.description,
+                    alias: this.form.alias,
+                    settings: this.form.settings
+                })
                     .then(response => {
                         this.$notify.success('Connection established');
                         this.$emit('newConnection', response.data);
@@ -79,6 +62,22 @@
             },
             model() {
                 return this.connector.settings.model;
+            },
+            metaFormSchema() {
+                return this.$tools.generator.form.newForm()
+                    .withGroup(this.$tools.generator.group.newGroup()
+                        .withField(this.$tools.generator.field.text('name')
+                            .label('Connection Name')
+                            .hint('A name for the connection')
+                            .required(true)
+                            .value(this.defaultName)
+                        ).withField(this.$tools.generator.field.textArea('description')
+                            .label('Description')
+                            .hint('A description for the connection to help you identify it in the future.')
+                        )
+                    )
+                    .generate()
+                    .asJson()
             }
         }
     }
