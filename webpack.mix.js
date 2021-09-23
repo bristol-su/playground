@@ -1,5 +1,6 @@
 const mix = require('laravel-mix');
 const webpack = require('webpack');
+require('laravel-mix-tailwind');
 
 /*
  |--------------------------------------------------------------------------
@@ -14,8 +15,9 @@ const webpack = require('webpack');
 
 mix.js('resources/js/app.js', 'public/js/app.js').vue()
     .js('resources/js/control.js', 'public/js/control.js').vue()
-   .sass('resources/sass/app.scss', 'public/css/app.css')
-    .postCss('./node_modules/@bristol-su/portal-ui-kit/src/install/ui-kit.css', 'public/css/ui-kit.css', [require('tailwindcss')]);
+    .postCss("resources/sass/ui-kit.css", "public/css/ui-kit.css", [require("tailwindcss")])
+    .copyDirectory('node_modules/@bristol-su/portal-ui-kit/src/assets', 'public', true)
+    .tailwind();
 
 if (mix.inProduction()) {
     mix.version();

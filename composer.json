@@ -11,13 +11,15 @@
     "require": {
         "php": "^8.0",
         "barryvdh/laravel-debugbar": "^3.6",
-        "bristol-su/portal-auth": "dev-pr-350/ui-kit as v0.0.1",
-        "bristol-su/support": "dev-PR-350/ui-kit as v5.0.0",
-        "bristol-su/upload-file": "dev-PR-302 as v2.0.0",
-        "bristol-su/assign-roles": "dev-PR-23 as v2.0.0",
-        "bristol-su/static-page": "dev-PR-19 as v2.0.0",
-        "bristol-su/typeform": "dev-PR-20 as v2.0.0",
-        "bristol-su/typeform-service": "dev-PR-20 as v2.0.0",
+        "bristol-su/portal-auth": "dev-develop as v0.0.1",
+        "bristol-su/support": "^5.0.0",
+        "bristol-su/upload-file": "dev-develop as 2.0.0",
+        "bristol-su/static-page": "dev-develop as 2.0.0",
+        "bristol-su/typeform": "dev-develop as 2.0.0",
+        "bristol-su/data-entry": "dev-develop as 2.0.0",
+        "bristol-su/unioncloud-portal": "^2.0.0",
+        "laravel/telescope": "^4.6",
+        "bristol-su/assign-roles": "dev-develop",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
@@ -32,8 +34,7 @@
         "laravel/sail": "^1.0.1",
         "nunomaduro/collision": "^5.0",
         "phpunit/phpunit": "^9.3.3",
-        "phpspec/prophecy-phpunit": "^2.0.1",
-        "tobytwigger/form-schema-generator": "dev-PR-361 as v1.3"
+        "phpspec/prophecy-phpunit": "^2.0.1"
     },
     "autoload": {
         "psr-4": {
@@ -54,64 +55,6 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "repositories": [
-        {
-            "type": "path",
-            "url": "./repos/bristol-su/portal-auth",
-            "options": {
-                "symlink": true
-            }
-        },
-        {
-            "type": "path",
-            "url": "./repos/tobytwigger/form-schema-generator",
-            "options": {
-                "symlink": true
-            }
-        },
-        {
-            "type": "path",
-            "url": "./repos/bristol-su/upload-file",
-            "options": {
-                "symlink": true
-            }
-        },
-        {
-            "type": "path",
-            "url": "./repos/bristol-su/static-page",
-            "options": {
-                "symlink": true
-            }
-        },
-        {
-            "type": "path",
-            "url": "./repos/bristol-su/support",
-            "options": {
-                "symlink": true
-            }
-        },
-        {
-            "type": "path",
-            "url": "./repos/bristol-su/typeform",
-            "options": {
-                "symlink": true
-            }
-        },
-        {
-            "type": "path",
-            "url": "./repos/bristol-su/typeform-service",
-            "options": {
-                "symlink": true
-            }
-        },
-        {
-            "type": "path",
-            "url": "./repos/bristol-su/assign-roles",
-            "options": {
-                "symlink": true
-            }
-        }
-    ],
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",

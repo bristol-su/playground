@@ -10,16 +10,13 @@
         "prod": "npm run production"
     },
     "devDependencies": {
-        "axios": "^0.19.2",
-        "bootstrap": "^4.5.0",
-        "cross-env": "^5.1",
-        "jquery": "^3.5.1",
+        "axios": "^0.21.0",
         "laravel-mix": "^6.0.27",
+        "laravel-mix-tailwind": "^0.1.2",
         "lodash": "^4.17.13",
-        "popper.js": "^1.16.1",
         "postcss": "^8.1",
         "postcss-loader": "^4.0.3",
-        "resolve-url-loader": "^2.3.1",
+        "resolve-url-loader": "^4.0.0",
         "sass": "^1.26.7",
         "sass-loader": "^8.0.2",
         "tailwindcss": "^2.2.7",
@@ -29,10 +26,7 @@
     },
     "dependencies": {
         "@bristol-su/control-management": "^0.3.2",
-        "@bristol-su/frontend-toolkit": "github:bristol-su/frontend-toolkit#PR-361",
-        "awesome-notifications": "^3.1.1",
-        "bootstrap-vue": "^2.21.2",
-        "moment": "^2.26.0",
-        "vue-form-generator": "^2.3.4"
+        "@bristol-su/frontend-toolkit": "^1.0.0",
+        "moment": "^2.26.0"
     }
 }

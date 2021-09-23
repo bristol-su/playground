@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p-api-form :schema="form" @submit="createModule">
+        <p-api-form :schema="form" @submit="createModule" :busy="$isLoading('creating-module')">
 
         </p-api-form>
     </div>
@@ -21,7 +21,7 @@
             createModule(data) {
                 this.$httpBasic.post('/module/' + this.portalModule.alias + '/module-instance', {
                     name: data.name, activity_for: data.activityFor
-                })
+                }, {name: 'creating-module'})
                     .then(response => {
                         window.location.href = '/p/' + response.data.activity.slug + '/' + response.data.slug;
                     })

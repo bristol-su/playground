@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p-table :items="moduleInstances" :columns="columns" :viewable="true" :deletable="true" @view="openModuleInstance($event)" @delete="openModuleInstance($event)">
+        <p-table :busy="$isLoading('load-module-instances')" :items="moduleInstances" :columns="columns" :viewable="true" :deletable="true" @view="openModuleInstance($event)" @delete="openModuleInstance($event)">
             <template #cell(updated_at)="{row}">
                 {{row.updated_at | datetime }}
             </template>
@@ -37,7 +37,7 @@
         },
 
         created() {
-            this.$httpBasic.get('/module/' + this.portalModule.alias + '/module-instance')
+            this.$httpBasic.get('/module/' + this.portalModule.alias + '/module-instance', {name: 'load-module-instances'})
                 .then(response => this.moduleInstances = response.data)
                 .catch(error => this.$notify.alert('Could not load saved modules'));
         },

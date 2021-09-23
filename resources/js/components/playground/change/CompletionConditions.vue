@@ -46,14 +46,6 @@
             }
         },
 
-        watch: {
-            selectedConditionAlias(val) {
-                if(val !== null) {
-                    this.currentSettings = this.selectedCondition.options;
-                }
-            }
-        },
-
         methods: {
             test() {
                 this.testing = true;

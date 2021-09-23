@@ -8,7 +8,6 @@
 
 @push('styles')
     @include('templates.javascript_injection')
-    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{mix('css/ui-kit.css')}}" type="text/css">
 @endpush
 
