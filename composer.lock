@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d9211566e04650e5f2e6caf37a2b372c",
+    "content-hash": "7dc53f2431c1d4ac592b1fb4b8d3f4f0",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -11104,7 +11104,7 @@
         {
             "package": "bristol-su/portal-auth",
             "version": "dev-develop",
-            "alias": "v0.0.1",
+            "alias": "0.0.1",
             "alias_normalized": "0.0.1.0"
         },
         {

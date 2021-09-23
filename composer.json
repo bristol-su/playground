@@ -11,7 +11,7 @@
     "require": {
         "php": "^8.0",
         "barryvdh/laravel-debugbar": "^3.6",
-        "bristol-su/portal-auth": "dev-develop as v0.0.1",
+        "bristol-su/portal-auth": "dev-develop as 0.0.1",
         "bristol-su/support": "^5.0.0",
         "bristol-su/upload-file": "dev-develop as 2.0.0",
         "bristol-su/static-page": "dev-develop as 2.0.0",
