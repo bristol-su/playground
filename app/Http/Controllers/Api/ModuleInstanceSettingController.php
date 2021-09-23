@@ -17,7 +17,7 @@ class ModuleInstanceSettingController extends Controller
      * Get all module instance settings belonging to a module.
      *
      * @param ModuleInstance $moduleInstance Module instance the setting belongs to
-     * @return ModuleInstanceSetting
+     * @return ModuleInstanceSetting[]
      */
     public function index(ModuleInstance $moduleInstance)
     {

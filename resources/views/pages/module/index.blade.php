@@ -1,12 +1,7 @@
 @extends('layouts.app')
 
 @section('app-content')
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-                <module-index></module-index>
-            </div>
-        </div>
-    </div>
-
+    <p-page-content title="Modules" subtitle="Choose a module to get started">
+        <module-index></module-index>
+    </p-page-content>
 @endsection
