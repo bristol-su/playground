@@ -27,6 +27,6 @@
     "dependencies": {
         "@bristol-su/control-management": "^0.3.2",
         "@bristol-su/frontend-toolkit": "^1.0.0",
-        "moment": "^2.26.0"
+        "moment": "^2.29.2"
     }
 }
